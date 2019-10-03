@@ -1,0 +1,261 @@
+<!doctype html>
+
+<script type="text/javascript" src="CSS/A5System/default/theme.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/A5System/default/theme.css" />
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "wt_users_imp1"
+Delete tmpl_wt_users_imp1
+DIM tmpl_wt_users_imp1 as P
+tmpl_wt_users_imp1 = a5w_load_component("wt_users_imp1") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_users_imp1)
+'Following code allows you to override settings in the saved component, and specify the component alias (componentName property).
+'Each component on a page must have a unique alias (componentName property).
+with tmpl_wt_users_imp1
+	componentName = componentalias
+end with 
+'=======================================compute the HTML for the Component=======================================
+delete x_wt_users_imp1
+dim x_wt_users_imp1 as p
+x_wt_users_imp1 = a5w_run_Component(tmpl_wt_users_imp1)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_wt_users_imp1) (EDIT:wt_users_imp1)
+if x_wt_users_imp1.RedirectURL <> "" then 
+	response.redirect(x_wt_users_imp1.redirectURL)
+	end
+end if 
+?x_wt_users_imp1.Output.Head.JavaScript
+?x_wt_users_imp1.Output.Head.CSS_Link
+%>
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "wt_users_imp2"
+Delete tmpl_wt_users_imp2
+DIM tmpl_wt_users_imp2 as P
+tmpl_wt_users_imp2 = a5w_load_component("wt_users_imp2") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_users_imp2)
+'Following code allows you to override settings in the saved component, and specify the component alias (componentName property).
+'Each component on a page must have a unique alias (componentName property).
+with tmpl_wt_users_imp2
+	componentName = componentalias
+end with 
+'=======================================compute the HTML for the Component=======================================
+delete x_wt_users_imp2
+dim x_wt_users_imp2 as p
+x_wt_users_imp2 = a5w_run_Component(tmpl_wt_users_imp2)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_wt_users_imp2) (EDIT:wt_users_imp2)
+if x_wt_users_imp2.RedirectURL <> "" then 
+	response.redirect(x_wt_users_imp2.redirectURL)
+	end
+end if 
+?x_wt_users_imp2.Output.Head.JavaScript
+?x_wt_users_imp2.Output.Head.CSS_Link
+%>
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "wt_users_imp"
+Delete tmpl_wt_users_imp
+DIM tmpl_wt_users_imp as P
+tmpl_wt_users_imp = a5w_load_component("wt_users_imp") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_users_imp)
+'Following code allows you to override settings in the saved component.
+tmpl_wt_users_imp.override_settings = <<%override_settings%
+	componentName = componentAlias
+	_gridFilename = "wt_users_imp"
+%override_settings%
+'TIP: To refer to local or page variables in the override_settings string, you must first define a local
+'dot variable called 'pageVar' with properties for all of the variables you want to reference. For example:
+'	dim pageVar as p
+'	pageVar.gridRowCount = 10
+'Then, in the override_settings string, you can reference pageVar.gridRowCount. For example:
+'	rows = pageVar.gridRowCount
+'Resolve session and page variables in the override_settings string.
+a5w_resolveVariablesInOverrideSettings(tmpl_wt_users_imp,session,local_variables())
+delete x_wt_users_imp
+dim x_wt_users_imp as p
+x_wt_users_imp = a5w_run_Component(tmpl_wt_users_imp)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_wt_users_imp) (EDIT:wt_users_imp)
+if x_wt_users_imp.RedirectURL <> "" then 
+	response.redirect(x_wt_users_imp.redirectURL)
+	end
+end if 
+?x_wt_users_imp.Output.Head.JavaScript
+?x_wt_users_imp.Output.Head.CSS_Link
+%>
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "wt_users"
+Delete tmpl_wt_users
+DIM tmpl_wt_users as P
+tmpl_wt_users = a5w_load_component("wt_users") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_users)
+'Following code allows you to override settings in the saved component.
+tmpl_wt_users.override_settings = <<%override_settings%
+	componentName = componentAlias
+	_gridFilename = "wt_users"
+%override_settings%
+'TIP: To refer to local or page variables in the override_settings string, you must first define a local
+'dot variable called 'pageVar' with properties for all of the variables you want to reference. For example:
+'	dim pageVar as p
+'	pageVar.gridRowCount = 10
+'Then, in the override_settings string, you can reference pageVar.gridRowCount. For example:
+'	rows = pageVar.gridRowCount
+'Resolve session and page variables in the override_settings string.
+a5w_resolveVariablesInOverrideSettings(tmpl_wt_users,session,local_variables())
+delete x_wt_users
+dim x_wt_users as p
+x_wt_users = a5w_run_Component(tmpl_wt_users)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_wt_users) (EDIT:wt_users)
+if x_wt_users.RedirectURL <> "" then 
+	response.redirect(x_wt_users.redirectURL)
+	end
+end if 
+?x_wt_users.Output.Head.JavaScript
+?x_wt_users.Output.Head.CSS_Link
+%>
+
+<%a5 a5w_include("wt_inc_header_head.a5w") %>
+
+<style type="text/css">
+
+#tab1{
+padding-top:3px;
+border: 1px solid blue;
+background-color:wheat;
+MARGIN-TOP:15PX;
+}
+
+#tab1.TABBAND{
+background-color:#ece9d8;
+}
+#tab1.panes{
+margin:-15px;
+}
+
+.tab1selected{
+border-right:1px solid blue;
+border-top:1px solid blue;
+padding:5px;
+font-weight:bold;
+text-decoration:none;
+background-color:wheat;
+}
+
+.tab1{
+border-right:1px solid blue;
+border-top:1px solid blue;
+padding:5px;
+font-weight:bold;
+text-decoration:none;
+background-color:white;
+}
+
+.tab1selected a:hover{
+text-decoration:none;
+}
+.tab1selected a:visited{
+text-decoration:none;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div id="container">
+<%A5 a5w_include("wt_inc_header_body.a5w") %> 
+<div id="row">
+
+<h1>Import Users</h1>
+
+<div id="tab1">
+	<div id="tab1.TABBAND">
+		<a id=tab1.0.TAB class=tab1pane href="#">Start here</a>
+		<a id=tab1.1.TAB class=tab1pane href="#">Import Users List (temp)</a>
+		<a id=tab1.2.TAB class=tab1pane href="#">Process import</a>
+		<a id=tab1.3.TAB class=tab1pane href="#">Live Users List</a>
+	</div>
+	<br style="CLEAR: both" >
+	<div id="tab1.PANES">
+		<div id="tab1.0.PANE">
+		<table>
+			<tr>
+				<td><%A5 ?x_wt_users_imp1.Output.Body.Dialog_Echo %></td>
+			</tr>
+			<tr>
+				<td><%A5 ?x_wt_users_imp1.Output.Body.Xbasic_Code_Errors %></td>
+			</tr>
+			<tr>
+				<td><%A5 ?x_wt_users_imp1.Output.Body.Dialog_HTML %></td>
+			</tr>
+		</table>
+		</div>
+		<div id="tab1.1.PANE">
+		<table><!--Table enclosing Grid component-->
+			<tr><!--Table row for Grid Search Part-->
+				<td><!--Table cell for Grid Search Part (Will be blank if Grid uses a Master Layout Template)-->
+					<%A5 ?x_wt_users_imp.Output.Body.Search_HTML %></td><!--End table cell for Grid Search Part-->
+			</tr><!--End table row for Grid Search Part-->
+			<tr><!--Table row for Grid Part-->
+				<td><%A5 ?x_wt_users_imp.Output.Body.Grid_HTML %></td>
+			</tr><!--End table row for Grid Part-->
+			<tr><!--Table row for Grid Detail View Part-->
+				<td><!--Table cell for Grid Detail View Part (Will be blank if Grid uses a Master Layout Template)-->
+					<%A5 ?x_wt_users_imp.Output.Body.DetailView_HTML	%></td><!--End table cell for Grid Search Part-->
+			</tr><!--End table row for Grid Search Part-->
+		</table><!--End table enclosing Grid component-->
+		</div>
+		<div id="tab1.2.PANE">
+		<table>
+			<tr>
+				<td><%A5 ?x_wt_users_imp2.Output.Body.Dialog_Echo %></td>
+			</tr>
+			<tr>
+				<td><%A5 ?x_wt_users_imp2.Output.Body.Xbasic_Code_Errors %></td>
+			</tr>
+			<tr>
+				<td><%A5 ?x_wt_users_imp2.Output.Body.Dialog_HTML %></td>
+			</tr>
+		</table>
+		</div>
+		<div id="tab1.3.PANE">
+		<table><!--Table enclosing Grid component-->
+			<tr><!--Table row for Grid Search Part-->
+				<td><!--Table cell for Grid Search Part (Will be blank if Grid uses a Master Layout Template)-->
+					<%A5 ?x_wt_users.Output.Body.Search_HTML %></td><!--End table cell for Grid Search Part-->
+			</tr><!--End table row for Grid Search Part-->
+			<tr><!--Table row for Grid Part-->
+				<td><%A5 ?x_wt_users.Output.Body.Grid_HTML %></td>
+			</tr><!--End table row for Grid Part-->
+			<tr><!--Table row for Grid Detail View Part-->
+				<td><!--Table cell for Grid Detail View Part (Will be blank if Grid uses a Master Layout Template)-->
+					<%A5 ?x_wt_users.Output.Body.DetailView_HTML	%></td><!--End table cell for Grid Search Part-->
+			</tr><!--End table row for Grid Search Part-->
+		</table><!--End table enclosing Grid component--></p>
+		</div>
+	</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %> 
+</body></html>
+
+<script type="text/javascript" src="javascript/core.js"></script>
+<script type="text/javascript" src="javascript/aui.js"></script>
+<script type="text/javascript" src="javascript/AjaxFormLibrary.js"></script>
+<script type="text/javascript">
+var tab1Object = new a5_AJAX_tab('tab1',[
+	{html: 'Pane Title'},
+	{html: 'Pane Title'},
+	{html: 'Pane Title'},
+	{html: 'Pane Title'}
+],{
+	tabClassName: 'tab1',
+	tabSelectedClassName: 'tab1selected',
+	tabDisabledClassName: 'tab1disabled',
+	paneClassName: 'tab1pane',
+	paneWidth: '100%'
+});
+
+</script>
