@@ -1,0 +1,1404 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "style_name": "Alpha",
+        "style_type": "Alpha Five",
+        "resolveAbstractClassNames": true,
+        "builderVersionNumber": 1,
+        "overrideStyleName": "Default",
+        "FontSize": "Medium",
+        "LocalCss": "<style type=\"text/css\">\n\n\n\n\n\n\n\n\n\n\n\n\n* {\n  box-sizing: border-box;  \n}\n#multi {\n  display: flex;\n  flex-wrap: wrap;\n  width: 800px ;\n  margin: 0 auto;\n}\n.single {\n  display: flex;\n  max-width: 800px ;\n  margin: 0 auto;\n}\n.child {\n  height: 50px;\n  background: red;\n  flex: 1;\n  min-width: 25%;\n  border: 5px solid white;\n}\n.child50 {\n  height: 50px;\n  background: red;\n  flex: 1;\n  min-width: 50%;\n  border: 5px solid white;\n}\n.item{\nflex-grow: 1;\nbackground: red;\nborder: 5px solid white;\n}\n.item1 {\n  height: 50px;\n  background: red;\n  min-width: 100%;\n  border: 5px solid white;\n}\n.item2 {\n  height: 50px;\n  background: red;\n  min-width: 50%;\n  border: 5px solid white;\n}\n.item3 {\n  height: 50px;\n  background: red;\n  min-width: 33.3333%;\n  border: 5px solid white;\n}\n.item4 {\n  height: 50px;\n  background: red;\n  min-width: 25%;\n  border: 5px solid white;\n}\n.item5 {\n  height: 50px;\n  background: red;\n  min-width: 20%;\n  border: 5px solid white;\n}\n.item6 {\n  height: 50px;\n  background: red;\n  min-width: 16.6666%;\n  border: 5px solid white;\n}\n.item7 {\n  height: 50px;\n  background: red;\n  min-width: 14.2857%;\n  border: 5px solid white;\n}\n.item8 {\n  height: 50px;\n  background: red;\n  min-width: 12.5%;\n  border: 5px solid white;\n}\n.itemflex{\nflex-grow: 1;\nbackground: red;\nborder: 5px solid white;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n</style>",
+        "A5ContainerClassPadding": "0px",
+        "A5ContainerClassPaddingForContainerWidthMode": "4px",
+        "layoutType": "ContainerWidth",
+        "previewMode": "Default",
+        "useDragScrolling": "Auto",
+        "pageTitle": "UX",
+        "waitMsg": {
+            "message": {
+                "text": "Wait...",
+                "waitIcon": "css/A5System/Images/wait.gif"
+            },
+            "cssAnimation": {
+                "size": "32"
+            }
+        },
+        "globalSettings": {
+            "labelWidth": "1in"
+        },
+        "serverSideEvents": {
+            "canAjaxCallback": "",
+            "afterAjaxCallback": ""
+        },
+        "onTimerEventInterval": 60,
+        "securityDeniedAction": "Redirect to login page",
+        "clientSideEvents": {
+            "_canAjaxCallback": "",
+            "__afterAjaxCallbackComplete": "",
+            "beforeUXSectionPrepare": "",
+            "afterUXSectionPrepare": "",
+            "beforeUXSectionDestroy": "",
+            "afterUXSectionDestroy": "",
+            "onBeforeCreate": "",
+            "onOAuthAuthorize": "",
+            "onAjaxCallbackFailed": "",
+            "onAjaxCallbackNotAvailable": "",
+            "onAjaxCallbackNotAllowed": "",
+            "onServerSideEventHandlerError": "",
+            "onFieldValidationError": "",
+            "beforePrepare": "",
+            "afterPrepare": "",
+            "afterValidate": "",
+            "onTabPaneChanged": "",
+            "beforeRptSectionRowPrepare": "",
+            "afterRptSectionRowPrepare": "",
+            "canRptSectionRowAdd": "",
+            "afterRptSectionRowAdd": "",
+            "canRptSectionRowDelete": "",
+            "afterRptSectionRowDelete": "",
+            "onStateChange": "",
+            "onDataStateChange": "",
+            "afterControlBasedOnClientSideDataCacheRefreshed": "",
+            "onControlFocus": "",
+            "onRptSectionFocus": "",
+            "onRptSectionRowChange": "",
+            "canResetForm": "",
+            "afterResetForm": "",
+            "canRecordNavigate": "",
+            "afterRecordNavigate": "",
+            "onSynchronizeDialog": "",
+            "afterPopulateFromTable": "",
+            "onRenderComplete": "",
+            "onAndroidBackButton": "",
+            "onPanelActivate": "",
+            "afterSaveToRepository": "",
+            "afterLoadFromRepository": "",
+            "afterGoogleVisualization": "",
+            "canDeleteParentRecord": "",
+            "afterDeleteParentRecord": "",
+            "onOrientationChange": "",
+            "onKeyboard": "",
+            "onCordovaReady": "",
+            "onPhoneGapReady": "",
+            "onImageError": "",
+            "onSignatureCaptureToggle": "",
+            "onSignatureCaptureAccept": "",
+            "onTimer": "",
+            "beforeOnTimer": "",
+            "canLogin": "",
+            "afterLogin": "",
+            "afterFailedLogin": "",
+            "canLogout": "",
+            "afterLogout": "",
+            "onSessionTimeoutWarning": "",
+            "onServerSideListSummaryCompute": "",
+            "beforeHTMLReportExport": "",
+            "onConnectionChange": "",
+            "appCache_cached": "",
+            "appCache_checking": "",
+            "appCache_downloading": "",
+            "appCache_error": "",
+            "appCache_noupdate": "",
+            "appCache_obsolete": "",
+            "appCache_progress": "",
+            "appCache_updateready": "",
+            "onControlBlur": "",
+            "onControlChange": "",
+            "onBeforePersistControlValuesToLocalStorage": "",
+            "onPersistControlValuesToLocalStorage": "",
+            "onRestoreVariablesFromLocalStorage": "",
+            "onRestoreComponentStateFromLocalStorage": "",
+            "localStorageEncryption": "",
+            "localStorageDecryption": "",
+            "securityNotAuthenticated": "",
+            "securityPermissionDenied": "",
+            "webSocketOnMessage": "",
+            "webSocketServerClose": "",
+            "webSocketSendMessageFail": "",
+            "afterGoogleAddressSelect": "",
+            "onBeforeClientSideDataCacheRead": "",
+            "afterClientSideDataCacheAjaxCallback": "",
+            "onWatchEvent": ""
+        },
+        "onlyValidateChangedFields": true,
+        "edit": {
+            "field_error_style": {
+                "type": "Block",
+                "showWarning": true,
+                "icon": "<Specified by Style>",
+                "controlContainer_classname": ""
+            },
+            "row_errors_window_title": "Error",
+            "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+            "fieldValidationErrorMessage": "Form has errors."
+        },
+        "submitDialogIfHasClientSideValidationErrors": true,
+        "activeLanguage": "<Default>",
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close"
+        },
+        "clientSideDateFormat": "MM/dd/yyyy",
+        "fontScalingOption": "All",
+        "helpTableType": "DBF",
+        "fieldHelpWindowStyle": "modal-resizeable",
+        "customization": {
+            "resetFormMessage": "Are you sure you want to reset the form?",
+            "resetFormTitle": "Warning",
+            "resetFormIcon": "<Specified by Style>",
+            "resetFormYesButton": "Yes",
+            "resetFormNoButton": "No",
+            "windowTitleDirection": "ltr",
+            "dirtyWarning": "You must first save your changes or cancel changes by clicking the Reset button.",
+            "dirtyWarningTitle": "Notice",
+            "dirtyWarningIcon": "<Specified by Style>",
+            "deleteRecordWarningTitle": "Delete Record",
+            "deleteRecordWarningMessage": "Are you sure you want to delete this record?"
+        },
+        "dataBinding": {
+            "computeDataBindingCodeAtDesignTimePrompt": "Prompt",
+            "autoRefreshSchemaOnLoad": true,
+            "autoRefreshPromptFirst": "Prompt"
+        },
+        "info": {
+            "createdBy": "Michael",
+            "dateCreated": "2018-1-10",
+            "dateLastEdited": "2018-1-29"
+        },
+        "flagShowCommentsInTree": true,
+        "treeCommentOffset": "6",
+        "renderUXLocation": {
+            "type": "window",
+            "sizeToElement": true
+        },
+        "checkSessionEvery": 1,
+        "warningIntervalBeforeExpiration": 1,
+        "sessionTimeOutWarningMessage": "Your session will expire in {secondsToSessionEnd} seconds. Click the button to extend your session.",
+        "sessionExtendSessionButtonLabel": "Extend Session",
+        "sessionTimeoutWarningDialogTitle": "Warning",
+        "sessionHasExpiredMessage": "Your session has expired.",
+        "sessionHasExpiredButtonLabel": "OK",
+        "sessionHasExpiredAction": "Nothing",
+        "sessionHasExpiredRedirectPage": "<self>",
+        "sessionHasExpiredDialogTitle": "Notice",
+        "sessionHasExpiredOKButtonJavascript": "<ReloadThisPage>",
+        "login": {
+            "errorMessageStyle": "color: red;",
+            "logoutDoesFullPageReload": true
+        },
+        "applyResponsiveDesignSettings": true,
+        "responseDesignRulesMode": "FirstTrue",
+        "localStorage": {
+            "namespace": "<Default>",
+            "__version": 1,
+            "workingPreviewTestingMode": "Browser",
+            "variablesToNotPersist": ""
+        },
+        "preRenderComputeWhen": "Every time component is saved",
+        "page_fields": [
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=bbc705df-eed2-4ee0-924c-59363e580d0d}{I:'$$format.border.style.dash'} [Container: CONT_SINGLE]",
+                "displayODFlat": "{Data=bbc705df-eed2-4ee0-924c-59363e580d0d}{I:'$$format.border.style.dash'} [Container: CONTAINER_1]",
+                "idInternal": "bbc705df-eed2-4ee0-924c-59363e580d0d",
+                "lastIndex": 18,
+                "parentContainer": -1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=bbc705df-eed2-4ee0-924c-59363e580d0d}{I:'$$format.border.style.dash'} [Container: CONTAINER_1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=bbc705df-eed2-4ee0-924c-59363e580d0d}{I:'$$format.border.style.dash'} [Container: CONT_SINGLE]",
+                "crc": "4294953664",
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_SINGLE\"   \n\t\t\tclass=\"A5CWLayout single\"  style=\"width: 800px; \"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                },
+                "v": {
+                    "container": {
+                        "ID": "CONT_SINGLE",
+                        "class": "single",
+                        "contentAlignment": "Left",
+                        "width": "800px",
+                        "edgeOffset": "",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=438c248c-3e47-45be-9a08-cdfb8f3d5fd6}{I:'$$format.border.style.dash'} [Container: CONT_1]",
+                "displayODFlat": "{Data=438c248c-3e47-45be-9a08-cdfb8f3d5fd6}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "idInternal": "438c248c-3e47-45be-9a08-cdfb8f3d5fd6",
+                "lastIndex": 3,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=438c248c-3e47-45be-9a08-cdfb8f3d5fd6}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=438c248c-3e47-45be-9a08-cdfb8f3d5fd6}{I:'$$format.border.style.dash'} [Container: CONT_1]",
+                "crc": "4294928030",
+                "v": {
+                    "container": {
+                        "ID": "CONT_1",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_1\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=cd190c47-dc70-4d8e-968d-72223bdd6ec1}{I:'vertLineCap'} [Container End: CONT_1] �",
+                "displayODFlat": "{Data=cd190c47-dc70-4d8e-968d-72223bdd6ec1}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "cd190c47-dc70-4d8e-968d-72223bdd6ec1",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=cd190c47-dc70-4d8e-968d-72223bdd6ec1}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=cd190c47-dc70-4d8e-968d-72223bdd6ec1}{I:'vertLineCap'} [Container End: CONT_1] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_1.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 2
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d7900478-133f-491f-ab7d-f1de7181002d}{I:'$$format.border.style.dash'} [Container: CONT_2]",
+                "displayODFlat": "{Data=d7900478-133f-491f-ab7d-f1de7181002d}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "idInternal": "d7900478-133f-491f-ab7d-f1de7181002d",
+                "lastIndex": 5,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d7900478-133f-491f-ab7d-f1de7181002d}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d7900478-133f-491f-ab7d-f1de7181002d}{I:'$$format.border.style.dash'} [Container: CONT_2]",
+                "crc": "4294927492",
+                "v": {
+                    "container": {
+                        "ID": "CONT_2",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_2\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b8065f06-2959-4930-bdf8-4f0c7385c76a}{I:'vertLineCap'} [Container End: CONT_2] �",
+                "displayODFlat": "{Data=b8065f06-2959-4930-bdf8-4f0c7385c76a}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "b8065f06-2959-4930-bdf8-4f0c7385c76a",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b8065f06-2959-4930-bdf8-4f0c7385c76a}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b8065f06-2959-4930-bdf8-4f0c7385c76a}{I:'vertLineCap'} [Container End: CONT_2] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_2.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 4
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=4f4902e9_d111_445c_94e1_bc83950db6ad}{I:'$$format.border.style.dash'} [Container: CONT_3]",
+                "displayODFlat": "{Data=4f4902e9_d111_445c_94e1_bc83950db6ad}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "idInternal": "4f4902e9_d111_445c_94e1_bc83950db6ad",
+                "lastIndex": 7,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=4f4902e9_d111_445c_94e1_bc83950db6ad}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=4f4902e9_d111_445c_94e1_bc83950db6ad}{I:'$$format.border.style.dash'} [Container: CONT_3]",
+                "crc": "4294933840",
+                "v": {
+                    "container": {
+                        "ID": "CONT_3",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_3\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a5d9e2da_a5b8_4210_b32f_43d53c18cdd4}{I:'vertLineCap'} [Container End: CONT_3] �",
+                "displayODFlat": "{Data=a5d9e2da_a5b8_4210_b32f_43d53c18cdd4}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "a5d9e2da_a5b8_4210_b32f_43d53c18cdd4",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a5d9e2da_a5b8_4210_b32f_43d53c18cdd4}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a5d9e2da_a5b8_4210_b32f_43d53c18cdd4}{I:'vertLineCap'} [Container End: CONT_3] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_3.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 6
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=c6f424d2_bb6e_40ee_94f7_db94cad54814}{I:'$$format.border.style.dash'} [Container: CONT_4]",
+                "displayODFlat": "{Data=c6f424d2_bb6e_40ee_94f7_db94cad54814}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "idInternal": "c6f424d2_bb6e_40ee_94f7_db94cad54814",
+                "lastIndex": 9,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=c6f424d2_bb6e_40ee_94f7_db94cad54814}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=c6f424d2_bb6e_40ee_94f7_db94cad54814}{I:'$$format.border.style.dash'} [Container: CONT_4]",
+                "crc": "4294952341",
+                "v": {
+                    "container": {
+                        "ID": "CONT_4",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_4\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a4818190_8ce0_450c_886f_ca030146ec14}{I:'vertLineCap'} [Container End: CONT_4] �",
+                "displayODFlat": "{Data=a4818190_8ce0_450c_886f_ca030146ec14}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "a4818190_8ce0_450c_886f_ca030146ec14",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a4818190_8ce0_450c_886f_ca030146ec14}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a4818190_8ce0_450c_886f_ca030146ec14}{I:'vertLineCap'} [Container End: CONT_4] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_4.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 8
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=f74e7522_f43f_4e2d_9f9c_4f4908ca7c49}{I:'$$format.border.style.dash'} [Container: CONT_5]",
+                "displayODFlat": "{Data=f74e7522_f43f_4e2d_9f9c_4f4908ca7c49}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "idInternal": "f74e7522_f43f_4e2d_9f9c_4f4908ca7c49",
+                "lastIndex": 11,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=f74e7522_f43f_4e2d_9f9c_4f4908ca7c49}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=f74e7522_f43f_4e2d_9f9c_4f4908ca7c49}{I:'$$format.border.style.dash'} [Container: CONT_5]",
+                "crc": "4294934442",
+                "v": {
+                    "container": {
+                        "ID": "CONT_5",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_5\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d81f8d3f_c9b7_454e_97fe_6231b7c2cc3c}{I:'vertLineCap'} [Container End: CONT_5] �",
+                "displayODFlat": "{Data=d81f8d3f_c9b7_454e_97fe_6231b7c2cc3c}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "d81f8d3f_c9b7_454e_97fe_6231b7c2cc3c",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d81f8d3f_c9b7_454e_97fe_6231b7c2cc3c}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d81f8d3f_c9b7_454e_97fe_6231b7c2cc3c}{I:'vertLineCap'} [Container End: CONT_5] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_5.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 10
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=51c25d80_83e6_48fa_874f_c61ebb93f9d5}{I:'$$format.border.style.dash'} [Container: CONT_6]",
+                "displayODFlat": "{Data=51c25d80_83e6_48fa_874f_c61ebb93f9d5}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "idInternal": "51c25d80_83e6_48fa_874f_c61ebb93f9d5",
+                "lastIndex": 13,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=51c25d80_83e6_48fa_874f_c61ebb93f9d5}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=51c25d80_83e6_48fa_874f_c61ebb93f9d5}{I:'$$format.border.style.dash'} [Container: CONT_6]",
+                "crc": "4294938456",
+                "v": {
+                    "container": {
+                        "ID": "CONT_6",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_6\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=36dc15e8_0743_48fc_aa0b_76961ca2f51d}{I:'vertLineCap'} [Container End: CONT_6] �",
+                "displayODFlat": "{Data=36dc15e8_0743_48fc_aa0b_76961ca2f51d}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "36dc15e8_0743_48fc_aa0b_76961ca2f51d",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=36dc15e8_0743_48fc_aa0b_76961ca2f51d}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=36dc15e8_0743_48fc_aa0b_76961ca2f51d}{I:'vertLineCap'} [Container End: CONT_6] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_6.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 12
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=bd629c75_7051_46e9_837d_54bcc2c37df3}{I:'$$format.border.style.dash'} [Container: CONT_7]",
+                "displayODFlat": "{Data=bd629c75_7051_46e9_837d_54bcc2c37df3}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "idInternal": "bd629c75_7051_46e9_837d_54bcc2c37df3",
+                "lastIndex": 15,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=bd629c75_7051_46e9_837d_54bcc2c37df3}{I:'$$format.border.style.dash'} [Container: CONTAINER_2]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=bd629c75_7051_46e9_837d_54bcc2c37df3}{I:'$$format.border.style.dash'} [Container: CONT_7]",
+                "crc": "4294963483",
+                "v": {
+                    "container": {
+                        "ID": "CONT_7",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_7\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b4203acc_c089_4b5e_8697_1d877f840564}{I:'vertLineCap'} [Container End: CONT_7] �",
+                "displayODFlat": "{Data=b4203acc_c089_4b5e_8697_1d877f840564}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "b4203acc_c089_4b5e_8697_1d877f840564",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b4203acc_c089_4b5e_8697_1d877f840564}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=b4203acc_c089_4b5e_8697_1d877f840564}{I:'vertLineCap'} [Container End: CONT_7] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_7.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 14
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a409a543_fd54_4b6e_9116_78e7d5fb2d00}{I:'$$format.border.style.dash'} [Container: CONT_8]",
+                "displayODFlat": "{Data=a409a543_fd54_4b6e_9116_78e7d5fb2d00}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "idInternal": "a409a543_fd54_4b6e_9116_78e7d5fb2d00",
+                "lastIndex": 17,
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a409a543_fd54_4b6e_9116_78e7d5fb2d00}{I:'$$format.border.style.dash'} [Container: CONTAINER_3]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=a409a543_fd54_4b6e_9116_78e7d5fb2d00}{I:'$$format.border.style.dash'} [Container: CONT_8]",
+                "crc": "4294903769",
+                "v": {
+                    "container": {
+                        "ID": "CONT_8",
+                        "class": "item8",
+                        "contentAlignment": "Left",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "None",
+                        "edgeOffset": "",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_8\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d16028d4_50f8_40ec_80b4_cab9967327ea}{I:'vertLineCap'} [Container End: CONT_8] �",
+                "displayODFlat": "{Data=d16028d4_50f8_40ec_80b4_cab9967327ea}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "d16028d4_50f8_40ec_80b4_cab9967327ea",
+                "parentContainer": 1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d16028d4_50f8_40ec_80b4_cab9967327ea}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{Data=d16028d4_50f8_40ec_80b4_cab9967327ea}{I:'vertLineCap'} [Container End: CONT_8] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_8.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 16
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=e7c21606-276c-4969-b8a5-15e9eb525c98}{I:'vertLineCap'} [Container End: CONT_SINGLE] �",
+                "displayODFlat": "{Data=e7c21606-276c-4969-b8a5-15e9eb525c98}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "e7c21606-276c-4969-b8a5-15e9eb525c98",
+                "parentContainer": -1,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=e7c21606-276c-4969-b8a5-15e9eb525c98}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{Data=e7c21606-276c-4969-b8a5-15e9eb525c98}{I:'vertLineCap'} [Container End: CONT_SINGLE] �",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_SINGLE.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 1
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=8cef1e04-ecb5-4e16-acb7-bfef11695136}{I:'$$control.staticHTML'} [flex] �",
+                "displayODFlat": "{Data=8cef1e04-ecb5-4e16-acb7-bfef11695136}{I:'$$control.staticHTML'} [flex]",
+                "idInternal": "8cef1e04-ecb5-4e16-acb7-bfef11695136",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=8cef1e04-ecb5-4e16-acb7-bfef11695136}{I:'$$control.staticHTML'} [flex]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=8cef1e04-ecb5-4e16-acb7-bfef11695136}{I:'$$control.staticHTML'} [flex] �",
+                "crc": "4294951325",
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "controlType": "ViewBox",
+                    "variableName": "flex",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Flex",
+                    "class": "<Default>",
+                    "breakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "Above",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "embeddedJavascriptControl": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "viewbox": {
+                        "height": "3in",
+                        "width": "1000px",
+                        "fillPanelContainer": false,
+                        "definitionJSON": "{\n\t\"formview\": {\n\t\t\"datasource\": {\n\t\t\t\"type\": \"List\",\n\t\t\t\"databasequeryType\": \"SQL query\",\n\t\t\t\"sql\": {\n\t\t\t\t\"selectType\": \"FieldsFromTable\",\n\t\t\t\t\"distinct\": false,\n\t\t\t\t\"portableSQL\": true,\n\t\t\t\t\"first\": -1,\n\t\t\t\t\"dataReturnType\": \"PrimaryKey\",\n\t\t\t\t\"delayRenderTillVisible\": false,\n\t\t\t\t\"delayRenderTillRefresh\": false\n\t\t\t},\n\t\t\t\"nestedsql\": {\n\t\t\t\t\"delayRenderTillVisible\": false,\n\t\t\t\t\"delayRenderTillRefresh\": false,\n\t\t\t\t\"dataReturnType\": \"PrimaryKey\"\n\t\t\t}\n\t\t},\n\t\t\"formProperties\": {\n\t\t\t\"hasMultipleLayouts\": false,\n\t\t\t\"autoSelectOnOrientationChange\": false,\n\t\t\t\"multipleSelection\": false,\n\t\t\t\"selectionMode\": \"Default\",\n\t\t\t\"loopNavigate\": false,\n\t\t\t\"loopNavigateNullSelection\": true,\n\t\t\t\"allowNullSelection\": false,\n\t\t\t\"allowNullDeselection\": false,\n\t\t\t\"allowTextSelection\": false,\n\t\t\t\"allowAnimation\": true,\n\t\t\t\"autoRefresh\": false,\n\t\t\t\"allowAnyValue\": false,\n\t\t\t\"captureFocus\": true,\n\t\t\t\"preserveLineBreaksInFreeformTemplates\": false,\n\t\t\t\"container\": {\n\t\t\t\t\"allowScrolling\": false,\n\t\t\t\t\"scrolling\": {\n\t\t\t\t\t\"axis\": \"Both\",\n\t\t\t\t\t\"stopPropogation\": false,\n\t\t\t\t\t\"isDefined\": false,\n\t\t\t\t\t\"indicator\": {\n\t\t\t\t\t\t\"m\": {\n\t\t\t\t\t\t\t\"show\": true,\n\t\t\t\t\t\t\t\"location\": \"right\",\n\t\t\t\t\t\t\t\"offset\": \"0px\",\n\t\t\t\t\t\t\t\"top\": \"0px\",\n\t\t\t\t\t\t\t\"bottom\": \"0px\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"h\": {\n\t\t\t\t\t\t\t\"show\": true,\n\t\t\t\t\t\t\t\"location\": \"top\",\n\t\t\t\t\t\t\t\"offset\": \"0px\",\n\t\t\t\t\t\t\t\"left\": \"0px\",\n\t\t\t\t\t\t\t\"right\": \"0px\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"pull\": {\n\t\t\t\t\t\"isDefined\": false,\n\t\t\t\t\t\"javascript\": {\n\t\t\t\t\t},\n\t\t\t\t\t\"pullpastEnd\": {\n\t\t\t\t\t\t\"YSetting\": \"auto\",\n\t\t\t\t\t\t\"XSetting\": \"auto\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"javascript\": {\n\t\t\t},\n\t\t\t\"css\": {\n\t\t\t}\n\t\t},\n\t\t\"lowLevelMode\": \"HTML\",\n\t\t\"htmlMode\": \"DefineNow\",\n\t\t\"fields\": [\t\t\n],\n\t\t\"items\": [\n\t\t\t{\n\t\t\t\t\"itemName\": \"btn\",\n\t\t\t\t\"selectable\": true,\n\t\t\t\t\"itemType\": \"Default\",\n\t\t\t\t\"item\": {\n\t\t\t\t\t\"inheritFrom\": \"*edit\",\n\t\t\t\t\t\"openEditorEvent\": \"onSelect\"\n\t\t\t\t},\n\t\t\t\t\"itemClassName\": \"formView\",\n\t\t\t\t\"javascript\": {\n\t\t\t\t\t\"onClick\": \"\\nalert(v);\\n\\n\"\n\t\t\t\t}\n\t\t\t}\t\t\n],\n\t\t\"groups\": [\t\t\n],\n\t\t\"layouts\": [\n\t\t\t{\n\t\t\t\t\"layoutName\": \"Default\",\n\t\t\t\t\"defaultLayout\": false,\n\t\t\t\t\"layoutDataType\": \"Data\",\n\t\t\t\t\"layoutDefinition\": \"<div class=\\\"single\\\">\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"one\\\" class=\\\"item center\\\">One</div>\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"two\\\" class=\\\"item center\\\">Two</div>\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"three\\\" class=\\\"item\\\">Three</div>\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"four\\\" class=\\\"item\\\">Four</div>\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"five\\\" class=\\\"item\\\">Five</div>\\n</div>\",\n\t\t\t\t\"layoutType\": \"Freeform\",\n\t\t\t\t\"defaultTemplate\": \"\",\n\t\t\t\t\"postProcessJavascript\": \"\",\n\t\t\t\t\"last_layoutGenieFieldSelected_c\": \"\"\n\t\t\t}\t\t\n],\n\t\t\"javascriptLocal\": [\t\t\n],\n\t\t\"css\": \"\\n#single {\\n  display: flex;\\n  justify-content: center;\\n  align-content: center;\\n  flex-direction: row;\\n  width: 900px ;\\n  margin: 0 auto;\\n}\\n.single {\\n  display: flex;\\n  justify-content: center;\\n  align-content: center;\\n  flex-direction: row;\\n  width: 900px ;\\n  margin: 0 auto;\\n}\\n\\n\\n\\n.item{\\nflex-grow: 1;\\nbackground: blue;\\n  color: white;\\n  \\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  resize: vertical;\\n  \\n height: 40px;\\n \\n}\\n.center{ align-items: center;}\\n\\n\"\n\t},\n\t\"_state\": {\n\t\t\"showPane\": {\n\t\t\t\"css\": true,\n\t\t\t\"javascript\": true,\n\t\t\t\"items\": true,\n\t\t\t\"preview\": true\n\t\t},\n\t\t\"tabPage\": \"FormLayout\",\n\t\t\"LayoutSelected_n\": 1,\n\t\t\"fieldSelected_n\": 0,\n\t\t\"itemSelected_c\": \"btn\",\n\t\t\"cssMode\": 1,\n\t\t\"jsmode\": 1\n\t}\n}",
+                        "class": "",
+                        "style": ""
+                    },
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "displayAsSlider": false,
+                    "precalc": {
+                        "controlHTMLInPanelCard": "in panel card",
+                        "javascript_viewBoxData": "{dialog.object}._viewBoxData['FLEX'] = [[dialog.viewBoxData.flex]]; ",
+                        "javascript_viewBoxSettings": "{dialog.object}._viewBoxSettings['FLEX'] = [[dialog.viewBoxSettings.flex]]; ",
+                        "javascript_viewBox": "{dialog.object}._controls['FLEX'] =  { type: 'viewBox',  data: {dialog.object}._viewBoxData['FLEX'],  onInitialize: function() { if(this._onInitialize) {this._onInitialize();} },  settings: {dialog.object}._viewBoxSettings['FLEX'] }",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 1000px\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.FLEX\" for=\"{grid.componentname}.V.R{grid.rownumber}.FLEX\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Flex</label>\n<!--LblE-->\n\t<!--FldS--><!--JSControlStart--><input type=\"hidden\" id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX\" name=\"V.R{grid.rownumber}.FLEX\" /><!--JSControlEnd-->\n<div >\n\t<div id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX.CONTROL\"  class=\"{grid.componentName}_FLEX\" style=\"overflow: auto; width: 100%; height: 3in; \"></div>\n</div>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'FLEX': {info: {controlType: 'ViewBox'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{Data=03328a5a-8441-4f4d-be60-0f106932a40c}{I:'$$control.staticHTML'} [flex1] �",
+                "displayODFlat": "{Data=03328a5a-8441-4f4d-be60-0f106932a40c}{I:'$$control.staticHTML'} [flex1]",
+                "idInternal": "03328a5a-8441-4f4d-be60-0f106932a40c",
+                "parentContainer": -1,
+                "displayOD": "{B=White,Light Blue}{Data=03328a5a-8441-4f4d-be60-0f106932a40c}{I:'$$control.staticHTML'} [flex1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{Data=03328a5a-8441-4f4d-be60-0f106932a40c}{I:'$$control.staticHTML'} [flex1] �",
+                "crc": "4294953322",
+                "indentTree": 0,
+                "inPanelCard": false,
+                "inTreeControl": false,
+                "v": {
+                    "controlType": "ViewBox",
+                    "variableName": "flex1",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Flex1",
+                    "class": "<Default>",
+                    "breakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "Above",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "embeddedJavascriptControl": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "viewbox": {
+                        "height": "3in",
+                        "width": "1000px",
+                        "fillPanelContainer": false,
+                        "definitionJSON": "{\n\t\"formview\": {\n\t\t\"datasource\": {\n\t\t\t\"type\": \"Static JSON\",\n\t\t\t\"staticJson\": \"[\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"John\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Smith\\\",\\n\\t\\t\\\"City\\\": \\\"Boston\\\",\\n\\t\\t\\\"State\\\": \\\"MA\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Henry\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Rhodes\\\",\\n\\t\\t\\\"City\\\": \\\"New York\\\",\\n\\t\\t\\\"State\\\": \\\"NY\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Allison\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Berman\\\",\\n\\t\\t\\\"City\\\": \\\"Los Angeles\\\",\\n\\t\\t\\\"State\\\": \\\"CA\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Amanda\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Higgins\\\",\\n\\t\\t\\\"City\\\": \\\"Chicago\\\",\\n\\t\\t\\\"State\\\": \\\"IL\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Nancy\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Clark\\\",\\n\\t\\t\\\"City\\\": \\\"Boston\\\",\\n\\t\\t\\\"State\\\": \\\"MA\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Cecelia\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Dawkins\\\",\\n\\t\\t\\\"City\\\": \\\"Boulder\\\",\\n\\t\\t\\\"State\\\": \\\"CO\\\"\\n\\t},\\n\\t{\\n\\t\\t\\\"Firstname\\\": \\\"Kathy\\\",\\n\\t\\t\\\"Lastname\\\": \\\"Morton\\\",\\n\\t\\t\\\"City\\\": \\\"New York\\\",\\n\\t\\t\\\"State\\\": \\\"NY\\\"\\n\\t}\\n]\",\n\t\t\t\"databasequeryType\": \"SQL query\",\n\t\t\t\"sql\": {\n\t\t\t\t\"selectType\": \"FieldsFromTable\",\n\t\t\t\t\"distinct\": false,\n\t\t\t\t\"portableSQL\": true,\n\t\t\t\t\"first\": -1,\n\t\t\t\t\"dataReturnType\": \"PrimaryKey\",\n\t\t\t\t\"delayRenderTillVisible\": false,\n\t\t\t\t\"delayRenderTillRefresh\": false\n\t\t\t},\n\t\t\t\"nestedsql\": {\n\t\t\t\t\"delayRenderTillVisible\": false,\n\t\t\t\t\"delayRenderTillRefresh\": false,\n\t\t\t\t\"dataReturnType\": \"PrimaryKey\"\n\t\t\t}\n\t\t},\n\t\t\"formProperties\": {\n\t\t\t\"hasMultipleLayouts\": false,\n\t\t\t\"autoSelectOnOrientationChange\": false,\n\t\t\t\"multipleSelection\": false,\n\t\t\t\"selectionMode\": \"Default\",\n\t\t\t\"loopNavigate\": false,\n\t\t\t\"loopNavigateNullSelection\": true,\n\t\t\t\"allowNullSelection\": false,\n\t\t\t\"allowNullDeselection\": false,\n\t\t\t\"allowTextSelection\": false,\n\t\t\t\"allowAnimation\": true,\n\t\t\t\"autoRefresh\": false,\n\t\t\t\"allowAnyValue\": false,\n\t\t\t\"captureFocus\": true,\n\t\t\t\"preserveLineBreaksInFreeformTemplates\": false,\n\t\t\t\"container\": {\n\t\t\t\t\"allowScrolling\": false,\n\t\t\t\t\"scrolling\": {\n\t\t\t\t\t\"axis\": \"Both\",\n\t\t\t\t\t\"stopPropogation\": false,\n\t\t\t\t\t\"isDefined\": false,\n\t\t\t\t\t\"indicator\": {\n\t\t\t\t\t\t\"m\": {\n\t\t\t\t\t\t\t\"show\": true,\n\t\t\t\t\t\t\t\"location\": \"right\",\n\t\t\t\t\t\t\t\"offset\": \"0px\",\n\t\t\t\t\t\t\t\"top\": \"0px\",\n\t\t\t\t\t\t\t\"bottom\": \"0px\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t\"h\": {\n\t\t\t\t\t\t\t\"show\": true,\n\t\t\t\t\t\t\t\"location\": \"top\",\n\t\t\t\t\t\t\t\"offset\": \"0px\",\n\t\t\t\t\t\t\t\"left\": \"0px\",\n\t\t\t\t\t\t\t\"right\": \"0px\"\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t\"pull\": {\n\t\t\t\t\t\"isDefined\": false,\n\t\t\t\t\t\"javascript\": {\n\t\t\t\t\t},\n\t\t\t\t\t\"pullpastEnd\": {\n\t\t\t\t\t\t\"YSetting\": \"auto\",\n\t\t\t\t\t\t\"XSetting\": \"auto\"\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t\"javascript\": {\n\t\t\t},\n\t\t\t\"css\": {\n\t\t\t}\n\t\t},\n\t\t\"lowLevelMode\": \"Data\",\n\t\t\"htmlMode\": \"DefineNow\",\n\t\t\"fields\": [\n\t\t\t{\n\t\t\t\t\"fieldName\": \"Firstname\",\n\t\t\t\t\"display\": \"{B=White,Light Blue}{data=Firstname}{T=0}{I:'$$control.text'}Firstname\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"fieldName\": \"Lastname\",\n\t\t\t\t\"display\": \"{B=White,Light Blue}{data=Lastname}{T=0}{I:'$$control.text'}Lastname\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"fieldName\": \"City\",\n\t\t\t\t\"display\": \"{B=White,Light Blue}{data=City}{T=0}{I:'$$control.text'}City\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"fieldName\": \"State\",\n\t\t\t\t\"display\": \"{B=White,Light Blue}{data=State}{T=0}{I:'$$control.text'}State\"\n\t\t\t}\t\t\n],\n\t\t\"items\": [\n\t\t\t{\n\t\t\t\t\"itemName\": \"btn\",\n\t\t\t\t\"selectable\": true,\n\t\t\t\t\"itemType\": \"Default\",\n\t\t\t\t\"item\": {\n\t\t\t\t\t\"inheritFrom\": \"*edit\",\n\t\t\t\t\t\"openEditorEvent\": \"onSelect\",\n\t\t\t\t\t\"defaultTemplate\": \"\"\n\t\t\t\t},\n\t\t\t\t\"selectedClassName\": \"\",\n\t\t\t\t\"disabledClassName\": \"\",\n\t\t\t\t\"itemClassName\": \"formView\",\n\t\t\t\t\"javascript\": {\n\t\t\t\t\t\"onClick\": \"\\n\\nalert(v)\",\n\t\t\t\t\t\"onBeforeSelect\": \"\",\n\t\t\t\t\t\"onSelect\": \"\",\n\t\t\t\t\t\"onDown\": \"\",\n\t\t\t\t\t\"onUp\": \"\",\n\t\t\t\t\t\"onSwipe\": \"\",\n\t\t\t\t\t\"onDownHold\": \"\",\n\t\t\t\t\t\"onDblClick\": \"\",\n\t\t\t\t\t\"onRightClick\": \"\"\n\t\t\t\t}\n\t\t\t}\t\t\n],\n\t\t\"groups\": [\t\t\n],\n\t\t\"layouts\": [\n\t\t\t{\n\t\t\t\t\"layoutName\": \"Default\",\n\t\t\t\t\"defaultLayout\": false,\n\t\t\t\t\"layoutDataType\": \"Data\",\n\t\t\t\t\"layoutDefinition\": \"{*root}\\n{*header}\\n<div class=\\\"single\\\">\\n{/*header}\\n\\n  <div a5-item=\\\"btn\\\" a5-value=\\\"{State}\\\" class=\\\"item center\\\">{City}</div>\\n\\n\\n{*footer}\\n</div>\\n\\n{/*footer}\\n{/*root}\",\n\t\t\t\t\"layoutType\": \"Freeform\",\n\t\t\t\t\"_temp\": {\n\t\t\t\t\t\"objectType\": \"ViewBox\"\n\t\t\t\t},\n\t\t\t\t\"defaultTemplate\": \"\",\n\t\t\t\t\"postProcessJavascript\": \"\",\n\t\t\t\t\"last_layoutGenieFieldSelected_c\": \"\"\n\t\t\t}\t\t\n],\n\t\t\"javascriptLocal\": [\t\t\n],\n\t\t\"css\": \".single {\\n  display: flex;\\n  justify-content: center;\\n  align-content: center;\\n  flex-direction: row;\\n  width: 900px ;\\n  margin: 0 auto;\\n}\\n.item{\\n  flex-grow: 1;\\n  background: blue;\\n  color: white;\\n  display: flex;\\n  flex-direction: column;\\n  justify-content: center;\\n  resize: vertical;\\n  height: 40px;\\n}\\n.center{ align-items: center;}\\n\\n\"\n\t},\n\t\"_state\": {\n\t\t\"showPane\": {\n\t\t\t\"css\": true,\n\t\t\t\"javascript\": true,\n\t\t\t\"items\": true,\n\t\t\t\"preview\": true\n\t\t},\n\t\t\"tabPage\": \"Preview\",\n\t\t\"LayoutSelected_n\": 1,\n\t\t\"fieldSelected_n\": 1,\n\t\t\"cssMode\": 1,\n\t\t\"jsmode\": 1,\n\t\t\"itemSelected_c\": \"btn\"\n\t}\n}",
+                        "class": "",
+                        "style": ""
+                    },
+                    "datePicker": {
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "displayAsSlider": false,
+                    "precalc": {
+                        "controlHTMLInPanelCard": "in panel card",
+                        "javascript_viewBoxData": "{dialog.object}._viewBoxData['FLEX1'] = [[dialog.viewBoxData.flex1]]; ",
+                        "javascript_viewBoxSettings": "{dialog.object}._viewBoxSettings['FLEX1'] = [[dialog.viewBoxSettings.flex1]]; ",
+                        "javascript_viewBox": "{dialog.object}._controls['FLEX1'] =  { type: 'viewBox',  data: {dialog.object}._viewBoxData['FLEX1'],  onInitialize: function() { if(this._onInitialize) {this._onInitialize();} },  settings: {dialog.object}._viewBoxSettings['FLEX1'] }",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 1000px\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.FLEX1\" for=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Flex1</label>\n<!--LblE-->\n\t<!--FldS--><!--JSControlStart--><input type=\"hidden\" id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1\" name=\"V.R{grid.rownumber}.FLEX1\" /><!--JSControlEnd-->\n<div >\n\t<div id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1.CONTROL\"  class=\"{grid.componentName}_FLEX1\" style=\"overflow: auto; width: 100%; height: 3in; \"></div>\n</div>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'FLEX1': {info: {controlType: 'ViewBox'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                }
+            }
+        ],
+        "builderType": "Dialog2",
+        "guid": "b500ed95-35c5-4ed7-9a69-0e6e6932a234",
+        "componentName": "FlexboxExample",
+        "componentFilename": "C:\\Alpha Reseller\\Training\\AlphaProgram\\Training.WebProjects\\NewStylesheet.WebProject\\FlexboxExample.a5wcmp",
+        "_style_versionNumber": 4,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "useCompactTheme": false,
+        "styleTweaksCSS": "",
+        "styleTweaksSubthemes": "",
+        "controlflowdirection": "ltr",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "createAppCacheVersion": false,
+        "createAppCacheVersionC": "No",
+        "appcache": {
+            "pageName": "<Default>",
+            "pageTitle": "",
+            "hasHomeScreenIcons": false,
+            "homeScreenIconName": "",
+            "icons": {
+                "precomposed": false
+            },
+            "pageHeadSection": ""
+        },
+        "clientsideNumberFormatDecimal": "period",
+        "clientsideNumberFormatThousands": "comma",
+        "dataSeriesPublishToClientSide": false,
+        "showLineNumbersInControlsList": false,
+        "saveFileType": "Formatted JSON",
+        "keyboardShortcutsJSON": "",
+        "preRenderWarningMessageShow": false,
+        "autoSetPreRenderOnForAllUX": false,
+        "selected": "bbc705df-eed2-4ee0-924c-59363e580d0d\n",
+        "designPaneIndex": 1,
+        "masterPaneC": "controls",
+        "serverSideEventIndex": 1,
+        "clientSideEventIndex": 1,
+        "clientSideEventIndexC": "1",
+        "lastControlSelected": "insert_layout_directive_Freeform",
+        "__WPhostName": "Internet Explorer",
+        "embeddedMode": false,
+        "_style_hassubthemeTweaks": false,
+        "repeatingSectionsAreDirty": true,
+        "flagDropdownCascadingChanged": false,
+        "toolBox_value": "",
+        "addinBuildNumber": "4981",
+        "addinBuildNumberHighestUsed": "5035",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "13",
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "precalc": {
+            "js_editorSetInitialization": ";\n",
+            "customControl": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "customControl_xbasicFunctions": ""
+            },
+            "jschart": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "jschart_xbasicFunctions": ""
+            },
+            "rgraph": {
+                "libraries": ""
+            },
+            "getSetFunctions": {
+                "js_beforePrepare": ""
+            },
+            "injectibleHTML": "",
+            "containerWindowHTML": "",
+            "repeatingsectionInfoJs": "",
+            "framesInfoJS": "{dialog.object}.framesInfo = {\n\n};\n",
+            "jsActionJavascriptGlobalFunctions": "",
+            "xbActionJavascriptGlobalFunctions": "",
+            "javascriptSetupForGridLookups": "{\n}",
+            "javascript": {
+                "showWaitMessage": "",
+                "hideWaitMessage": "",
+                "embeddedUXComponents": ""
+            },
+            "fileUpload_controlInfo": "",
+            "javascript_cascadingDropdowns": "{dialog.object}._cascadingControls = [];\n{dialog.object}._cascadingControlsChildren = [];",
+            "template_html": "<!--div GLOBALERRORS-->\n<div class=\"errorTip\" style=\"margin-bottom: 2px; display: none; width: 8in; \" id=\"{dialog.componentname}.GLOBALERRORS\"></div>\n<!--End div GLOBALERRORS-->\n\n<div id=\"{dialog.componentname}.R1\">\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_SINGLE\"   \n\t\t\tclass=\"A5CWLayout single\"  style=\"width: 800px; \"  ><!--DIV for Container control-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_1\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_1.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_2\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_2.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_3\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_3.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_4\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_4.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_5\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_5.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_6\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_6.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_7\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_7.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.CONT_8\"   \n\t\t\tclass=\"A5CWLayout item8\"  style=\"\"  ><!--DIV for Container control-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.CONT_SINGLE.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 1000px\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.FLEX\" for=\"{grid.componentname}.V.R{grid.rownumber}.FLEX\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Flex</label>\n<!--LblE-->\n\t<!--FldS--><!--JSControlStart--><input type=\"hidden\" id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX\" name=\"V.R{grid.rownumber}.FLEX\" /><!--JSControlEnd-->\n<div >\n\t<div id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX.CONTROL\"  class=\"{grid.componentName}_FLEX\" style=\"overflow: auto; width: 100%; height: 3in; \"></div>\n</div>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: 1000px\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.FLEX1\" for=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Flex1</label>\n<!--LblE-->\n\t<!--FldS--><!--JSControlStart--><input type=\"hidden\" id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1\" name=\"V.R{grid.rownumber}.FLEX1\" /><!--JSControlEnd-->\n<div >\n\t<div id=\"{grid.componentname}.V.R{grid.rownumber}.FLEX1.CONTROL\"  class=\"{grid.componentName}_FLEX1\" style=\"overflow: auto; width: 100%; height: 3in; \"></div>\n</div>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n\n\n</div>\n<!--div DEBUGUPDATECOMMANDS-->\n<div class=\"\" style=\"display: none; \" id=\"{dialog.componentname}.DEBUGUPDATECOMMANDS\"></div>\n<!--End div DEBUGUPDATECOMMANDS-->\n",
+            "panelDisplayNames": "",
+            "controlJavascript": "",
+            "controlJavascriptRepeatingSections": "",
+            "template_js": "",
+            "sessionVarsInShowHideExpns": "",
+            "flagHasShowTimer": false,
+            "themeSearchReplaceString": "",
+            "flagHasHTML5ImageCapture": false,
+            "flagUsesCordova": false,
+            "flagUseAmazonS3FileUpload": false,
+            "flagUseStripe": false,
+            "usesSystemSVG": false,
+            "flagUseAudioPlayer": false,
+            "flagUseInk": false,
+            "flagUsesAudioLibrary": false,
+            "flagUsesPhoneGapFileSystemFunctions": false,
+            "flagUsesGetAccurateLocation": false,
+            "editorSet_for_editor": "{dialog.object}._EDITOR_EDITORSET = {};",
+            "otherJS": "",
+            "javascript_layoutRules": "",
+            "javascript_controlNesting": "{\nCONT_SINGLE: ['container:CONT_1','container:CONT_2','container:CONT_3','container:CONT_4','container:CONT_5','container:CONT_6','container:CONT_7','container:CONT_8'],\nCONT_1: [],\nCONT_2: [],\nCONT_3: [],\nCONT_4: [],\nCONT_5: [],\nCONT_6: [],\nCONT_7: [],\nCONT_8: []\n}",
+            "appcacheEvents": "",
+            "viewBoxesToRefresh": "",
+            "viewBoxSettings": {
+                "flex": "{\n\t\"inputId\": \"flex\",\n\t\"variableName\": \"FLEX\",\n\t\"theme\": \"{dialog.style}\",\n\t\"animation\": {\n\t\t\"allow\": true\n\t},\n\t\"multiple\": false,\n\t\"loopNavigate\": false,\n\t\"loopNavigateNullSelection\": true,\n\t\"allowNullSelection\": false,\n\t\"allowTextSelection\": false,\n\t\"allowNullDeselection\": false,\n\t\"autoRefresh\": false,\n\t\"allowAnyValue\": false,\n\t\"captureFocus\": true,\n\t\"scroll\": false,\n\t\"layout\": \"default\",\n\t\"layouts\": {\n\t\t'default' : {\n\t\t\ttype: 'static',\n\t\t\thtml: [\n\t\t\t'<div class=\"single\">',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"one\" class=\"item center\">One</div>',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"two\" class=\"item center\">Two</div>',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"three\" class=\"item\">Three</div>',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"four\" class=\"item\">Four</div>',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"five\" class=\"item\">Five</div>',\n\t\t\t'</div>'\n\t\t\t].join('')\n\t\t}\n\t\n\t},\n\t\"_onInitialize\": function() { $acn(this.contId,'{dialog.ComponentName}_' + this.variableName); },\n\t\"items\": {\n\t\t'btn' : {\n\t\t\titemName: 'btn',\n\t\t\tselectable: true,\n\t\t\tonClick: function(v,ia,i,ele) { \t\t\t\t\n\t\t\t\talert(v);\n\t\t\t}\n\t\t\t\t\t\t\n\t\t}\n\t\t\n\t\t}\n}",
+                "flex1": "{\n\t\"inputId\": \"flex1\",\n\t\"variableName\": \"FLEX1\",\n\t\"theme\": \"{dialog.style}\",\n\t\"animation\": {\n\t\t\"allow\": true\n\t},\n\t\"multiple\": false,\n\t\"loopNavigate\": false,\n\t\"loopNavigateNullSelection\": true,\n\t\"allowNullSelection\": false,\n\t\"allowTextSelection\": false,\n\t\"allowNullDeselection\": false,\n\t\"autoRefresh\": false,\n\t\"allowAnyValue\": false,\n\t\"captureFocus\": true,\n\t\"scroll\": false,\n\t\"layout\": \"default\",\n\t\"layouts\": {\n\t\t'default' : {\n\t\t\ttype: 'template',\n\t\t\ttemplate: [\n\t\t\t'{*root}',\n\t\t\t'{*header}',\n\t\t\t'<div class=\"single\">',\n\t\t\t'{/*header}',\n\t\t\t'',\n\t\t\t'  <div a5-item=\"btn\" a5-value=\"{State}\" class=\"item center\">{City}</div>',\n\t\t\t'',\n\t\t\t'',\n\t\t\t'{*footer}',\n\t\t\t'</div>',\n\t\t\t'',\n\t\t\t'{/*footer}',\n\t\t\t'{/*root}'\n\t\t\t].join('')\n\t\t}\n\t\n\t},\n\t\"_onInitialize\": function() { $acn(this.contId,'{dialog.ComponentName}_' + this.variableName); },\n\t\"items\": {\n\t\t'btn' : {\n\t\t\titemName: 'btn',\n\t\t\tselectable: true,\n\t\t\tonClick: function(v,ia,i,ele) { \t\t\t\t\n\t\t\t\talert(v)\n\t\t\t}\n\t\t\t\t\t\t\n\t\t}\n\t\t\n\t\t}\n}"
+            },
+            "viewBoxSettings2": {
+                "flex": {
+                    "javascriptFunctions": "",
+                    "css": "#{dialog.componentName}\\.V\\.R1\\.flex {\n#single {\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  flex-direction: row;\n  width: 900px;\n  margin: 0 auto; }\n\n.single {\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  flex-direction: row;\n  width: 900px;\n  margin: 0 auto; }\n\n.item {\n  flex-grow: 1;\n  background: blue;\n  color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  resize: vertical;\n  height: 40px; }\n\n.center {\n  align-items: center; }\n\n}"
+                },
+                "flex1": {
+                    "javascriptFunctions": "",
+                    "css": "#{dialog.componentName}\\.V\\.R1\\.flex1 {\n.single {\n  display: flex;\n  justify-content: center;\n  align-content: center;\n  flex-direction: row;\n  width: 900px;\n  margin: 0 auto; }\n\n.item {\n  flex-grow: 1;\n  background: blue;\n  color: white;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  resize: vertical;\n  height: 40px; }\n\n.center {\n  align-items: center; }\n\n}"
+                }
+            },
+            "requiredPlugins": ""
+        },
+        "FieldsInRepeatingSectionsDeletedBySecurity": "",
+        "repeatingSectionsToRecalc": "",
+        "dialogObject": "if(typeof {dialog.componentName}_DlgObj == 'object') {dialog.componentName}_DlgObj._destroy();\nvar {dialog.componentName}_DlgObj = new A5.DialogComponentHelper('{dialog.componentName}',{\n\tajaxURL: '{dialog.ajaxUrl}',\n\t_embeddedMode: {dialog.embeddedMode},\n\t_livePreviewInBuilder: {livePreviewInBuilder},\n\tcomponentGUID: 'b500ed95-35c5-4ed7-9a69-0e6e6932a234',\n\tcolumnInfo: {columninfo},\n\toriginalValues: {dialog.jsOriginalValues},\n\tdefaultValues: {dialog.jsDefaultValues},\n\tdatePickerMonthNames: [{datePickerMonthNames}],\n\tdatePickerDayNames: [{datePickerDayNames}],\n\tdatePickerTodayButton: '{datePickerTodayButton}',\n\tdatePickerCloseButton: '{datePickerCloseButton}',\n\tdatePickerFirstDayOfWeek: {datePickerFirstDayOfWeek},\n\tresetFormMessage: '{resetFormMessage}',\n\tresetFormTitle: '{resetFormTitle}',\n\tresetFormIcon: '{resetFormIcon}',\n\tdirtyFormMessage: '{dirtyFormMessage}',\n\tdirtyFormTitle: '{dirtyFormTitle}',\n\tdirtyFormIcon: '{dirtyFormIcon}',\n\tdeleteRecordDialogTitle: '{deleteRecordTitle}',\n\tdeleteRecordDialogMessage: '{deleteRecordMessage}',\t\n\tssDateFormat: '{serverSideDateFormat}',\n\tstyleName: '{dialog.style}',\n\t_fieldHelpers_DIALOG2: [],\n\tparentComponentAlias: '{parentComponentAlias}',\n\tsubmitIfHasClientSideErrors: true, \n\trowErrors: {\n\t\t\t\tshowMessageBox: false,\n\t\t\t\tmessageBoxTitle: 'Error',\n\t\t\t\tstyle: 'color: red; width: 6in; height: 2in;'\n\t\t},\n\tfieldErrors: {\n\t\ttype: 'block', \n\t\tclassName: 'errorText',\n\t\tinputClassName: '[class.gridInputError]',\n\t\tedit: { \n\t\t\tcontainer: { className: '[class.gridInputContainerError]'}\n\t\t},\n\t\ticon: '{images.dialog.editError}',\n\t\tglobal: {\n\t\t\tcontId: '{dialog.componentname}.GLOBALERRORS',\n\t\t\thoverClassName: 'errorTextHighlight',\n\t\t\thoverInputClassName: 'errorInputHighlight'\n\t\t}\n\t}\n\n\t});\n\n",
+        "xbasiccode": {
+            "blankInitialValueIfVarNotFound": "",
+            "setValueProperties": "value.FLEX=\"\"\nvalue.FLEX1=\"\"",
+            "setValueProperties2": "value.FLEX=\"\"\nvalue.FLEX1=\"\"",
+            "setValueUnformattedProperties": "value.FLEX=convert_type(\"\",\"C\")\nvalue.FLEX1=convert_type(\"\",\"C\")\n"
+        },
+        "componentType": "Dialog2",
+        "version": 1,
+        "recNav": {
+            "slider": {
+                "showSlider": false
+            }
+        },
+        "A5SaveTimeStamp": "20180129145518656",
+        "minimumBuildNumber": "",
+        "customTabOrder": "",
+        "captureJSErrorStackTrace": false,
+        "__allowCascadingRecalc": true,
+        "__idinternalCurrentControl": "03328a5a-8441-4f4d-be60-0f106932a40c",
+        "__nameCurrentControl": "flex1",
+        "__flagHasMacro": false,
+        "Livepreview_permissions": "",
+        "livePreview_permissions_friendly": "",
+        "_flagDoTreeview": true,
+        "showJavascriptActions": false,
+        "showResponsiveLayoutHelp": false,
+        "containerSubTypeNew": "",
+        "containerSubTypeOld": ""
+    }
+}

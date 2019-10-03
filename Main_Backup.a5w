@@ -1,0 +1,100 @@
+<%a5
+
+'Show Demo Server Name
+session.ServerName = ""
+
+if file.exists("c:\Server.txt")
+	f  = file.open("c:\Server.txt",FILE_RO_SHARED)
+	session.ServerName = f.read_line()
+	f.close()
+end if
+
+'Dashboard initial Values
+session.CurrAlertWeek = week(date())
+session.CurrAlertYear = year(date())
+session.CurrDate = Date()
+session.CurrWeekStart = session.CurrDate -(dow(session.CurrDate)-1)
+session.CurrWeekEnd = session.CurrDate + (7 - dow(session.CurrDate))
+
+
+
+
+'Open connection
+'Required for use on IIS. CurrUser is only available on successful login.
+CurrUser = a5ws_getcurrentuser()
+
+'Open connection
+dim cn as sql::connection
+dim args as sql::Arguments
+args.add("CurrUser",CurrUser)
+cn.Open("::Name::SQL")
+
+'Get User information
+sqlstr = "select * from WebUser where Userid = :CurrUser"
+cn.Execute(sqlstr,args)
+session.UserId = cn.Resultset.data("ID")
+
+args.Add("UserID",session.UserID)
+cn.Open("::Name::SQL")
+
+'Get User information
+
+sqlstr = "select * from WebUser where id = :userid"
+cn.Execute(sqlstr,args)
+sqlstr2 = replace_arguments_in_string(sqlstr,args,3)
+
+
+file.from_string("c:\Alpha Debug\Main.txt",sqlstr2)
+
+session.Fullname = cn.ResultSet.data("FullName")
+session.CompanyID = cn.ResultSet.data("CompanyID")
+session.CurrCompanyID = cn.ResultSet.data("CompanyID")
+session.CurrCompanyIdText = alltrim(str(session.CurrCompanyID))
+
+args.add("CompanyID",session.CurrCompanyID)
+
+file.from_string("c:\alpha debug\ComapnyID.txt",alltrim(str(session.CurrCompanyID)))
+
+sqlstr = "select Name as Company from Company where id = :CompanyID"
+cn.Execute(sqlstr,args)
+session.CompanyName = cn.ResultSet.data("Company")
+session.CurrCompanyName = cn.ResultSet.data("Company")
+'session.CompanyLogo = cn.ResultSet.data("Logo") 
+
+'Get HRCAdmin Status
+'Get Company and CurrCompanyID (for HRCAdmin to select company to work with)
+
+session.UserAssignments = a5ws_get_user_assignments(session.UserId)
+if occurs("HRC Admins",session.UserAssignments)
+	session.HRCAdminFlag = .t.
+else
+	session.HRCAdminFlag = .f.
+end if
+
+file.from_string("c:\Alpha Debug\UserValues.txt", session.UserAssignments + crlf() + iif(session.HRCAdminFlag,"HrcAdmin = True","HRCAdmin = False"))
+
+sqlstr = "select ServerType, Filepath from si where ID = 101"
+cn.Execute(sqlstr) 
+
+session.ServerType = cn.ResultSet.data("ServerType")
+session.FilePath = cn.ResultSet.data("FilePath")
+
+'Go to user's page
+'Send to Index for all user
+
+sqlstr = "select DefaultProbation from Company where id = :CompanyID"
+cn.Execute(sqlstr,args)
+session.DefaultProbation = cn.ResultSet.data("DefaultProbation")
+
+'Get credentials for SMS operations
+'sqlstr = "select NexmoApiKey, NexmoApiSecret, cUrlPath from si"
+'cn.Execute(sqlstr)
+'session.NexmoApiKey = cn.ResultSet.data("NexmoApiKey")
+'session.NexmoApiSecret = cn.ResultSet.data("NexmoApiSecret")
+'session.cUrlPath = cn.ResultSet.data("cUrlPath")
+cn.Close()
+
+response.redirect("Index.a5w")
+
+
+%>

@@ -1,0 +1,29 @@
+<%a5
+
+'Note - this _actions.a5w will contain additional functions as time goes on
+
+select
+	case _action = "toggleShow"
+	'toggle session.show
+	toggleShow()
+end select
+
+END
+
+function toggleShow as c ()
+	dim session.show as c
+	dim msg as c
+	select
+		case session.show = "Y"
+		delete session.show
+		msg = "Show has been turned OFF. Close this page/tab before toggling again."
+		case session.show = "N"
+		session.show = "Y"
+		msg = "Show has been turned ON. Close this page/tab before toggling again."
+		case session.show = ""
+		session.show = "Y"
+		msg = "Show has been turned ON. Close this page/tab before toggling again."
+	end select
+	?msg
+end function
+%>

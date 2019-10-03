@@ -1,0 +1,59 @@
+<%a5
+
+
+session.CurrAlertWeek = week(date())
+session.CurrAlertYear = year(date())
+session.CurrDate = Date()
+session.CurrWeekStart = session.CurrDate -(dow(session.CurrDate)-1)
+session.CurrWeekEnd = session.CurrDate + (7 - dow(session.CurrDate))
+'Open connection
+CurrUser = a5ws_getcurrentuser()
+dim pUser as p
+    a5ws_logged_in_user_values(pUser)
+    session.userid = pUser.userid;
+
+dim pUser2 as p
+    a5ws_logged_in_user_values(pUser2)
+    session.userIdd = pUser2.userid;
+
+dim pUser3 as p
+    a5ws_logged_in_user_values(pUser3)
+    session.useraydid = pUser3.userid;
+
+'Open connection
+dim cn as sql::conn
+dim args as sql::Arguments
+args.add("CurrUser",CurrUser)
+cn.Open("::Name::conn")
+
+'Get User information
+sqlstr = "select * from wt_users where userid = :CurrUser"
+cn.Execute(sqlstr,args)
+session.userIddd = cn.Resultset.data("userid")
+session.useraydidd = cn.Resultset.data("userid")
+args.Add("userID",session.userid)
+cn.Open("::Name::conn")
+
+'Get User information
+
+sqlstr = "select * from wt_users where id = :userID"
+cn.Execute(sqlstr,args)
+sqlstr2 = replace_arguments_in_string(sqlstr,args,3)
+
+session.usergroup = context.Security.GetUserRoles()
+file.from_string("c:\Alpha Debug\Main.txt",sqlstr2)
+
+session.fname = cn.ResultSet.data("fname") 'Can Be fetched 
+session.lname = cn.ResultSet.data("lname") 'Can Be fetched
+session.FullName = session.fname + ", " + session.lname
+session.CompanyID = cn.ResultSet.data("CompanyID")
+session.CurrCompanyIdText = alltrim(str(session.CurrCompanyID))
+
+cn.Close()
+
+
+
+response.redirect("index.a5w")
+
+
+%>

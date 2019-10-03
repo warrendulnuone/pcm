@@ -1,0 +1,199 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "builderType": "CustomComponent",
+        "subtype": "Web2Cal Calendar",
+        "minimumBuildNumber": "",
+        "guid": "5b433146-f776-43d6-b5d8-0550e40db3b7",
+        "style_name": "GrBlue",
+        "componentName": "calendar1",
+        "componentFilename": "C:\\pcm\\pcm.WebProjects\\Default.WebProject\\calendar1.a5wcmp",
+        "style_type": "Alpha Five",
+        "overrideStyleName": "Default",
+        "resolveAbstractClassNames": true,
+        "persistArgValuesInObject": true,
+        "ns": "a5_cal",
+        "showViews": "",
+        "startofWeek": "Sunday",
+        "timeFormat": "12",
+        "showWeekView": true,
+        "showMonthView": true,
+        "showDayView": true,
+        "showCustomView": true,
+        "showAgendaView": true,
+        "showWorkWeekView": false,
+        "showWorkShiftView": false,
+        "showW2cView": true,
+        "daysInCustomView": "4",
+        "defaultView": "Week",
+        "timezoneOffset": "0",
+        "readOnly": false,
+        "calendar": {
+            "startTime": 6,
+            "endTime": 19,
+            "slotHeight": "43",
+            "interval": 4,
+            "controlWidth": "99%",
+            "controlHeight": "500px",
+            "showLeftNav": true,
+            "showAllDay": true,
+            "showQuickFilter": true,
+            "date": "Today",
+            "calendarstoshow": "All",
+            "readonlycalendars": ""
+        },
+        "popUpHeight": "420",
+        "popUpWidth": "530",
+        "newEventGrid": "new_event",
+        "updateEventGrid": "event_details",
+        "calLicense": "not registered",
+        "defaultLanguage": "EN",
+        "mustRunInIFrame": true,
+        "calendarWidth": "1024px",
+        "calendarHeight": "768px",
+        "borderAroundCalendar": false,
+        "calendarIframeStyle": "",
+        "calendarIframeMasterTemplate": "",
+        "calendarMasterTemplate": "",
+        "dataBinding": {
+            "calendars": {
+                "tableType": "SQL",
+                "connectionString": "::Name::conn",
+                "tableName": "InterviewCal",
+                "sequenceName": "",
+                "fieldMap": ""
+            },
+            "events": {
+                "tableType": "SQL",
+                "connectionString": "::Name::conn",
+                "tableName": "InterviewEvents",
+                "sequenceName": "",
+                "fieldMap": ""
+            },
+            "componentName": "FollowupList3",
+            "component": {
+                "useMasterStyle": true
+            },
+            "additionalFieldsInEventsTable": "",
+            "createNewCalendarIfNotFound": true
+        },
+        "window": {
+            "ajaxWindowTitle": "Add/Edit Event",
+            "animation": {
+                "hasAnimation": false,
+                "show": {
+                    "method": "Fade",
+                    "speed": "Slow"
+                },
+                "hide": {
+                    "method": "Fade",
+                    "speed": "Slow"
+                }
+            },
+            "ajaxWindowWorkingMessage": "Working...",
+            "ajaxWindowWorkingMessageIcon": "css/A5System/Images/wait.gif",
+            "height": "",
+            "width": "",
+            "isResizable": false,
+            "onInitialize": "",
+            "onBeforeShow": "",
+            "onShow": "",
+            "onBeforeHide": "",
+            "onHide": "",
+            "onFocus": "",
+            "onMove": "",
+            "onResize": ""
+        },
+        "ajaxWindowPositionAttribute": "'20px','20px'",
+        "ajaxWindowPositionAttributeEnglish": "Absolute ('20px','20px')",
+        "loadObjectBeforeHtml": true,
+        "saveFileType": "Formatted JSON",
+        "arguments": [
+            {
+                "Name": "CalendarsToShow",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "All"
+            },
+            {
+                "Name": "ReadOnlyCalendars",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": ""
+            },
+            {
+                "Name": "InitialDate",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": "Today"
+            },
+            {
+                "Name": "DescriptionForNewCalendar",
+                "DataType": "Character",
+                "Source": "RUNTIMEBINDING",
+                "VariableScope": "",
+                "VariableName": "",
+                "DefaultValue": ""
+            }
+        ],
+        "FontSize": "Medium",
+        "serverSideEvents": {
+            "onInitialRender": "",
+            "onComponentInitialize": "",
+            "onComponentExecute": "",
+            "systemOnInitialRender": "\n\n\nfunction systemOnInitialRender as v (e as p)\n\n\n\nif e.tmpl.showWeekView then\n\te.tmpl.showViews=\"week,\"\nend if\n\t\nif e.tmpl.showMonthView then\n\t   e.tmpl.showViews=e.tmpl.showViews+\"month,\"\nend if\n\t\nif e.tmpl.showDayView then\n\t  e.tmpl.showViews=e.tmpl.showViews+\"day,\"\nend if\n\t\nif e.tmpl.showCustomView then\n    e.tmpl.showViews=e.tmpl.showViews+\"custom,\"\nend if\n\t\nif e.tmpl.showAgendaView then\n\te.tmpl.showViews=e.tmpl.showViews+\"agenda,\"\nend if\n\t\nif e.tmpl.showWorkWeekView then\n\te.tmpl.showViews=e.tmpl.showViews+\"workweek,\"\nend if\n\t\nif e.tmpl.showWorkShiftView then\n    e.tmpl.showViews=e.tmpl.showViews+\"workshift,\"\nend if\n\t\nif e.tmpl.showW2cView then\n    e.tmpl.showViews=e.tmpl.showViews+\"w2cview,\"\nend if\n\t\n'force default if no selected views - this should never happen\nif e.tmpl.showViews=\"\" then\n    e.tmpl.showViews=\"day,week,month,\"\nend if\n\t\ne.tmpl.showViews=strip_trailing_char(e.tmpl.showViews,\",\")\n\t\nif e.tmpl.startofWeek=\"Sunday\" then\n    e.tmpl.startofWeek=\"0\"\nelse\n    e.tmpl.startofWeek=\"1\"    \nend if\n\t\nif e.tmpl.readOnly then\n    e.tmpl.readOnly=\"true\"\nelse\n    e.tmpl.readOnly=\"false\"    \nend if\n\t\ne.tmpl.defaultView=lower(e.tmpl.defaultView)\ne.tmpl.timezoneOffset=val(e.tmpl.timezoneOffset)*60\ne.tmpl.defaultLanguage=upper(substr(e.tmpl.defaultLanguage,1,2))\ne.tmpl.mustRunInIFrame = .T.\n\ndim StylesToLoad as c = \"\"\nif e.tmpl.dataBinding.component.useMasterStyle = .t. then \n\t'Dialog component will use style specified in the Calendar component\n\tstylesToLoad = e.tmpl.style_name\nend if \nif e.tmpl.AdditionalGridStyles <> \"\" then \n\tstylesToLoad = alltrim(stylesToLoad) + crlf() + comma_to_crlf(e.tmpl.AdditionalGridStyles)\nend if \n\ndim linkTemplate as c \nlinkTemplate = <<%txt%\n<link rel=\"stylesheet\" type=\"text/css\" href=\"css/__styleName__/style.css\">\n<script type=\"text/javascript\" src=\"css/__styleName__/Style.js\"></script>\n%txt%\n\ndim linkTxt as c = \"\"\nfor each sn in stylesToLoad\n\tlinkTxt = linkTxt + stritran(linkTemplate,\"__styleName__\",sn.value) + crlf()\nnext\n\n\ne.tmpl.headSectionMarkup = <<%str%\n<link rel=\"stylesheet\" type=\"text/css\" href=\"css/jq_cal/web2cal.css\" />\n<script type=\"text/javascript\" src=\"javascript/jq_cal/Web2Cal-2.0-min.js\">  </script>\n<script type=\"text/javascript\" src=\"javascript/jq_cal/web2cal.a5.support.js\">  </script>\n<script type=\"text/javascript\" src=\"javascript/jq_cal/web2cal.a5.template.js\">  </script>\n<script type=\"text/javascript\" src=\"javascript/jq_cal/locale/locale_fr.js\">  </script>\n<script type=\"text/javascript\" src=\"javascript/jq_cal/locale/locale_sp.js\">  </script>\n<script type=\"text/javascript\" src=\"javascript/jq_cal/locale/locale_it.js\">  </script>\n%str%\n\ne.tmpl.headSectionMarkup = e.tmpl.headSectionMarkup + linkTxt\n\t\n\ndim etmp as p\ndim initialDatePassedIn as c \ndim argsIn as sql::arguments \nargsIn.xml = e.arguments.xml\ninitialDate = argval(argsIn,\"InitialDate\")\nif initialDate = \"Today\" then \n\tetmp.date = \"new Date()\"\nelse\n\tdim _y as c \n\t_y = word(initialDate,1,\"/\")\n\t_m = word(initialDate,2,\"/\")\n\t_d = word(initialDate,3,\"/\")\n\t'_m is 0 based\n\t_m = \"\" + (val(_m) -1)\n\tetmp.date = \"new Date(\" + _y + \",\" + _m + \",\" + _d + \")\"\nend if \n\n\ndim etmp.license as c\netmp.license = e.tmpl.calLicense\nif atc(\"<\",etmp.license) > 0 then \n\tdim projProp as p  = a5_getWebProjectProperties()\n\tdim licNumber as c \n\tdim projProp.calendar.license as c = default \"not licensed\"\n\tetmp.license = projProp.calendar.license\nend if \n\n\n'multiple licenses are supported\netmp.license = comma_to_crlf(etmp.license)\netmp.license = *for_each(x,quote(x),etmp.license)\netmp.license = crlf_to_comma(etmp.license)\n\n\n\t\n\netmp.defaultView = e.tmpl.defaultView\ndim dvLookup as c \ndvLookup = <<%txt%\nDay=day\nWeek=week\nMonth=month\nCustom=custom\nAgenda=Agenda\nWork Week=workweek\nWorkshift=workshift\nGroups/Events=w2cview\n%txt%\n\ndim sd as stringdictionary\nsd.initialize(dvLookup)\netmp.defaultView = sd.get(etmp.defaultView)\n\n\nif \"\" +e.tmpl.timeFormat = \"12\" then \n\tetmp.timeformatConstant = \"Web2CalConstants.TIME_FORMAT=\\\"hh:mm tt\\\";\"\nelse\n\tetmp.timeformatConstant = \"Web2CalConstants.TIME_FORMAT=\\\"HH:mm\\\";\"\nend if \n\n\t\ndim template as c\ntemplate=<<%txt%\n__ns2__ = e.tmpl.ns\n__showViews__ = e.tmpl.showViews\n__startofWeek__ = e.tmpl.startofWeek\n__timeFormat__ = e.tmpl.timeFormat\n__timeFormatConstant__ = etmp.timeformatConstant\n__daysInCustomView__ = e.tmpl.daysInCustomView\n__defaultView__ = etmp.defaultView\n__timezoneOffset__ = e.tmpl.timezoneOffset\n__readOnly__ = e.tmpl.readOnly\n__flagCaptureDebuggingInfo__=e.tmpl.captureDebuggingInfo\n\n__popUpHeight__ = e.tmpl.popUpHeight\n__popUpWidth__ = e.tmpl.popUpWidth\n__newEventGrid__ = e.tmpl.newEventGrid\n__updateEventGrid__ = e.tmpl.updateEventGrid\n__calLicense__ = etmp.license\n__defaultLanguage__= e.tmpl.defaultLanguage\n__startTime__= e.tmpl.calendar.startTime\n__endTime__\t = e.tmpl.calendar.endTime\n__date__=etmp.date\n__slotHeight__ = e.tmpl.calendar.slotHeight\n__interval__=e.tmpl.calendar.interval\n__controlWidth__=e.tmpl.calendar.controlWidth\n__controlHeight__=e.tmpl.calendar.controlHeight\n__showLeftNav__=iif(e.tmpl.calendar.showLeftNav,\"true\",\"false\")\n__showAllDay__=iif(e.tmpl.calendar.showAllDay,\"true\",\"false\")\n__showQuickFilter__=iif(e.tmpl.calendar.showQuickFilter,\"true\",\"false\")\n%txt%\n\t\ndim html_out as c\n\t\nhtml_out = <<%txt% \n\t             \n<div id=\"calendarContainer\"></div>   \n<div id=\"eventContainer\" style=\"display: none\">\n\t<a id=edit_event href=\"event_details.a5w\">Event Details</a> \n</div>\n\t    \n<script type=\"text/javascript\">\n\tif(typeof window['{component.object}'] != 'undefined')  {\n\t\twindow['{component.object}'].a5_cal = {};\n\t\tvar __ns__ = window['{component.object}'].a5_cal;\n\t\t\n\t} else if(typeof window.parent['{component.object}'] != 'undefined')  {\n\t\twindow.parent['{component.object}'].a5_cal = {};\n\t\tvar __ns__ = window.parent['{component.object}'].a5_cal;\n\t\t\n\t}\n\t\n\n    __ns__.st='';\n    __ns__.et='';\n    __ns__.activeEvent='';\n\t    \n    WEB2CAL_LICENSE_KEY=[__calLicense__];\n\t    \n    Web2Cal.LANG=eval('Web2CalLanguage___defaultLanguage__');\n    \n    \n    __timeFormatConstant__\n    \n\t    \n    __ns__.drawCalendar = function(){ \n        __ns__.ical = new Web2Cal('calendarContainer', {\n            loadEvents\t\t:   __ns__.loadCalendarEvents,\n            onUpdateEvent\t:   __ns__.updateEvent,             \n            onPreview\t\t:   __ns__.onPreview,\n            onNewEvent\t\t:   __ns__.onNewEvent,\n            showQuickAdd    : false,\n            startOfWeek\t\t: \t__startOfWeek__,\n            timeFormat\t\t: __timeFormat__,\n            views           :'__showViews__',\n            defaultView     : '__defaultView__',\n            customViewSize  : __daysInCustomView__,\n            startTime       : __startTime__,\n\t\t\tendTime         : __endTime__,\n\t\t\tdate            : __date__,\n\t\t\tdwSlotHeight    : __slotHeight__,\n\t\t\tinterval        : __interval__,\n\t\t\tcontrolWidth    : '__controlWidth__',\n\t\t\tcontrolHeight   : '__controlHeight__',\n\t\t\tshowLeftNav     : __showLeftNav__, \n\t\t\tshowAllDay\t\t: __showAllDay__,\n\t\t\tshowQuickFilter : __showQuickFilter__,\n          //timeZoneOffset  : __timezoneOffset__,\n            readOnly        : __readOnly__ \n\t            \n        });\n        __ns__.ical.build();\n\t}\n\t\n\t__ns__.onPreview = function(evt, dataObj, html){\n          __ns__.activeEvent=dataObj;\n          __ns__.showEventGrid();\n\t}\n\t\n\t__ns__.showEventGrid = function(){\n\t\tthis.ical.hideStatusMsg();\n\t\tvar calendarsToShow = '';\n\t\tvar readOnlyCalendars = '';\n\t\tvar flagReadOnly = __readOnly__;\n\t\tvar flagCaptureDebuggingInfo = __flagCaptureDebuggingInfo__;\n\t\t//if(flagReadOnly) return false;\n\t\tif(typeof window.parent['{Component.Object}'] != 'undefined') {\n\t\t\tcalendarsToShow = window.parent['{Component.Object}']._arguments['CALENDARSTOSHOW'];\n\t\t\treadOnlyCalendars = window.parent['{Component.Object}']._arguments['READONLYCALENDARS'];\n\t\t\tif(flagReadOnly) readOnlyCalendars = 'All';\n\t\t\twindow.parent['{Component.Object}']._showEventsDialog(__ns__.activeEvent.eventId,'editEvent','','',window.parent['{Component.Object}'].custId, calendarsToShow,'',readOnlyCalendars, flagCaptureDebuggingInfo);\n\t\t} else {\n\t\t\tcalendarsToShow = window['{Component.Object}']._arguments['CALENDARSTOSHOW'];\n\t\t\treadOnlyCalendars = window['{Component.Object}']._arguments['READONLYCALENDARS'];\n\t\t\tif(flagReadOnly) readOnlyCalendars = 'All';\n\t\t\twindow['{Component.Object}']._showEventsDialog(__ns__.activeEvent.eventId,'editEvent','','',window['{Component.Object}'].custId, calendarsToShow,'',readOnlyCalendars, flagCaptureDebuggingInfo);\n\t\t}\n    }\n\t    \n\t__ns__.onNewEvent = function(obj, groups, allday){ \n\t\tvar new_event=obj;\n        var st = new UTC(obj.startTime);\n        var et = new UTC(obj.endTime);\n        var calendarsToShow = '';\n        var readOnlyCalendars = '';\n        var defaultGroupID = '';\n   \t\tvar flagCaptureDebuggingInfo = __flagCaptureDebuggingInfo__;\n        if(typeof obj.group != 'undefined') {\n        \tif(typeof obj.group.groupId != 'undefined') defaultGroupID = obj.group.groupId;\n        }\n\t    //alert('groups: ' + defaultGroupID);\n       \n        \n        if(typeof window.parent['{Component.Object}'] != 'undefined') {\n        \tcalendarsToShow = window.parent['{Component.Object}']._arguments['CALENDARSTOSHOW'];\n\t\t\treadOnlyCalendars = window.parent['{Component.Object}']._arguments['READONLYCALENDARS'];\n\t\t\twindow.parent['{Component.Object}']._showEventsDialog('','addEvent',st,et, window.parent['{Component.Object}'].custId,calendarsToShow,defaultGroupID,readOnlyCalendars,flagCaptureDebuggingInfo);\n\t\t} else {\n\t\t\tcalendarsToShow = window['{Component.Object}']._arguments['CALENDARSTOSHOW'];\n\t\t\treadOnlyCalendars = window['{Component.Object}']._arguments['READONLYCALENDARS'];\n \t\t\twindow['{Component.Object}']._showEventsDialog('','addEvent',st,et, window['{Component.Object}'].custId,calendarsToShow,defaultGroupID,readOnlyCalendars, flagCaptureDebuggingInfo);\n\t\t}\n        this.refresh();\n    }\n\t    \t\t\n\t__ns__.loadCalendarEvents = function(startTime, endTime, viewName){  \n\t\n\t\t\n\t\tvar eObj = {};\n\t\teObj.startTime = startTime;\n\t\teObj.endTime = endTime;\n\t\teObj.viewName = viewName;\n\t\tvar result = '';\n\t\tif(typeof window.parent['{Component.Object}'] != 'undefined') {\n\t\t\tresult = window.parent['{Component.Object}']._executeEvent('onEventsLoad',eObj);\n\t\t} else {\n\t\t\tresult = window['{Component.Object}']._executeEvent('onEventsLoad',eObj);\n\t\t}\n\t\t//if(result == false) return false;\n\n\t\t//alert(startTime + '\\n' + endTime +'\\n' + 'View name: ' + viewName);\n\t\t\n\t\n\t\t//alert(viewName);\n\t\tif (startTime){\n\t\t\tvar _st = new UTC(startTime);\n\t\t\tvar _et = new UTC(endTime);\n\t\t\t__ns__.st = escape(_st.toDateString());\n\t\t    __ns__.et = escape(_et.toDateString());\n\t\t}\n\t\tvar _sql=\"\"  // empty string will return all calendars\n\t\t\n\t\t\n\t\t\n\t\tif(typeof window.parent['{Component.Object}'] != 'undefined') {\n\t\t\twindow.parent['{Component.Object}'].ajaxCallback('','','getEvents','','_st='+__ns__.st+'&_et='+__ns__.et+'&_cid=__ns__&_sql='+_sql);  \t\t \n\t\t} else {\n\t\t\twindow['{Component.Object}'].ajaxCallback('','','getEvents','','_st='+__ns__.st+'&_et='+__ns__.et+'&_cid=__ns__&_sql='+_sql);  \t\t \n\t\t}\n\t\t\n\t\t\n\t}\n\t    \n\t__ns__.updateEvent = function(event){ \n\t  \tvar _sT = new UTC(event.startTime);\n\t\tvar _eT = new UTC(event.endTime);\n\t\n\t\tvar stStr = _sT.toDateString() +\" \"+_sT.toTimeString();\n\t\tvar edStr = _eT.toDateString() +\" \"+_eT.toTimeString();\n\t\t\n\t\tvar data = '';\n\t\tdata = data + '_calEvent_start=' + stStr;\n\t\tdata = data + '&_calEvent_end=' + edStr;\n\t\tdata = data + '&_calEvent_eventId=' + event.eventId;\n\t\tdata = data + '&_calEvent_groupId=' + event.group.groupId;\n\t\tdata = data + '&_calEvent_allDay=' + ((event.allDay)?1:0);\n\t\t__ns__.ical.updateEvent(event);\n\t\t\n\t\tif(typeof window.parent['{Component.Object}'] != 'undefined') {\n\t\t\twindow.parent['{Component.Object}'].ajaxCallback('','','updateEvents','',data);\n\t\t} else {\n\t\t\twindow['{Component.Object}'].ajaxCallback('','','updateEvents','',data);\n\t\t}\n\t}\t\n\t\n\t// if loaded in iFrame with all js loaded in head section    \n\tjQuery(document).ready(function(){ \n\t\t__ns__.drawCalendar();\t         \n\t });\n</script>   \t \n%txt%\n\n\n\n\t\n\t\ndim str_out as c\nstr_out = stritran_multi_expressions(html_out,template)\t\ne.html = str_out\n\t\t\t\nend function\n",
+            "systemOnComponentInitialize": "function systemOnComponentInitialize as v (e as p)\nend function \n",
+            "systemOnComponentExecute": "function systemOnComponentExecute as v (e as p)\nend function \n"
+        },
+        "activeLanguage": "<Default>",
+        "fontScalingOption": "All",
+        "IframeInlineStyle": "border-style: none; width: 1024px; height: 768px; ",
+        "masterTemplate": "",
+        "info": {
+            "dateLastEdited": "2018-1-21"
+        },
+        "pageTitle": "Component",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "builder": {
+            "workingPreviewEnabled": true,
+            "previewEnabled": true
+        },
+        "selected": "",
+        "designPaneIndex": 1,
+        "masterPaneC": "TabbedUIProps",
+        "serverSideEventIndex": 1,
+        "clientSideEventIndex": 1,
+        "clientSideEventIndexC": "1",
+        "__WPhostName": "Internet Explorer",
+        "embeddedMode": false,
+        "_style_versionNumber": 2,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hassubthemeTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "repeatingSectionsAreDirty": true,
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "systemXbasicFunctionDeclarations": "\n\nfunction getEvents as c (e as p)\ndim e.componentSettings as c \ne.componentSettings = <<%settings%\nDIM calendars as P\nDIM calendars.tableType as C = \"SQL\"\nDIM calendars.connectionString as C = \"::Name::conn\"\nDIM calendars.tableName as C = \"InterviewCal\"\nDIM calendars.sequenceName as C\nDIM calendars.fieldMap as C\nDIM events as P\nDIM events.tableType as C = \"SQL\"\nDIM events.connectionString as C = \"::Name::conn\"\nDIM events.tableName as C = \"InterviewEvents\"\nDIM events.sequenceName as C\nDIM events.fieldMap as C\nDIM componentName as C = \"FollowupList3\"\nDIM component as P\nDIM component.useMasterStyle as L = .T.\nDIM additionalFieldsInEventsTable as C\nDIM createNewCalendarIfNotFound as L = .T.\n\n%settings%\ne.flagCaptureDebuggingInfo = .f.\ne.fatalError = .f.\ngetEvents = a5_WebCalendarGenericRunTime(e,\"GetEvents\")\n\nif e.fatalError = .t. then \n\tdim js as c \n\t\t\n\tif e.__actionToTake = \"DisplayError\" then \n\t\t'js = \"$('{component.componentname}.COMPONENT.ERRORS_DIV').innerHTML = 'Fatal error. Could not connect to database to get list of Calendars';\"\n\t\tjs = \"alert('Fatal error. Could not connect to database to get list of Calendars');\"\n\t\t\n\t\tif e.flagCaptureDebuggingInfo then \n\t\t\tdim debugTxt as c \n\t\t\tdebugTxt = crlf() + \"Custom Component GetEvents Handler\" + crlf() + \"Fatal error. Could not connect to database to get list of Calendars\"\n\t\t\ttrace.writeLn(debugTxt,\"Calendar\")\n\t\tend if\t\t\n\t\t\n\t\t\n\t\tgetEvents = js \n\t\texit function \n\tend if \n\t\n\t'Handle  e.__actionToTake = \"AddNewCalendar\" then \n\tdim calendarsToShow as c \n\tcalendarsToShow = argVal(e.arguments,\"calendarsToShow\")\n\t'count number of words in calendarsToShow\n\tdim count as n \n\tcount = line_count(comma_to_crlf(calendarsToShow))\n\tif count = 0 then \n\t\t'user tried to show more than one calendar and none exist - but can't create a new calendar record if you passed in multiple calendars\n\t\t'js = \"$('{component.componentname}.COMPONENT.ERRORS_DIV').innerHTML = 'Fatal error. Could not find any calendars matching the requested Calendar Ids.';\"\n\t\tjs = \"alert('Fatal error. Could not find any calendars matching the requested Calendar Ids.');\"\n\n\t\tif e.flagCaptureDebuggingInfo then \n\t\t\tdim debugTxt as c \n\t\t\tdebugTxt = crlf() + \"Custom Component GetEvents Handler\" + crlf() + \"Fatal error. Could not find any calendars matching the requested Calendar Ids.\"\n\t\t\ttrace.writeLn(debugTxt,\"Calendar\")\n\t\tend if\t\t\n\n\t\t\n\t\tgetEvents = js \n\t\texit function \n\tend if \n\n\tcalendarsToShow = word(calendarsToShow,1,\",\")\n\tdim descriptionForNewCalendar as c \n\tdescriptionForNewCalendar =  argVal(e.arguments,\"descriptionForNewCalendar\")\n\t\n\t\n\tdim db as p\n\tdb = e.tmpl.dataBinding.calendars\n\tdim calendarId as n \n\tcalendarId = val(calendarsToShow)\n\tdim calendarDescription as c \n\tcalendarDescription = descriptionForNewCalendar\n\tdim pcc as p\n\tdim xxp as p\n\txxp.db = db\n\txxp.calendarId = calendarId\n\txxp.calendarDescription = calendarDescription\n\t'create a new calendar record\t\n\tdim pResult as p\n\tpcc = a5wcb_createCalendarRecord(db, calendarId, calendarDescription,pResult)\n\t\n\tif e.flagCaptureDebuggingInfo then \n\t\tdim debugTxt as c \n\t\tdim pResult.code as c = default \"\"\n\t\tdebugTxt = crlf() + \"Custom Component GetEvents Handler - Add record for new calendar\" + crlf() + presult.code\n\t\ttrace.writeLn(debugTxt,\"Calendar\")\n\tend if\t\t\n\t\n\t\n\t'pcc.hasRecord = .f.\n\t'pcc.userDeclinedToAddRecord = .f.\n\t'pcc.addRecordFailed = .f.\n\n\t'--------------execute the onNewCalendarRecordCreate event ---------------------\n\t\n\tif pcc.addRecordFailed = .t. then \n\t\t'js = \"$('{component.componentname}.COMPONENT.ERRORS_DIV').innerHTML = 'Fatal error. Could not create a new record in the Calendar table for id: \"+calendarId+\" .';\"\n\t\tjs = \"alert('Fatal error. Could not create a new record in the Calendar table for id: \"+calendarId+\" ');\"\n\t\tgetEvents = js \n\t\t\n\t\tif e.flagCaptureDebuggingInfo then \n\t\t\tdim debugTxt as c \n\t\t\tdim pResult.code as c = default \"\"\n\t\t\tdebugTxt = crlf() + \"Custom Component GetEvents Handler - Add record for new calendar failed: \" + crlf() + pResult.errorText\n\t\t\ttrace.writeLn(debugTxt,\"Calendar\")\n\t\tend if\t\t\n\t\t\n\t\t\n\t\texit function \n\t\t\n\telse\n\t\tgetEvents = a5_WebCalendarGenericRunTime(e,\"GetEvents\")\n\tend if \n\texit function \n\t\nend if \n\n\nend function\n\n\nfunction showEventData as c (e as p)\ndim e.componentSettings as c \ne.componentSettings = <<%settings%\nDIM calendars as P\nDIM calendars.tableType as C = \"SQL\"\nDIM calendars.connectionString as C = \"::Name::conn\"\nDIM calendars.tableName as C = \"InterviewCal\"\nDIM calendars.sequenceName as C\nDIM calendars.fieldMap as C\nDIM events as P\nDIM events.tableType as C = \"SQL\"\nDIM events.connectionString as C = \"::Name::conn\"\nDIM events.tableName as C = \"InterviewEvents\"\nDIM events.sequenceName as C\nDIM events.fieldMap as C\nDIM componentName as C = \"FollowupList3\"\nDIM component as P\nDIM component.useMasterStyle as L = .T.\nDIM additionalFieldsInEventsTable as C\nDIM createNewCalendarIfNotFound as L = .T.\n\n%settings%\ne.flagCaptureDebuggingInfo = .f.\n\nshowEventData = a5_WebCalendarGenericRunTime(e,\"ShowEventData\")\nend function\n\n\n\n\nfunction updateEvents as c (e as p)\ndim e.componentSettings as c \ne.componentSettings = <<%settings%\nDIM calendars as P\nDIM calendars.tableType as C = \"SQL\"\nDIM calendars.connectionString as C = \"::Name::conn\"\nDIM calendars.tableName as C = \"InterviewCal\"\nDIM calendars.sequenceName as C\nDIM calendars.fieldMap as C\nDIM events as P\nDIM events.tableType as C = \"SQL\"\nDIM events.connectionString as C = \"::Name::conn\"\nDIM events.tableName as C = \"InterviewEvents\"\nDIM events.sequenceName as C\nDIM events.fieldMap as C\nDIM componentName as C = \"FollowupList3\"\nDIM component as P\nDIM component.useMasterStyle as L = .T.\nDIM additionalFieldsInEventsTable as C\nDIM createNewCalendarIfNotFound as L = .T.\n\n%settings%\n\ne.flagCaptureDebuggingInfo = .f.\n\nupdateEvents = a5_WebCalendarGenericRunTime(e,\"UpdateEvents\")\nend function\n\n",
+        "systemJavascript": "{component.object}._showEventsDialog = function(eventId,mode,startTime,endTime,componentId,calendarsToShow,defaultCalendarID,readOnlyCalendars,flagCaptureDebuggingInfo) {\nvar windowName = '__EventsDialog';\nvar currWindow = {component.object}.getWindow(windowName);\nvar go = new Object();\ngo.dialog2Name = 'FollowupList3';\ngo.type = 'dialog2';\ngo.alias = 'EVENTSDLG_' + '{component.alias}';\ngo.workingMessage = '<img src=\\'css/A5System/Images/wait.gif\\' />Working...';\ngo.placeholderValues = 'String_1='+'SQL'+'||'+'String_2='+'InterviewEvents'+'||'+'String_3='+'::Name::conn'+'||'+'String_4='+'__defaultArgValue'+'||'+'String_5='+'__defaultArgValue'+'||'+'String_6='+'SQL'+'||'+'String_7='+'InterviewCal'+'||'+'String_8='+'::Name::conn'+'||'+'String_9='+'__defaultArgValue'+'||'+'String_10='+'__defaultArgValue'+'||'+'String_11='+eventId+'||'+'String_12='+mode+'||'+'String_13='+startTime+'||'+'String_14='+endTime+'||'+'String_15='+componentId+'||'+'String_16='+calendarsToShow+'||'+'String_17='+defaultCalendarID+'||'+'String_18='+readOnlyCalendars+'||'+'String_19='+flagCaptureDebuggingInfo;\ngo.argumentBinding = 'eventsTableType=String_1||eventsTableName=String_2||eventsConnectionString=String_3||eventsFieldMap=String_4||eventsSequenceName=String_5||calendarsTableType=String_6||calendarsTableName=String_7||calendarsConnectionString=String_8||calendarsFieldMap=String_9||calendarsSequenceName=String_10||eventId=String_11||eventsMode=String_12||eventStartTime=String_13||eventEndTime=String_14||parentComponentId=String_15||calendarIdsToShow=String_16||defaultCalendarID=String_17||readOnlyCalendarIds=String_18||flagCaptureDebuggingInfo=String_19';\ngo.overrideSettings = 'Style_name = `{component.style}`';\ngo.a5_default_path = '{component.defaultPath}';\ngo._applicationRoot = '{applicationroot}';\ngo.windowName = windowName;\ngo.showWindowParameters = '\\'20px\\',\\'20px\\'';\nif(!currWindow) {\n\tcurrWindow = {component.object}.createWindow(windowName,'modal',\n\t{\n\tbody: {\n\t\tcontent: {\n\t\t\ttype: 'blank',\n\t\t\telementId: '~'\n\t\t}\n\t},\n\theight: '',\n\twidth: '',\n\ttitle: {\n\t\thtml: 'Add/Edit Event',\n\t\tlocation: 'top',\n\t\tdirection: 'ltr',\n\t\tshow: true\n\t},\n\tdisableMove: false,\n\ttheme: '{component.style}'\n}\n\t);\t\t\n\tgo.dialog2Div = currWindow.getWindowId('body');\n\tA5.component.runGenericComponent(go)\n\tcurrWindow.show('20px','20px');\n} else {\n\tgo.dialog2Div = currWindow.getWindowId('body');\n\tvar pele = $(go.dialog2Div);\n\tif(pele) pele.innerHTML = '<img src=\\'css/A5System/Images/wait.gif\\' /> Working...';\n\tgo.windowPositionArg1 = '20px';\ngo.windowPositionArg2 = '20px';\n\tA5.component.runGenericComponent(go)\n\tcurrWindow.show('20px','20px');\n};\n}\n{component.object}.calAddEvent = function(eId) { this.a5_cal.ical.addEvent(eId); };\n{component.object}.calUpdateEvent = function(eId) { this.a5_cal.ical.updateEvent(eId); };\n{component.object}.calDeleteEvent = function(eId) { this.a5_cal.ical.deleteEvent(eId); };\n",
+        "componentType": "CustomComponent",
+        "version": 1,
+        "Livepreview_permissions": "",
+        "toolBox_value": "",
+        "addinBuildNumber": "5033",
+        "addinBuildNumberHighestUsed": "5033",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builderVersionNumber": 1,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "1",
+        "A5SaveTimeStamp": "20180121093334098"
+    }
+}

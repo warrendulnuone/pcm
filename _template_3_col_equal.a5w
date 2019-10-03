@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+<div class="main_content">
+	<div class="container clearfix">
+		<%a5 ?wt_page("page_title","<h1>") %>
+		<div class="grid_4">
+			*** Text content here ***
+			<%a5 ?wt_content("content_id_here") %>
+		</div>
+		<div class="grid_4">
+			*** Text content here ***
+			<%a5 ?wt_content("content_id_here") %>
+		</div>
+		<div class="grid_4">
+			*** Text content here ***
+			<%a5 ?wt_content("content_id_here") %>
+		</div>
+	</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>
