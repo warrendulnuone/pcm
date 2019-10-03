@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "CONTACT"
+Delete tmpl_CONTACT
+DIM tmpl_CONTACT as P
+tmpl_CONTACT = a5w_load_component("contact") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:contact)
+'Following code allows you to override settings in the saved component. DO NOT REMOVE SYSTEM GENERATED OVERRIDE_SETTINGS
+tmpl_CONTACT.override_settings = <<%override_settings%
+	componentName = componentAlias
+	_gridFilename = "contact"
+%override_settings%
+'TIP: To refer to local or page variables in the override_settings string, you must first define a local
+'dot variable called 'pageVar' with properties for all of the variables you want to reference. For example:
+'	dim pageVar as p
+'	pageVar.gridRowCount = 10
+'Then, in the override_settings string, you can reference pageVar.gridRowCount. For example:
+'	rows = pageVar.gridRowCount
+'Resolve session and page variables in the override_settings string.
+a5w_resolveVariablesInOverrideSettings(tmpl_CONTACT,session,local_variables())
+delete x_CONTACT
+dim x_CONTACT as p
+x_CONTACT = a5w_run_Component(tmpl_CONTACT)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_CONTACT) (EDIT:contact)
+if x_CONTACT.RedirectURL <> "" then 
+	response.redirect(x_CONTACT.redirectURL)
+	end
+end if 
+?x_CONTACT.Output.Head.JavaScript
+?x_CONTACT.Output.Head.CSS_Link
+%>
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+<div class="main_content">
+	<div class="container">
+		<div class="row">
+			<%a5 ?wt_page("page_title","<h1>") %>
+			<div class="col-md-8">
+				<%a5 ?wt_content("contact_1") %>
+			</div>
+			<div class="col-md-4">
+				<%A5 ?x_CONTACT.Output.Body.Grid_HTML %>
+			</div>
+		</div>
+	</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>
+
