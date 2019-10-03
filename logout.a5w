@@ -1,0 +1,6 @@
+<%a5
+a5ws_logoutuser(session,request,response)
+'Template Note - depending on your app you don't necessarily want to reset all session variables per line below.
+session.reset()
+response.redirect("index.a5w")
+%>

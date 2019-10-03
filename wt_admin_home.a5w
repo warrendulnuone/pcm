@@ -1,0 +1,8 @@
+<!doctype html>
+<html><head>
+<body>
+<!-- Framework Note: Place any Xbasic, or content above or below the main content tag below. -->
+<%a5 ?wt_content("admin_tui_home") %>
+
+</body>
+</html>

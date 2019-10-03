@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<%a5 a5w_include("wt_inc_header_head.a5w") %>
+</head>
+<body>
+
+<div id="wrapper" style="width:300px">
+<div id="content" style="BACKGROUND-COLOR: #fafafa">
+
+<%A5 ?wt_page("page_title","<h1>") %>
+
+<p>This page has a slight background color to expose any text that might be rendered invisible against a white background.</p>
+<br>
+<h1>H1 tag</h1>
+<h2>H2 tag</h2>
+<h3>H3 tag</h3>
+<h4>H4 tag</h4>
+<h5>H5 tag</h5>
+<h6>H6 tag</h6>
+<hr>
+<p>Default Paragraph tag</p>
+<hr>
+<ul>
+<li>Standard bullet list</li>     
+</ul>
+<hr>
+<ol>
+<li>Standard numbered list</li>    
+</ol>
+<hr>
+<a href="#">Hyperlink style</a><br>
+<hr>
+<div id="footer" style="width:280px"><a href="#">Footer style with hyperlink</a></div>
+<hr>
+<div id="topbar" style="width:265px"><a href="#">Topbar style with hyperlink</a></div>
+<hr>
+<img src="images/testimage.jpg">Image style</img><br>
+<hr>
+<span class="reqd">*</span>Style of the asterisks to denote a required field<br>
+
+<hr>
+<%a5 
+dim cn as sql::Connection
+cn.open("::name::conn")
+vSQL = "SELECT * FROM wt_css_boxes ORDER BY css_class"
+if cn.execute(vSQL) = .f.
+	errorout("WT_STYLESHEET|"+cn.callresult.text)
+end if
+lst = "<a name=\"boxstyles\"></a>" + crlf()
+while cn.resultset.nextrow()
+	vcss_class = cn.resultset.data("css_class")
+	lst = lst + <<%txt%
+	<div class="{vcss_class}">
+	<div class="{vcss_class}title">{vcss_class} Title</div>
+	<div class="{vcss_class}content">In autem esse dolore, dignissim dolore</div>
+	<div class="clearfix"></div>
+	</div>
+	<hr>
+	%txt%
+	lst = evaluate_string(lst)
+end while
+?lst
+cn.close()
+%>
+</div><!-- CONTENT -->
+</div><!-- WRAPPER -->
+</body></html>

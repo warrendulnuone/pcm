@@ -1,0 +1,56 @@
+<%A5
+''VARS WHEN LOGGED IN
+dim pUser as p
+dim pUser.userid as c
+a5ws_logged_in_user_values(pUser)
+
+dim cn as SQL::Connection
+dim rs as SQL::ResultSet
+dim arr[0] as p
+if cn.open("::name::conn") =.f.
+	errorout("HEADER_SETVAR|"+cn.callresult.text)
+	?"Could not open database, please contact the administrator"
+	END
+end if
+cn.portableSQLEnabled = .t.
+
+if alltrim(pUser.userid) <>"" 'logged-in
+	vSQL = "SELECT * FROM wt_variables WHERE omit<>1 AND availability<>'Always'"
+	if cn.execute(vSql) = .f.
+		errorout("SETVAR_SELECT|"+cn.callresult.text)
+		?"Could not read the database, please contact the administrator"+cn.callresult.text
+		END
+	end if
+	rs = cn.resultset
+	rs.topropertyarray(arr)
+	for x = 1 to arr.size()
+		var_name = arr[x].var_name
+		expression = arr[x].expression
+		v = "DIM session." + arr[x].var_name + " AS C = " + expression 
+		evaluate_template(v)
+	next
+end if
+
+delete arr
+dim arr[0] as p
+v = ""
+if alltrim(pUser.userid)="" ' not logged in
+	vSQL = "SELECT * FROM wt_variables WHERE omit<>1 AND availability='Always'"
+	if cn.execute(vSql) = .f.
+		errorout("SETVAR_SELECT|"+cn.callresult.text)
+		?"Could not read the database, please contact the administrator"+cn.callresult.text
+		END
+	end if
+	rs = cn.resultset
+	rs.topropertyarray(arr)
+	for x = 1 to arr.size()
+		var_name = arr[x].var_name
+		expression = arr[x].expression
+		v = "DIM session." + arr[x].var_name + " AS C = " + expression 
+		evaluate_template(v)
+	next
+end if
+
+cn.close()
+
+%>

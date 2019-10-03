@@ -1,0 +1,48 @@
+<!-- Footer Body -->
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<%a5 ?wt_content("footer_left") %>
+			</div>
+			<div class="col-md-8">
+				<%a5 ?wt_content("footer_right") %>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<%a5 ?wt_content("footer_top") %>
+			<%a5 ?wt_content("footer_middle") %>
+			<%a5 ?wt_content("footer_bottom") %>
+		</div>
+	</div>
+</div>
+<!-- Scripts for slicknav -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="javascript/jquery.slicknav.js"></script>
+<script>
+	$.noConflict();
+	jQuery( document ).ready(function( $ ) {
+	$(function(){
+		$('#menu').slicknav();
+	});
+	});
+</script>
+<!-- End Scripts for slicknav -->
+<%a5
+?wt_setup("body_code")
+%>
+<!-- Footer Body -->
+<div id="footer_under">
+	<div class="container" style="background-color:#ffffff;height:20px">
+		<div class="row">
+			<%A5 ?wt_atgbranding() %>
+			<%a5 ?wt_debugarea() %>
+			<%a5 ?wt_content("footer_under") %>
+		</div>
+	</div>
+</div>
+
+

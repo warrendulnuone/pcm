@@ -1,0 +1,276 @@
+/* =============================================================================
+   Inclue other Framework CSS
+   ========================================================================== */
+@import url("framework_boxes.css");
+@import url("framework_main_nav.css");
+
+
+/* =============================================================================
+   Editor
+   ========================================================================== */
+.show{
+border:1px solid green;
+}
+
+
+/* =============================================================================
+   Usefull classes
+   ========================================================================== */
+.align-right {
+text-align: right;
+}
+.align-center {
+text-align: center;
+}
+.bold {
+font-weight: 700;
+}
+.relative {
+position: relative;
+}
+.clearfix {
+clear: both;
+}
+.icon-box {
+    border-right: 1px solid #EAEAEA;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.noprint {
+display: none ;
+}
+.shadow {
+box-shadow: 3px 3px 4px #000;
+-moz-box-shadow: 3px 3px 4px #000;
+-webkit-box-shadow: 3px 3px 4px #000;
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+/* =============================================================================
+   Header area
+   ========================================================================== */
+
+#header {
+background-color:#34495e;
+border-bottom:5px solid #34495f;
+text-align: left;
+}
+
+#header a:link {
+text-decoration: none;
+color: #993300;
+}
+#header a:visited {
+text-decoration: none;
+color: #993300;
+}
+#header a:active {
+text-decoration: underline;
+color: #993300;
+}
+#header a:hover {
+text-decoration: underline;
+color: #333300;
+}
+
+#ticker{
+background-color:#f1c40f;
+display:block;
+}
+
+#topbar {
+background-color: #EEEEEE;
+border-bottom: 1px solid #CCCCCC;
+padding: 0 8px;
+line-height: 30px;
+padding-top:7px;
+}
+#topbar a:link {
+text-decoration: none;
+color: #000000;
+}
+#topbar a:visited {
+text-decoration: none;
+color: #000000;
+}
+#topbar a:active {
+text-decoration: none;
+color: #000000;
+}
+#topbar a:hover {
+text-decoration: underline;
+color: #ff6600;
+}
+
+#branding{
+padding:15px;
+}
+#breadcrumbs {
+display:inline;
+color: #666666;
+padding: 5px;
+}
+#breadcrumbs a:link {
+text-decoration: none;
+color: #000000;
+}
+#breadcrumbs a:visited {
+text-decoration: none;
+color: #000000;
+}
+#breadcrumbs a:active {
+text-decoration: none;
+color: #000000;
+}
+#breadcrumbs a:hover {
+text-decoration: underline;
+color: #ff6600;
+}
+
+#logo {
+
+}
+
+#headerimage {
+}
+
+/* =============================================================================
+   Content area styles
+   ========================================================================== */
+body {
+font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+}
+
+.main_content {
+background-color:#ffffff;
+min-height:120px;
+}
+
+.section_1 {
+background-color:#475577;
+min-height:120px;
+}
+
+.section_2 {
+min-height:120px;
+}
+
+.section_3 {
+background-color:#475577;
+min-height:120px;
+}
+
+/* =============================================================================
+   Alpha Navigation
+   ========================================================================== */
+
+#alpha_nav {
+	background-color: #dddddd;
+	padding-left:20px; /* Padding assumes the Alpha Nav is NOT inside a "996Grid Div" like grid_12 */
+}
+
+
+/* =============================================================================
+   Other
+   ========================================================================== */
+
+h1 {
+color: #003366;
+}
+h2 {
+color: #003366;
+font-weight: bold;
+}
+h3 {
+color: #003366;
+}
+h4 {
+}
+h5 {
+}
+
+#sitemap{
+display: inline-block;
+margin: 0 auto 20px;
+padding: 0;
+list-style: none;
+}
+
+/* =============================================================================
+   Footer area
+   ========================================================================== */
+#footer {
+background: none repeat scroll 0 0 #323232;
+color: white;
+padding: 10px 10px;
+margin-top: 20px;
+border-top: 10px solid #475577;
+border-bottom: 10px solid #475577;
+
+}
+#footer a:link {
+color:white;
+text-decoration: none;
+}
+#footer a:visited {
+color:white;
+text-decoration: none;
+}
+#footer a:active {
+color:white;
+text-decoration: none;
+}
+#footer a:hover {
+color:white;
+text-decoration: underline;
+}
+/* =============================================================================
+   Banner (video, slideshow)
+   ========================================================================== */
+
+.banner span {
+color: #fff;
+font-size: 2.500em;
+font-weight: 400;
+margin: 0.75em 0;
+display: block;
+}
+.banner {
+text-align: center;
+background-color: #ea0b25;
+}
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+/* Tablet Portrait size to Base 996px */
+@media only screen and (min-width: 768px) and (max-width: 995px){
+}
+/* All Mobile Sizes */
+@media only screen and (max-width: 767px){
+}
+/* Mobile Landscape Size to Tablet Portrait */
+@media only screen and (min-width: 480px) and (max-width: 767px){
+}
+/* Mobile Portrait Size to Mobile Landscape Size */
+@media only screen and (max-width: 479px){
+}
+
+/* =============================================================================
+   Font-Face
+   ========================================================================== */
+/* This is the proper syntax for an @font-face file
+
+/* @font-face {
+font-family: 'FontName';
+src: url('../fonts/FontName.eot');
+src: url('../fonts/FontName.eot?iefix') format('embedded-opentype'),
+url('../fonts/FontName.woff') format('woff'),
+url('../fonts/FontName.ttf') format('truetype'),
+url('../fonts/FontName.svg#FontName') format('svg');
+font-weight: normal;
+font-style: normal; }
+*/

@@ -1,0 +1,34 @@
+<!doctype html>
+<%a5
+dim session.messagetitle as c
+dim session.messagetext as c
+dim session.messagelink as c
+dim session.messagehead as c
+if session.messagetitle = ""
+	session.messagetitle = "Message"
+end if
+if session.messagelink  = ""
+	session.messagelink = "Click <a href=\"index.a5w\">here</a> to return to our Home Page"
+end if
+%>
+
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+<div class="main_content">
+	<div class="container" style="min-height:370px">
+		<%a5 ?wt_page("page_title","<h1>") %>
+		<div class="row">
+			<h2><%a5 ?session.messagetitle %></h2>
+			<p><%a5 ?session.messagetext %></p>
+			<p><%a5 ?session.messagelink %></p>
+			<%a5 ?wt_content("message_1") %> 
+		</div>
+	</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>

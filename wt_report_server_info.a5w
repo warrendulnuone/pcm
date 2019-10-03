@@ -1,0 +1,30 @@
+<%a5
+ dim rs as reportserver::ReportServer
+
+ if rs.ClientRequestAllowed() then
+     ? "Report Server Is Running<br>"+crlf()
+     dim reportJobsPending as c = rs.ListQueue("$(i)|||$(r)"+crlf()) 
+     if reportJobsPending <> "" then
+         ? "Reports Currently Being Printed"+crlf()
+         reportJobsPending = strtran(reportJobsPending,"|||","</td><td>")
+         reportJobsPending = *for_each(x,"<tr><td>"+x+"</td></tr>",reportJobsPending)
+         ? "<table border=\"1\" cellspacing=\"1\" cellpadding=\"3\" >"+crlf()
+         ? "<tr><th>Report Job id</th><th>Report name</th></tr>"+crlf()
+         ? reportJobsPending
+         ? "</table>"+crlf()
+     else
+         ? "No Reports are currently being printed by the server<br>"+crlf()
+     end if
+     
+
+    dim reportServerTable as c = rs.ServersAvailable("$(n)|$(g)|$(c)"+crlf())
+     reportServerTable = strtran(reportServerTable,"|","</td><td>")
+     reportServerTable = *for_each(x,"<tr><td>"+x+"</td></tr>",reportServerTable)
+     ? "<table border=\"1\" cellspacing=\"1\" cellpadding=\"3\" >"+crlf()
+     ? "<tr><th>Server</th><th>Reports Generated</th><th>Reports     Canceled</th></tr>"+crlf()
+     ? reportServerTable
+     ? "</table>"+crlf()
+ else
+     ? "Report Server Is NOT Running<br>"+crlf()
+ end if
+ %>

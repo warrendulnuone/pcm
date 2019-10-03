@@ -1,0 +1,80 @@
+<!-- Header Body -->
+
+<%a5
+dim msg_id as n
+msg_id = wt_setup("ticker_msg_id")
+if msg_id > 0
+%>
+	<div id="ticker">
+		<div class="container">
+			<div class="row">
+			<%a5 ?wt_message(msg_id) %>
+			</div>
+		</div>
+	</div>
+<%a5 end if %>
+
+<div id="topbar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 logintext">
+				<%A5 a5w_include("wt_inc_logintext.a5w") %>
+			</div>
+			<div class="col-md-6 quickmenu">
+				<div class="align-right">
+					<%a5 ?wt_content("header_menu") %><br>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div id="branding">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<%a5 ?wt_logoimage(request) %>
+			</div>
+			<div class="col-md-7">
+				<%a5 ?wt_content("logo_area_right") %><br>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<%a5 ?"<div id=\"main_nav\" style=\"background-color: " + wt_setup("main_nav_color") + "\">" %>
+	<!-- dont put the Main Nav in a grid class -->
+	<div class="container">
+		<div class="row">
+			<%a5 ?wt_menu() %>
+		</div>
+	</div>
+</div>
+
+<div id="alpha_nav">
+	<div class="container">
+		<div class="row">
+			<%a5 '?x_mainmenu.Output.Body.navsysTBH %>
+		</div>
+	</div>
+</div>
+
+<div id="header_image">
+	<div class="container">
+		<div class="row">
+			<%A5 '?wt_headerimage(request) %>
+		</div>
+	</div>
+</div>
+
+<div id="breadcrumbs">
+	<div class="container">
+		<div class="row">
+		<%A5
+		'==Breadcrumbs - commented out to improve performance. Uncomment if you want to use this feature
+		'?wt_breadcrumbs()
+		%>
+		</div>
+	</div>
+</div>
+<!-- Header Body -->

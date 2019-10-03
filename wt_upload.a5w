@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<%a5
+'Template Note - Generic Upload Utility
+'Uploads file to user's session folder, then your custom code manipulates the file from there
+
+'Template Note - this code gives the upload page a title and action (see manual)
+'PRE-UPLOAD CODE
+dim title as c
+dim session.upl_title as c 
+if title <> ""
+	session.upl_title = title
+	else
+	session.upl_title = "Upload Files"
+end if
+dim actioncomplete as l = .f.
+dim _action as c 
+dim session._action as c
+if session._action = ""
+	session._action = _action
+end if
+
+'Template Note - this code only fires when they press the Upload Files button
+'START UPLOAD CODE
+if eval_valid("cmd")
+	dim FileToUpload as p
+	dim FileToUpload.filename as c
+	dim FileToUpload.data as b
+	'GENERIC UPLOAD TO SESSION FOLDER
+	if FileToUpload.filename <> ""
+		fldr = session.session_folder
+		file.from_blob(fldr + "\\" + FileToUpload.filename, FileToUpload.data)
+	end if
+	actioncomplete = .t.
+
+	'SPECIAL CODE AFTER FILE UPLOADED TO SESSION FOLDER
+	select
+	    case session._action = "case1" '- example 
+	    case session._action = "case2" '- example 
+	    case session._action = "case3" '- example 
+		case else
+	end select
+end if
+%>
+
+<head>
+
+<style type="text/css">
+h2{background-color:#003366;color:#ffffff;font-family:Arial;padding:5px;}
+h3{color:#ff0000;text-align:center;margin-top:20px}
+</style>
+
+</head>
+<body class="upload">
+<%a5 ?"<h2>"+session.upl_title+"</h2>" %>
+<form action=" <%a5 ? request.script_name %> " method="post" enctype="multipart/form-data">
+<input type="file" name="FileToUpload" ><br >
+<input type="submit" name="cmd" value="Upload File">
+</form>
+
+<%a5
+if actioncomplete = .t.
+	?"<form><input type=button value=\"Upload Done, Close This Window\" onClick=\"javascript:window.close();\"></form>"
+end if
+%>
+
+</body></html>

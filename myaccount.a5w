@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+
+<%a5
+Delete tmpl_WT_MYACCOUNT
+DIM tmpl_WT_MYACCOUNT as P
+tmpl_WT_MYACCOUNT = a5w_load_component("wt_myaccount") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_myaccount)
+
+'Override settings start -----------------------------------------
+with tmpl_WT_MYACCOUNT
+.alias = "WT_MYACCOUNT"
+_dialogFilename = "wt_myaccount"
+end with 
+'Override settings end -----------------------------------------
+
+delete x_WT_MYACCOUNT
+dim x_WT_MYACCOUNT as p
+x_WT_MYACCOUNT = a5w_run_Component(tmpl_WT_MYACCOUNT) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:wt_myaccount)
+?x_WT_MYACCOUNT.Output.Head.JavaScript
+?x_WT_MYACCOUNT.Output.Head.CSS_Link
+
+?x_WT_MYACCOUNT.Output.Head.Title 
+%>
+
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+<div class="main_content">
+	<div class="container">
+		<%a5 ?wt_page("page_title","<h1>") %>
+		<div class="row">
+			<%a5 ?wt_content("myaccount") %> 
+			<%a5 ?x_WT_MYACCOUNT.Output.Body.Dialog2_HTML %>
+		</div>
+	</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "WT_CONTENT_LIVE"
+Delete tmpl_WT_CONTENT_LIVE
+DIM tmpl_WT_CONTENT_LIVE as P
+tmpl_WT_CONTENT_LIVE = a5w_load_component("wt_content_live") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_content_live)
+'Following code allows you to override settings in the saved component. DO NOT REMOVE SYSTEM GENERATED OVERRIDE_SETTINGS
+tmpl_WT_CONTENT_LIVE.override_settings = <<%override_settings%
+	componentName = componentAlias
+	_gridFilename = "wt_content_live"
+%override_settings%
+'TIP: To refer to local or page variables in the override_settings string, you must first define a local
+'dot variable called 'pageVar' with properties for all of the variables you want to reference. For example:
+'	dim pageVar as p
+'	pageVar.gridRowCount = 10
+'Then, in the override_settings string, you can reference pageVar.gridRowCount. For example:
+'	rows = pageVar.gridRowCount
+'Resolve session and page variables in the override_settings string.
+a5w_resolveVariablesInOverrideSettings(tmpl_WT_CONTENT_LIVE,session,local_variables())
+delete x_WT_CONTENT_LIVE
+dim x_WT_CONTENT_LIVE as p
+x_WT_CONTENT_LIVE = a5w_run_Component(tmpl_WT_CONTENT_LIVE)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_WT_CONTENT_LIVE) (EDIT:wt_content_live)
+if x_WT_CONTENT_LIVE.RedirectURL <> "" then 
+	response.redirect(x_WT_CONTENT_LIVE.redirectURL)
+	end
+end if 
+?x_WT_CONTENT_LIVE.Output.Head.JavaScript
+?x_WT_CONTENT_LIVE.Output.Head.CSS_Link
+%>
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--CSS for tmpl_WT_CONTENT_LIVE -->
+<link rel="stylesheet" type="text/css" href="file:///C:/_masters/a5v12/ilweb/ogit3.WebProjects/Default.WebProject/css/GrGray/style.css">
+<!--Alpha Five Temporary Code End -->
+
+<link rel="stylesheet" type="text/css" href="css/theme/default/framework.css" />
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="ckeditor/a5_ckeditor.js"></script>
+<meta name="generator" content="Alpha Anywhere HTML Editor Version 12 Build 2689-4440">
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<title></title>
+</head>
+<body>
+<h3>You may close this browser tab after completing the update.<br>Remember to refresh the original browser with the updated content.</h3>
+
+	<%A5 ?x_WT_CONTENT_LIVE.Output.Body.Search_HTML %>
+	<%A5 ?x_WT_CONTENT_LIVE.Output.Body.Grid_HTML %>
+	<%A5 ?x_WT_CONTENT_LIVE.Output.Body.DetailView_HTML	%>
+
+</body></html>

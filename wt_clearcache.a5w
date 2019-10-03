@@ -1,0 +1,4 @@
+<%A5
+Server.ClearAEXCache()
+?"AEX cache has been cleared"
+%>

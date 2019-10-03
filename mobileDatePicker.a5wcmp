@@ -1,0 +1,1727 @@
+{
+    "$schema": "UX",
+    "$definition": {
+        "style_name": "Alpha",
+        "style_type": "Alpha Five",
+        "resolveAbstractClassNames": true,
+        "builderVersionNumber": 1,
+        "overrideStyleName": "Default",
+        "FontSize": "Medium",
+        "A5ContainerClassPadding": "0px",
+        "A5ContainerClassPaddingForContainerWidthMode": "4px",
+        "layoutType": "ContainerWidth",
+        "previewMode": "MobileDevice",
+        "useDragScrolling": "Auto",
+        "pageTitle": "UX",
+        "waitMsg": {
+            "message": {
+                "text": "Wait...",
+                "waitIcon": "css/A5System/Images/wait.gif"
+            },
+            "cssAnimation": {
+                "size": "32"
+            }
+        },
+        "globalSettings": {
+            "labelWidth": "1in"
+        },
+        "serverSideEvents": {
+            "canAjaxCallback": "",
+            "afterAjaxCallback": ""
+        },
+        "onTimerEventInterval": 60,
+        "securityDeniedAction": "Redirect to login page",
+        "clientSideEvents": {
+            "_canAjaxCallback": "",
+            "__afterAjaxCallbackComplete": "",
+            "beforeUXSectionPrepare": "",
+            "afterUXSectionPrepare": "",
+            "beforeUXSectionDestroy": "",
+            "afterUXSectionDestroy": "",
+            "onAjaxCallbackFailed": "",
+            "onAjaxCallbackNotAvailable": "",
+            "onAjaxCallbackNotAllowed": "",
+            "onBeforeCreate": "",
+            "onServerSideEventHandlerError": "",
+            "onFieldValidationError": "",
+            "onInitializeBegin": "\n\nA5.overrides.add('editDateTime',{\n\tbase: {\n\t\tdecouple: true,\n\t\twindow: {\n\t\t\ttype: 'modal',\n\t\t\tlocation: ['dock','top'],\n\t\t\twidth: '100%',\n\t\t\theight: '100%',\n\t\t\tbody: {\n\t\t\t\tstyle: 'text-align: center',\n\t\t\t\tscroll: {axis: 'both'}\n\t\t\t}\n\t\t}\n\t}\n});\n",
+            "beforePrepare": "",
+            "afterPrepare": "",
+            "afterValidate": "",
+            "onTabPaneChanged": "",
+            "beforeRptSectionRowPrepare": "",
+            "afterRptSectionRowPrepare": "",
+            "canRptSectionRowAdd": "",
+            "afterRptSectionRowAdd": "",
+            "canRptSectionRowDelete": "",
+            "afterRptSectionRowDelete": "",
+            "onStateChange": "",
+            "onDataStateChange": "",
+            "afterControlBasedOnClientSideDataCacheRefreshed": "",
+            "onControlFocus": "",
+            "onRptSectionFocus": "",
+            "onRptSectionRowChange": "",
+            "canResetForm": "",
+            "afterResetForm": "",
+            "canRecordNavigate": "",
+            "afterRecordNavigate": "",
+            "onSynchronizeDialog": "",
+            "afterPopulateFromTable": "",
+            "onRenderComplete": "",
+            "onAndroidBackButton": "",
+            "onPanelActivate": "",
+            "afterSaveToRepository": "",
+            "afterLoadFromRepository": "",
+            "afterGoogleVisualization": "",
+            "canDeleteParentRecord": "",
+            "afterDeleteParentRecord": "",
+            "onOrientationChange": "",
+            "onKeyboard": "",
+            "onCordovaReady": "",
+            "onPhoneGapReady": "",
+            "onImageError": "",
+            "onSignatureCaptureToggle": "",
+            "onSignatureCaptureAccept": "",
+            "onTimer": "",
+            "beforeOnTimer": "",
+            "canLogin": "",
+            "afterLogin": "",
+            "afterFailedLogin": "",
+            "canLogout": "",
+            "afterLogout": "",
+            "onSessionTimeoutWarning": "",
+            "onServerSideListSummaryCompute": "",
+            "beforeHTMLReportExport": "",
+            "onConnectionChange": "",
+            "appCache_cached": "",
+            "appCache_checking": "",
+            "appCache_downloading": "",
+            "appCache_error": "",
+            "appCache_noupdate": "",
+            "appCache_obsolete": "",
+            "appCache_progress": "",
+            "appCache_updateready": "",
+            "onControlBlur": "",
+            "onControlChange": "",
+            "onBeforePersistControlValuesToLocalStorage": "",
+            "onPersistControlValuesToLocalStorage": "",
+            "onRestoreVariablesFromLocalStorage": "",
+            "onRestoreComponentStateFromLocalStorage": "",
+            "localStorageEncryption": "",
+            "localStorageDecryption": "",
+            "securityNotAuthenticated": "",
+            "securityPermissionDenied": "",
+            "webSocketOnMessage": "",
+            "webSocketServerClose": "",
+            "webSocketSendMessageFail": "",
+            "onOAuthAuthorize": "",
+            "afterGoogleAddressSelect": "",
+            "onBeforeClientSideDataCacheRead": "",
+            "afterClientSideDataCacheAjaxCallback": "",
+            "onWatchEvent": ""
+        },
+        "onlyValidateChangedFields": true,
+        "edit": {
+            "field_error_style": {
+                "type": "Block",
+                "showWarning": true,
+                "icon": "<Specified by Style>",
+                "controlContainer_classname": ""
+            },
+            "row_errors_window_title": "Error",
+            "row_errors_window_style": "color: red; width: 6in; height: 2in;",
+            "fieldValidationErrorMessage": "Form has errors."
+        },
+        "submitDialogIfHasClientSideValidationErrors": true,
+        "activeLanguage": "<Default>",
+        "datePicker": {
+            "dayNames": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "firstDayOfWeek": 1,
+            "todayButtonText": "Today",
+            "closeButtonText": "Close"
+        },
+        "clientSideDateFormat": "MM/dd/yyyy",
+        "fontScalingOption": "All",
+        "helpTableType": "DBF",
+        "fieldHelpWindowStyle": "modal-resizeable",
+        "customization": {
+            "resetFormMessage": "Are you sure you want to reset the form?",
+            "resetFormTitle": "Warning",
+            "resetFormIcon": "<Specified by Style>",
+            "resetFormYesButton": "Yes",
+            "resetFormNoButton": "No",
+            "windowTitleDirection": "ltr",
+            "dirtyWarning": "You must first save your changes or cancel changes by clicking the Reset button.",
+            "dirtyWarningTitle": "Notice",
+            "dirtyWarningIcon": "<Specified by Style>",
+            "deleteRecordWarningTitle": "Delete Record",
+            "deleteRecordWarningMessage": "Are you sure you want to delete this record?"
+        },
+        "dataBinding": {
+            "computeDataBindingCodeAtDesignTime": true,
+            "computeDataBindingCodeAtDesignTimePrompt": "Prompt",
+            "autoRefreshSchemaOnLoad": true,
+            "autoRefreshPromptFirst": "Prompt",
+            "precalc": {
+                "flagCodeComputed": false
+            }
+        },
+        "info": {
+            "createdBy": "Eavan",
+            "dateCreated": "2018-2-22",
+            "dateLastEdited": "2018-2-23"
+        },
+        "flagShowCommentsInTree": true,
+        "treeCommentOffset": "6",
+        "renderUXLocation": {
+            "type": "window",
+            "sizeToElement": true
+        },
+        "checkSessionEvery": 1,
+        "warningIntervalBeforeExpiration": 1,
+        "sessionTimeOutWarningMessage": "Your session will expire in {secondsToSessionEnd} seconds. Click the button to extend your session.",
+        "sessionExtendSessionButtonLabel": "Extend Session",
+        "sessionTimeoutWarningDialogTitle": "Warning",
+        "sessionHasExpiredMessage": "Your session has expired.",
+        "sessionHasExpiredButtonLabel": "OK",
+        "sessionHasExpiredAction": "Nothing",
+        "sessionHasExpiredRedirectPage": "<self>",
+        "sessionHasExpiredDialogTitle": "Notice",
+        "sessionHasExpiredOKButtonJavascript": "<ReloadThisPage>",
+        "login": {
+            "errorMessageStyle": "color: red;",
+            "logoutDoesFullPageReload": true
+        },
+        "applyResponsiveDesignSettings": true,
+        "responseDesignRulesMode": "FirstTrue",
+        "localStorage": {
+            "namespace": "<Default>",
+            "__version": 1,
+            "workingPreviewTestingMode": "Browser",
+            "variablesToNotPersist": ""
+        },
+        "preRenderComputeWhen": "Every time component is saved",
+        "page_fields": [
+            {
+                "controltype": "layout_directive_PanelNavigatorBegin",
+                "display": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=60323209-728b-41a0-9922-d6ee3216583b}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1] (Programmatic) (LTR)",
+                "displayODFlat": "{Data=60323209-728b-41a0-9922-d6ee3216583b}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1]",
+                "displayOD": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=60323209-728b-41a0-9922-d6ee3216583b}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1]",
+                "displayODtree": "{C=#51+111+61,White}{B=White,#51+111+61n}{F=+B}{Data=60323209-728b-41a0-9922-d6ee3216583b}{I:'$$web.panel.navigator'} [Panel Navigator: PANELNAVIGATOR_1] (Programmatic) (LTR)",
+                "idInternal": "60323209-728b-41a0-9922-d6ee3216583b",
+                "lastIndex": 20,
+                "parentContainer": -1,
+                "repeatingSectionParentId": -1,
+                "indentTree": 0,
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": "",
+                    "javascript": {
+                        "panel": "new A5.PanelNavigator([\n{\n\tname: 'PANELCARD_1',\n\tsrc: new A5.PanelCard({\n\ttheme: '{dialog.style}',\n\tbody: {\n\t\tcontent: {\n\t\t\ttype: 'html',\n\t\t\tsrc: '<div class=\"A5CWLayout\" style=\"width: 100%\" >\\n\\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.DATE\" for=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Date</label>\\n<!--LblE-->\\n\\t<!--FldS--><table id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CONTAINER\" cellspacing=\"0\" cellpadding=\"0\" class=\"[theme:editButtonGroup.base.container.className|{grid.style}EditBG]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; *display: inline; width: 100%; \">\\n<tr>\\n<td style=\"width:100%\">\\n\\n<input  \\tid=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" name=\"V.R{grid.rownumber}.DATE\"  value=\"\"    autocomplete=\"off\"   size=\"200\" class=\"[theme:editButtonGroup.base.container.editClassName|class.editButtonGroupEdit]\" style=\"width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\" />\\n\\n</td>\\n\\t\\t<td class=\"[theme:editButtonGroup.base.container.separatorClassName|{grid.style}EditBGSeparator]\" >&nbsp;</td>\\n\\t\\t<td id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CUSTOMBUTTON.0\"  class=\"[theme:editButtonGroup.base.container.button.className|{grid.style}EditBGButton]\" style=\"width: 0%;\"><img style=\"vertical-align: middle; \" src=\"svgIcon=#alpha-icon-calendar:icon,24\" /></td>\\n\\t</tr>\\n</table>\\n<!--FldE-->\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div style=\"clear: both; font: 0px arial; height: 0px; width: 0px;\"></div>'\n\t\t},\n\t\tscroll: {\n\t\t\taxis: 'both',\n\t\t\tstopPropogation: false,\n\t\t\tpull: {\n\t\t\t\ty: 'auto',\n\t\t\t\tx: 'auto'\n\t\t\t},\n\t\t\tindicator: {\n\t\t\t\tshow: true,\n\t\t\t\th: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'top',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\tleft: '0px',\n\t\t\t\t\tright: '0px'\n\t\t\t\t},\n\t\t\t\tv: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'right',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\ttop: '0px',\n\t\t\t\t\tbottom: '0px'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\theader: {\n\t\thtml: '<div style=\"display:none;\"><!--A5HiddenFields--></div>'\n\t},\n\tfooter: {\n\t},\n\toverlay: {\n\t},\n\tonSize: function() {if(typeof {dialog.object} != 'undefined' && typeof {dialog.object}._panelCardResize != 'undefined') { {dialog.object}._panelCardResize('PANELCARD_1'); };}\n})\n},\n{\n\tname: 'PANELCARD_2',\n\tsrc: new A5.PanelCard({\n\ttheme: '{dialog.style}',\n\tbody: {\n\t\tcontent: {\n\t\t\ttype: 'html',\n\t\t\tsrc: '<div id=\"{dialog.componentName}.EDITORSET_1.EDITOR_1\" style=\"display:none;\"><div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_STATICTEXT2\" title=\"\"  class=\"\" style=\"box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   ><div id=\"EDITOR_1.FIELDLABEL\" style=\"display:none;\">Field label goes here</div></div>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div \\tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SPINLISTGROUP\"class=\"A5CWLayout \"  style=\"width: 100%; \"  ><!--DIV for Container control--><div  class=\"[theme:spinList.base.groupClassName|{dialog.style}SpinListGroup]\" style=\"white-space:nowrap;\" ><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MONTH\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH.CONTROL\"  style=\"width: 60px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY\" name=\"V.R{grid.rownumber}.EDITOR_1_S_DAY\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY.CONTROL\"  style=\"width: 50px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_YEAR\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR.CONTROL\"  style=\"width: 60px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_HOUR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_HOUR\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_HOUR.CONTROL\"  style=\"width: 45px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MINUTES\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MINUTES\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MINUTES.CONTROL\"  style=\"width: 50px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_AMPM\" name=\"V.R{grid.rownumber}.EDITOR_1_S_AMPM\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_AMPM.CONTROL\"  style=\"width: 45px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div></div><div style=\"font: 0pt arial;clear:both;\"></div></div><!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITOR_1_SPINLISTGROUP.BREAK\"  style=\"clear:both; \" /><!--breakend--><div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_NOW\"    ></button>\\n</div>\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR\"    ></button>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_HELP1\" title=\"\"  class=\"\" style=\"box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   ><div id=\"EDITOR_1.HELPTEXT\" style=\"display:none;\">Help text for this field goes here.</div></div>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON\"    ></button>\\n</div>\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON\"    ></button>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n</div>\\n<div style=\"clear: both; font: 0px arial; height: 0px; width: 0px;\"></div>'\n\t\t},\n\t\tscroll: {\n\t\t\taxis: 'both',\n\t\t\tstopPropogation: false,\n\t\t\tpull: {\n\t\t\t\ty: 'auto',\n\t\t\t\tx: 'auto'\n\t\t\t},\n\t\t\tindicator: {\n\t\t\t\tshow: true,\n\t\t\t\th: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'top',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\tleft: '0px',\n\t\t\t\t\tright: '0px'\n\t\t\t\t},\n\t\t\t\tv: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'right',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\ttop: '0px',\n\t\t\t\t\tbottom: '0px'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\theader: {\n\t\thtml: '<div style=\"display:none;\"><!--A5HiddenFields--></div>'\n\t},\n\tfooter: {\n\t},\n\toverlay: {\n\t},\n\tonSize: function() {if(typeof {dialog.object} != 'undefined' && typeof {dialog.object}._panelCardResize != 'undefined') { {dialog.object}._panelCardResize('PANELCARD_2'); };}\n})\n}\n],{\n\ttype: 'programmatic',\n\tflow: 'ltr',\n\tloopNavigate: false,\n\tonPanelActivate: function() {{dialog.Object}.refreshClientSideComputations();},\n\tonSize: function() {;if(typeof {dialog.object} != 'undefined') {\n\tif(typeof {dialog.object}._findActiveLayoutRule != 'undefined') { \n\t\t{dialog.object}._findActiveLayoutRule();\n\t\t\n\t}\n}},\n\ttheme: '{dialog.style}',\n\theader: {\n\t\tshow: false\n\t},\n\tfooter: {\n\t},\n\toverlay: {\n\t},\n\tcontrols: {\n\t\tprev: {\n\t\t\thas: false\n\t\t},\n\t\tnext: {\n\t\t\thas: false\n\t\t},\n\t\tback: {\n\t\t\thas: false\n\t\t},\n\t\tforward: {\n\t\t\thas: false\n\t\t}\n\t},\n\tbody: {\n\t},\n\tanimation: {\n\t\tduration: 400\n\t}\n})"
+                    }
+                },
+                "crc": "4294917355",
+                "isCollapsed": false,
+                "v": {
+                    "container": {
+                        "id": "PANELNAVIGATOR_1"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelNavigator": {
+                        "navigatorType": "Programmatic",
+                        "navigatorFlow": "LTR",
+                        "animation": {
+                            "type": "slide",
+                            "duration": 400
+                        },
+                        "indicator": {
+                            "location": "Auto"
+                        },
+                        "tabBand": {
+                            "location": "Top"
+                        }
+                    }
+                }
+            },
+            {
+                "controlType": "layout_directive_PanelCardBegin",
+                "display": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e47e27cc-5bd0-4d77-a57a-3c35e591ad32}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "displayODFlat": "{Data=e47e27cc-5bd0-4d77-a57a-3c35e591ad32}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "idInternal": "e47e27cc-5bd0-4d77-a57a-3c35e591ad32",
+                "lastIndex": 4,
+                "parentContainer": 1,
+                "displayOD": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e47e27cc-5bd0-4d77-a57a-3c35e591ad32}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e47e27cc-5bd0-4d77-a57a-3c35e591ad32}{I:'$$web.panel.card'} [Panel Card: PANELCARD_1]",
+                "crc": "4294961080",
+                "v": {
+                    "container": {
+                        "id": "PANELCARD_1"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelCard": {
+                        "allowBodyScrolling": true,
+                        "bodyScrolling": {
+                            "axis": "Both"
+                        },
+                        "pull": {
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "scrolling": {
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "type": "Default"
+                    }
+                },
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "'xbasic\n\nv._dirty = .f.\n\n\n",
+                    "DesignViewHTML": "",
+                    "javascript": {
+                        "panel": "new A5.PanelCard({\n\ttheme: '{dialog.style}',\n\tbody: {\n\t\tcontent: {\n\t\t\ttype: 'html',\n\t\t\tsrc: '<div class=\"A5CWLayout\" style=\"width: 100%\" >\\n\\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.DATE\" for=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Date</label>\\n<!--LblE-->\\n\\t<!--FldS--><table id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CONTAINER\" cellspacing=\"0\" cellpadding=\"0\" class=\"[theme:editButtonGroup.base.container.className|{grid.style}EditBG]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; *display: inline; width: 100%; \">\\n<tr>\\n<td style=\"width:100%\">\\n\\n<input  \\tid=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" name=\"V.R{grid.rownumber}.DATE\"  value=\"\"    autocomplete=\"off\"   size=\"200\" class=\"[theme:editButtonGroup.base.container.editClassName|class.editButtonGroupEdit]\" style=\"width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\" />\\n\\n</td>\\n\\t\\t<td class=\"[theme:editButtonGroup.base.container.separatorClassName|{grid.style}EditBGSeparator]\" >&nbsp;</td>\\n\\t\\t<td id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CUSTOMBUTTON.0\"  class=\"[theme:editButtonGroup.base.container.button.className|{grid.style}EditBGButton]\" style=\"width: 0%;\"><img style=\"vertical-align: middle; \" src=\"svgIcon=#alpha-icon-calendar:icon,24\" /></td>\\n\\t</tr>\\n</table>\\n<!--FldE-->\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div style=\"clear: both; font: 0px arial; height: 0px; width: 0px;\"></div>'\n\t\t},\n\t\tscroll: {\n\t\t\taxis: 'both',\n\t\t\tstopPropogation: false,\n\t\t\tpull: {\n\t\t\t\ty: 'auto',\n\t\t\t\tx: 'auto'\n\t\t\t},\n\t\t\tindicator: {\n\t\t\t\tshow: true,\n\t\t\t\th: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'top',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\tleft: '0px',\n\t\t\t\t\tright: '0px'\n\t\t\t\t},\n\t\t\t\tv: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'right',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\ttop: '0px',\n\t\t\t\t\tbottom: '0px'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\theader: {\n\t\thtml: '<div style=\"display:none;\"><!--A5HiddenFields--></div>'\n\t},\n\tfooter: {\n\t},\n\toverlay: {\n\t},\n\tonSize: function() {if(typeof {dialog.object} != 'undefined' && typeof {dialog.object}._panelCardResize != 'undefined') { {dialog.object}._panelCardResize('PANELCARD_1'); };}\n})"
+                    }
+                },
+                "parentIsCollapsed": false
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4b1b2260-783d-4ce9-88e2-93f5af15a3df}{I:'$$control.edit'} [date] �",
+                "displayODFlat": "{Data=4b1b2260-783d-4ce9-88e2-93f5af15a3df}{I:'$$control.edit'} [date]",
+                "idInternal": "4b1b2260-783d-4ce9-88e2-93f5af15a3df",
+                "parentContainer": 2,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4b1b2260-783d-4ce9-88e2-93f5af15a3df}{I:'$$control.edit'} [date]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{Data=4b1b2260-783d-4ce9-88e2-93f5af15a3df}{I:'$$control.edit'} [date] �",
+                "crc": "4294933252",
+                "indentTree": 2,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "parentIsCollapsed": true,
+                "v": {
+                    "controlType": "Textbox",
+                    "variableName": "date",
+                    "type": "Date",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "incontrolButtons": {
+                        "has": true,
+                        "isDefined": true,
+                        "buttons": [
+                            {
+                                "buttonName": "editor",
+                                "buttonType": "Icon",
+                                "iconName": "svgIcon=#alpha-icon-calendar:icon,24",
+                                "buttonText": "editor",
+                                "buttonPosition": "Right",
+                                "buttonCode": "{dialog.object}.editorFromControl('EDITORSET_1','EDITOR_1','date')",
+                                "inlineStyle": "",
+                                "highlightOnHover": true
+                            }
+                        ],
+                        "buttonCount": 1
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "Date",
+                    "class": "<Default>",
+                    "width": "100%",
+                    "breakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "Above",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "datePicker": {
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        },
+                        "display": false,
+                        "timePickerOptionsDefined": false,
+                        "openMethod": "ClickIcon",
+                        "useComboBoxes": true,
+                        "dateFormat": "dd/MM/yy",
+                        "lowYear": 1950,
+                        "highYear": 2050,
+                        "switchYear": 20,
+                        "iconNumber": 2,
+                        "lowDate": "",
+                        "highDate": "",
+                        "disabledDays": "",
+                        "disabledDates": "",
+                        "hasDisabledDates": false,
+                        "disabledDatesMethod": "Explicit",
+                        "disabledDatesExplicit": "",
+                        "disabledDatesJavascript": "",
+                        "showDaysOfWeek": true,
+                        "showWeeksOfYear": false,
+                        "showTodayButton": true,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "lockColumnWidths": true,
+                        "userMustSelectFromDatePicker": false,
+                        "drawBoxAroundDates": false,
+                        "dateItemHoverClassName": "",
+                        "dateItemSelectedClassName": "",
+                        "dateItemOutOfRangeClassName": "",
+                        "dateItemStyle": "",
+                        "containerWidth": "",
+                        "containerHeight": "",
+                        "hasEvents": false,
+                        "event": {
+                            "onItemDraw": "",
+                            "onClick": "",
+                            "onRightClick": "",
+                            "onSelect": "",
+                            "onNavigate": "",
+                            "onMonthNavigate": "",
+                            "onYearNavigate": ""
+                        },
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "displayTimePicker": false
+                    },
+                    "specialtype": "None",
+                    "specialtypeJSON": "",
+                    "displayAsSlider": false,
+                    "precalc": {
+                        "javascript_Lookupfields": "{dialog.componentName}_DlgObj.fieldHelpers['DATE'] = new A5.EditButtonGroup({theme: '{grid.style}'});",
+                        "javascriptAbstractSetupCode": "$e.add('{grid.componentname}.V.R{grid.rownumber}.DATE.CUSTOMBUTTON.0',A5.d.evnts.click,function(e) { {dialog.object}.editorFromControl('EDITORSET_1','EDITOR_1','date')});"
+                    },
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.DATE\" for=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Date</label>\n<!--LblE-->\n\t<!--FldS--><table id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CONTAINER\" cellspacing=\"0\" cellpadding=\"0\" class=\"[theme:editButtonGroup.base.container.className|{grid.style}EditBG]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; *display: inline; width: 100%; \">\n<tr>\n<td style=\"width:100%\">\n\n<input  \tid=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" name=\"V.R{grid.rownumber}.DATE\"  value=\"\"  autocomplete=\"off\"   size=\"200\" class=\"[theme:editButtonGroup.base.container.editClassName|class.editButtonGroupEdit]\" style=\"width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\" />\n\n</td>\n\t\t<td class=\"[theme:editButtonGroup.base.container.separatorClassName|{grid.style}EditBGSeparator]\" >&nbsp;</td>\n\t\t<td id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CUSTOMBUTTON.0\"  class=\"[theme:editButtonGroup.base.container.button.className|{grid.style}EditBGButton]\" style=\"width: 0%;\"><img style=\"vertical-align: middle; \" src=\"svgIcon=#alpha-icon-calendar:icon,24\" /></td>\n\t</tr>\n</table>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'DATE': {info: {controlType: 'Textbox'}, hiddenVal: false, type: 'input,label', isCalc: false, hlp: '', isArray: false, dataType: 'D'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_PanelCardEnd",
+                "display": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5ca1afec-2e96-4fbb-b8d6-a166f92edfbe}{I:'vertLineCap'} [Panel Card End: PANELCARD_1]",
+                "displayODFlat": "{Data=5ca1afec-2e96-4fbb-b8d6-a166f92edfbe}{I:'vertlinecap'} [Panel Card End]",
+                "idInternal": "5ca1afec-2e96-4fbb-b8d6-a166f92edfbe",
+                "parentContainer": 1,
+                "displayOD": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5ca1afec-2e96-4fbb-b8d6-a166f92edfbe}{I:'vertlinecap'} [Panel Card End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=5ca1afec-2e96-4fbb-b8d6-a166f92edfbe}{I:'vertLineCap'} [Panel Card End: PANELCARD_1]",
+                "indentTree": 1,
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 2,
+                "parentIsCollapsed": true
+            },
+            {
+                "controltype": "layout_directive_PanelCardBegin",
+                "display": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=f021e01b-892a-43a1-a74d-098d4eb7c0c3}{I:'$$web.panel.card'} [Panel Card: PANELCARD_2]",
+                "displayODFlat": "{Data=f021e01b-892a-43a1-a74d-098d4eb7c0c3}{I:'$$web.panel.Card'} [Panel Card: PANELCARD_2]",
+                "displayOD": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=f021e01b-892a-43a1-a74d-098d4eb7c0c3}{I:'$$web.panel.Card'} [Panel Card: PANELCARD_2]",
+                "displayODtree": "{C=#104+150+112,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=f021e01b-892a-43a1-a74d-098d4eb7c0c3}{I:'$$web.panel.card'} [Panel Card: PANELCARD_2]",
+                "idInternal": "f021e01b-892a-43a1-a74d-098d4eb7c0c3",
+                "v": {
+                    "id": "PANELCARDBEGIN_2",
+                    "Container": {
+                        "ID": "PANELCARD_2"
+                    },
+                    "panelInstance": {
+                        "sections": {
+                            "name": "<UsePanelId>",
+                            "renderMethod": "Auto-Create-Destroy"
+                        }
+                    },
+                    "panelCard": {
+                        "allowBodyScrolling": true,
+                        "bodyScrolling": {
+                            "axis": "Both"
+                        },
+                        "pull": {
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "scrolling": {
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "type": "Default"
+                    }
+                },
+                "lastIndex": 19,
+                "parentContainer": 1,
+                "repeatingSectionParentId": -1,
+                "indentTree": 1,
+                "parentIsCollapsed": false,
+                "precalc": {
+                    "javascript": {
+                        "panel": "new A5.PanelCard({\n\ttheme: '{dialog.style}',\n\tbody: {\n\t\tcontent: {\n\t\t\ttype: 'html',\n\t\t\tsrc: '<div id=\"{dialog.componentName}.EDITORSET_1.EDITOR_1\" style=\"display:none;\"><div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_STATICTEXT2\" title=\"\"  class=\"\" style=\"box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   ><div id=\"EDITOR_1.FIELDLABEL\" style=\"display:none;\">Field label goes here</div></div>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div \\tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SPINLISTGROUP\"class=\"A5CWLayout \"  style=\"width: 100%; \"  ><!--DIV for Container control--><div  class=\"[theme:spinList.base.groupClassName|{dialog.style}SpinListGroup]\" style=\"white-space:nowrap;\" ><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MONTH\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH.CONTROL\"  style=\"width: 60px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY\" name=\"V.R{grid.rownumber}.EDITOR_1_S_DAY\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY.CONTROL\"  style=\"width: 50px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_YEAR\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR.CONTROL\"  style=\"width: 60px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_HOUR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_HOUR\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_HOUR.CONTROL\"  style=\"width: 45px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MINUTES\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MINUTES\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MINUTES.CONTROL\"  style=\"width: 50px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_AMPM\" name=\"V.R{grid.rownumber}.EDITOR_1_S_AMPM\" type=\"hidden\"/><!--JSControlEnd--><div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_AMPM.CONTROL\"  style=\"width: 45px; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div></div><div style=\"font: 0pt arial;clear:both;\"></div></div><!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITOR_1_SPINLISTGROUP.BREAK\"  style=\"clear:both; \" /><!--breakend--><div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_NOW\"    ></button>\\n</div>\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR\"    ></button>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<div id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_HELP1\" title=\"\"  class=\"\" style=\"box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\"   ><div id=\"EDITOR_1.HELPTEXT\" style=\"display:none;\">Help text for this field goes here.</div></div>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON\"    ></button>\\n</div>\\n<div class=\"A5CWLayout\" style=\"width: \" >\\n\\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON\"    ></button>\\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\\n</div>\\n<div style=\"clear: both; font: 0px arial; height: 0px; width: 0px;\"></div>'\n\t\t},\n\t\tscroll: {\n\t\t\taxis: 'both',\n\t\t\tstopPropogation: false,\n\t\t\tpull: {\n\t\t\t\ty: 'auto',\n\t\t\t\tx: 'auto'\n\t\t\t},\n\t\t\tindicator: {\n\t\t\t\tshow: true,\n\t\t\t\th: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'top',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\tleft: '0px',\n\t\t\t\t\tright: '0px'\n\t\t\t\t},\n\t\t\t\tv: {\n\t\t\t\t\tshow: true,\n\t\t\t\t\tlocation: 'right',\n\t\t\t\t\toffset: '0px',\n\t\t\t\t\ttop: '0px',\n\t\t\t\t\tbottom: '0px'\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t},\n\theader: {\n\t\thtml: '<div style=\"display:none;\"><!--A5HiddenFields--></div>'\n\t},\n\tfooter: {\n\t},\n\toverlay: {\n\t},\n\tonSize: function() {if(typeof {dialog.object} != 'undefined' && typeof {dialog.object}._panelCardResize != 'undefined') { {dialog.object}._panelCardResize('PANELCARD_2'); };}\n})"
+                    }
+                }
+            },
+            {
+                "controltype": "layout_directive_ContainerBegin",
+                "display": "{C=#0+87+141,White}{B=White,#0+87+141}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=f1912838-5625-49c1-a8a5-af979f3b7892}{I:'$$format.border.edit'} [EditorSet: EDITORSET_1]",
+                "displayODFlat": "{Data=f1912838-5625-49c1-a8a5-af979f3b7892}{I:'$$format.border.style.dash'} [Container: EDITORSET_1]",
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=f1912838-5625-49c1-a8a5-af979f3b7892}{I:'$$format.border.style.dash'} [Container: EDITORSET_1]",
+                "displayODtree": "{C=#0+87+141,White}{B=White,#0+87+141}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=f1912838-5625-49c1-a8a5-af979f3b7892}{I:'$$format.border.edit'} [EditorSet: EDITORSET_1]",
+                "idInternal": "f1912838-5625-49c1-a8a5-af979f3b7892",
+                "lastIndex": 18,
+                "parentContainer": 5,
+                "repeatingSectionParentId": -1,
+                "indentTree": 2,
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITORSET_1\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": "",
+                    "editorSetJavascript": "{dialog.object}._editors['EDITORSET_1'] = {\n\tshow: function(value,settings) { \n{dialog.object}.panelSetActive('PANELCARD_2')\n},\n\thide: function(settings) { \n{dialog.object}.panelSetActive('PANELCARD_1')\n},\n\tonCommit: function(value,settings) { \n\n},\n\tautoCommit: true,\n\teditors: {\"EDITOR_1\":{edit: function(value,settings) { \nif(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 == 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1 = function() {\n\t\t\n\t\tvar sYear = {dialog.object}.getControl('EDITOR_1_S_YEAR');\n\t\tvar sMonth = {dialog.object}.getControl('EDITOR_1_S_MONTH');\n\t\tvar sDate = {dialog.object}.getControl('EDITOR_1_S_DAY');\n\t\t\n\t\tif(!sYear || !sMonth || !sDate) return false;\n\t\tvar year = sYear.value;\n\t\tvar month = sMonth.value;\n\t\t\n\t\tvar dInM = new Date(Number(year),Number(month), 0).getDate();\n\t\tvar dates = [];\n\t\tdates.push({html: '&nbsp;', value: '0'});\n\t\tfor(var i=1;i<=dInM;i++) dates.push({html: i, value: i});\n\t\tif(sDate.value > dInM) sDate.value = dInM;\n\t\tsDate.populate(dates,true);\n\t\tsDate.refresh();\n\t}\n}\n\nvar sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nvar d = new Date();\n\n\n\n\n\nvar dfmt = A5.serverSideDateFormat;\nif(value != null) d.fromFormat(value,dfmt);\n\n\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue(d.getFullYear());\nsMonth.setValue(d.getMonth()+1);\n\nif(value == '') { \n\tsYear.setValue('0');\n\tsMonth.setValue('0');\n}\n\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nsDate.setValue(d.getDate());\nif(value == '') { \n\tsDate.setValue('0');\n}\n\n\nif(typeof {dialog.object}._functions.parseTime == 'undefined') { \n\t{dialog.object}._functions.parseTime = function(t) {\n\t\tvar flagEmptyTime = false;\n\t\tif(t == '') flagEmptyTime = true;\n\t\tvar ampm = 'AM';\n\t\t\n\t\tt = t.toLowerCase();\n\t\tif(t.indexOf('p') > -1) ampm = 'PM';\n\t\tvar h = t.split(\":\")[0];\n\t\tvar h = Number(h);\n\t\tvar h = '' + h;\n\t\tvar m = t.split(\":\")[1];\n\t\t\n\t\tif(typeof m == 'undefined') {\n\t\t\th = '12';\n\t\t\tm = '00';\n\t\t}\n\t\tvar m = m.split(\" \");\n\t\tvar m = m[0];\n\t\tif(typeof m == 'undefined') m = '00';\n\t\tm = ':' + m;\n\t\t\n\t\tvar sH = {dialog.object}.getControl('EDITOR_1_S_HOUR');\n\t\tvar sM = {dialog.object}.getControl('EDITOR_1_S_MINUTES');\n\t\tvar sAMPM = {dialog.object}.getControl('EDITOR_1_S_AMPM');\n\t\tsH.setValue(h,false);\n\t\tsM.setValue(m,false);\n\t\tsAMPM.setValue(ampm,false);\n\t\t\n\t\tif(flagEmptyTime) { \n\t\t\tsH.setValue('0',false);\n\t\t\tsM.setValue('0',false);\n\t\t\tsAMPM.setValue('0',false);\n\t\t}\n\t\tsH.refresh();\n\t\tsM.refresh();\n\t\tsAMPM.refresh();\n\t};\n};\n\n\n\nif(typeof value == 'undefined' || value == null) value = '';\nvar txt = value.split(' ')\ntxt.shift();\nvar valueTime = txt.join(' ');\n\n\n\nif(typeof valueTime == 'undefined') valueTime = '';\n\n{dialog.object}._functions.parseTime(valueTime);\n},commit: function(settings) { \nvar sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nvar sH = {dialog.object}.getControl('EDITOR_1_S_HOUR');\nvar sM = {dialog.object}.getControl('EDITOR_1_S_MINUTES');\nvar sAMPM = {dialog.object}.getControl('EDITOR_1_S_AMPM');\n\n\nvar _date = sDate.value;\nif (Number(_date) < 10) { \n\t_date = '0' + _date;\n}\n\nvar _month = sMonth.value;\nif (Number(_month) < 10) { \n\t_month = '0' + _month;\n}\nvar val = _month+'/'+_date+'/'+sYear.value;\nif(val == '0/0/0') { \n\tval = '';\n\treturn val;\n};\n\n\n\n\n\n\n\n\nif(sDate.value == '0' && sMonth.value == '0' && sYear.value == '0') return '';\nif(sAMPM.value == '0') sAMPM.setValue('AM',false);\nif(sH.value != '0') {\n\tif(sM.value == '0') sM.setValue(':00');\n}\nvar timeStr =  sH.value + sM.value + ' ' + sAMPM.value;\nif(sH.value == '0' && sM.value == '0' && sAMPM.value == '0') timeStr = '';\n\nvar newValue = _month+'/'+_date+'/'+sYear.value + ' ' + timeStr;\nvar flag = false;\nif(typeof settings != 'undefined' && typeof settings.state != 'undefined' && typeof settings.state.value != 'undefined') { \n\tvar origValue = settings.state.value;\n\tif(origValue.toLowerCase() == newValue.toLowerCase()) { \n\t\tflag = true;\n\t}\n}\n\nif(flag) return origValue;\nelse return newValue;\n},show: function(value,settings) { \n{dialog.object}.__currentEditorSettings = settings;\nvar title = settings['title'];\nif(typeof title == 'undefined' || title == '' ) title = settings.formView.active.name;\nif(typeof title == 'undefined') title = '';\n\nvar eleTitle = $('EDITOR_1.FIELDLABEL');\nif(title == '') { \n\tif(eleTitle) eleTitle.style.display = 'none';\n} else { \n\tif(eleTitle) eleTitle.style.display = '';\n\tif(eleTitle) eleTitle.innerHTML = title;\n} \n\n\nvar helpText = settings['helpText'];\nif(typeof helpText == 'undefined') helpText = '';\n\n\nvar hEle = $('EDITOR_1.HELPTEXT');\nif(helpText == '') { \n\tif(hEle) hEle.style.display = 'none';\n\n} else { \n\tif(hEle) hEle.innerHTML = helpText\n\tif(hEle) hEle.style.display = '';\t\n}\n\nvar flagShowNowButton = true;\nvar flagShowClearDateButton = true;\nvar __gs = settings['__genieSettings'];\n\n\n\n\nif(typeof __gs != 'undefined' && __gs != null) { \n\tif(typeof __gs['showNowButton'] != 'undefined') { \n\t\tvar showNow = __gs['showNowButton'];\n\t\tif(!showNow) flagShowNowButton = false;\n\t};\n\tif(typeof __gs['showClearDateButton'] != 'undefined') { \n\t\tvar showClearDate = __gs['showClearDateButton'];\n\t\tif(!showClearDate) flagShowClearDateButton = false;\n\t};\n\n\tif(!flagShowNowButton) { \n\t\t{dialog.object}.setControlDisplay('EDITOR_1_NOW',false);\n\t} else { \n\t\tvar bEle = {dialog.object}.getControl('EDITOR_1_NOW');\n\t\tvar label = __gs['nowButtonLabel'];\n\t\tif(typeof label == 'undefined') label = 'Today';\n\t\tbEle.html = label\n\t\tbEle.refresh();\n\t}\t\n\n\tif(!flagShowClearDateButton) { \n\t\t{dialog.object}.setControlDisplay('EDITOR_1_CLEAR',false);\n\t} else { \n\t\tvar bEle = {dialog.object}.getControl('EDITOR_1_CLEAR');\n\t\tvar label = __gs['clearDateButtonLabel'];\n\t\tif(typeof label == 'undefined') label = 'Clear Date';\n\t\tbEle.html = label\n\t\tbEle.refresh();\n\n\t}\n}\n},hide: function(value,settings) { \n{dialog.object}.__currentEditorSettings = false;\n\n},validate: function(value,settings) { \n\n}}}\n}"
+                },
+                "crc": "4294946203",
+                "parentIsCollapsed": true,
+                "v": {
+                    "container": {
+                        "ID": "EDITORSET_1",
+                        "contentAlignment": "Left",
+                        "contentVerticalAlign": "Top",
+                        "edgeOffset": "",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "EditorSet",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "top",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "editorSet": {
+                            "show": "{dialog.object}.panelSetActive('PANELCARD_2')",
+                            "hide": "{dialog.object}.panelSetActive('PANELCARD_1')",
+                            "commit": "",
+                            "autoCommit": true
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=#11+161+255,White}{B=White,#11+161+255}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=869875d2_452a_42c3_b4ff_bf5cec682df8}{I:'$$format.border.edit'} [Editor: EDITOR_1]",
+                "displayODFlat": "{Data=869875d2_452a_42c3_b4ff_bf5cec682df8}{I:'$$format.border.style.dash'} [Container: EDITOR_1]",
+                "idInternal": "869875d2_452a_42c3_b4ff_bf5cec682df8",
+                "lastIndex": 17,
+                "parentContainer": 6,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=869875d2_452a_42c3_b4ff_bf5cec682df8}{I:'$$format.border.style.dash'} [Container: EDITOR_1]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#11+161+255,White}{B=White,#11+161+255}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=869875d2_452a_42c3_b4ff_bf5cec682df8}{I:'$$format.border.edit'} [Editor: EDITOR_1]",
+                "crc": "4294925066",
+                "indentTree": 3,
+                "isCollapsed": false,
+                "v": {
+                    "container": {
+                        "ID": "EDITOR_1",
+                        "contentAlignment": "Left",
+                        "contentVerticalAlign": "Top",
+                        "edgeOffset": "",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "Editor",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        },
+                        "editor": {
+                            "edit": "if(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 == 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1 = function() {\n\t\t//read year and month from the corresponding spinner and then figure out how many days are in that year/mont\n\t\tvar sYear = {dialog.object}.getControl('EDITOR_1_S_YEAR');\n\t\tvar sMonth = {dialog.object}.getControl('EDITOR_1_S_MONTH');\n\t\tvar sDate = {dialog.object}.getControl('EDITOR_1_S_DAY');\n\t\t\n\t\tif(!sYear || !sMonth || !sDate) return false;\n\t\tvar year = sYear.value;\n\t\tvar month = sMonth.value;\n\t\t//day is 1 based, month is 0 based. setting the day to 0 gives last day of previous month\n\t\tvar dInM = new Date(Number(year),Number(month), 0).getDate();\n\t\tvar dates = [];\n\t\tdates.push({html: '&nbsp;', value: '0'});\n\t\tfor(var i=1;i<=dInM;i++) dates.push({html: i, value: i});\n\t\tif(sDate.value > dInM) sDate.value = dInM;\n\t\tsDate.populate(dates,true);\n\t\tsDate.refresh();\n\t}\n}\n\nvar sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nvar d = new Date();\n\n\n\n\n\n//get the date format of the data in the form (must be the format in which the data is stored - not displayed)\nvar dfmt = A5.serverSideDateFormat;\nif(value != null) d.fromFormat(value,dfmt);\n\n\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue(d.getFullYear());\nsMonth.setValue(d.getMonth()+1);\n\nif(value == '') { \n\tsYear.setValue('0');\n\tsMonth.setValue('0');\n}\n\n\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nif(value != '') { \n\tsDate.setValue(d.getDate());\n} else { \n\tsDate.setValue('0');\n}",
+                            "commit": "var sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\n\nvar val = sMonth.value+'/'+sDate.value+'/'+sYear.value;\nif(val == '0/0/0') val = '';\n\nif(Number(sMonth.value <10)) { \n\tvar _month = '0' + sMonth.value;\n\tvar val = _month+'/'+sDate.value+'/'+sYear.value;\n}\nreturn val;",
+                            "show": "if(typeof settings.formView != 'undefined') { \n\n\tvar title = settings['title'];\n\tif(typeof title == 'undefined' || title == '' ) title = settings.formView.active.name;\n\tif(typeof title == 'undefined') title = '';\n\t\n\tvar eleTitle = $('EDITOR_1.FIELDLABEL');\n\tif(title == '') { \n\t\tif(eleTitle) eleTitle.style.display = 'none';\n\t} else { \n\t\tif(eleTitle) eleTitle.style.display = '';\n\t\tif(eleTitle) eleTitle.innerHTML = title;\n\t} ;\n\t\n\t\n\tvar helpText = settings['helpText'];\n\tif(typeof helpText == 'undefined') helpText = '';\n\t\n\t\n\tvar hEle = $('EDITOR_1.HELPTEXT');\n\tif(helpText == '') { \n\t\tif(hEle) hEle.style.display = 'none';\n\t\n\t} else { \n\t\tif(hEle) hEle.innerHTML = helpText;\n\t\tif(hEle) hEle.style.display = '';\t\n\t};\n\t\n\t\n\t\n\t\n\t\n\tvar flagShowTodayButton = true;\n\tvar flagShowClearDateButton = true;\n\tvar __gs = settings['__genieSettings'];\n\t\n\t\n\tif(typeof __gs == 'undefined' || __gs == null) __gs = {};\n\t\n\tif(typeof __gs != 'undefined') { \n\t\tif(typeof __gs['showTodayButton'] != 'undefined') { \n\t\t\tvar showToday = __gs['showTodayButton'];\n\t\t\tif(!showToday) flagShowTodayButton = false;\n\t\t};\n\t\tif(typeof __gs['showClearDateButton'] != 'undefined') { \n\t\t\tvar showClearDate = __gs['showClearDateButton'];\n\t\t\tif(!showClearDate) flagShowClearDateButton = false;\n\t\t};\n\t\n\t\tif(!flagShowTodayButton) { \n\t\t\t{dialog.object}.setControlDisplay('EDITOR_1_TODAY',false);\n\t\t} else { \n\t\t\tvar bEle = {dialog.object}.getControl('EDITOR_1_TODAY');\n\t\t\tvar label = __gs['todayButtonLabel'];\n\t\t\tif(typeof label == 'undefined') label = 'Today';\n\t\t\tbEle.html = label;\n\t\t\tbEle.refresh();\n\t\t}\n\t\n\t\tif(!flagShowClearDateButton) { \n\t\t\t{dialog.object}.setControlDisplay('EDITOR_1_CLEAR',false);\n\t\t} else { \n\t\t\tvar bEle = {dialog.object}.getControl('EDITOR_1_CLEAR');\n\t\t\tvar label = __gs['clearDateButtonLabel'];\n\t\t\tif(typeof label == 'undefined') label = 'Clear Date';\n\t\t\tbEle.html = label;\n\t\t\tbEle.refresh();\n\t\n\t\t};\n\t}\n};",
+                            "hide": "",
+                            "validate": "",
+                            "configurationJSON": "xbasic:a5wcb_dateEditor_configurationGenie(wf,vf, configurationGenieJSON )"
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerBegin",
+                "display": "{C=Violet,White}{B=White,Violet}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=c306bd35_623e_4456_808e_82d48f871a7c}{I:'$$control.button.multiState'} [SpinListGroup: EDITOR_1_SPINLISTGROUP]",
+                "displayODFlat": "{Data=c306bd35_623e_4456_808e_82d48f871a7c}{I:'$$format.border.style.dash'} [Container: EDITOR_1_SPINLISTGROUP]",
+                "idInternal": "c306bd35_623e_4456_808e_82d48f871a7c",
+                "lastIndex": 12,
+                "parentContainer": 7,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=c306bd35_623e_4456_808e_82d48f871a7c}{I:'$$format.border.style.dash'} [Container: EDITOR_1_SPINLISTGROUP]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=Violet,White}{B=White,Violet}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=c306bd35_623e_4456_808e_82d48f871a7c}{I:'$$control.button.multiState'} [SpinListGroup: EDITOR_1_SPINLISTGROUP]",
+                "crc": "4294950520",
+                "indentTree": 4,
+                "parentIsCollapsed": false,
+                "v": {
+                    "container": {
+                        "ID": "EDITOR_1_SPINLISTGROUP",
+                        "contentAlignment": "Left",
+                        "contentVerticalAlign": "Top",
+                        "edgeOffset": "",
+                        "buttonGroup": {
+                            "orientation": "Horizontal"
+                        },
+                        "subType": "SpinListGroup",
+                        "allowScrolling": false,
+                        "scrolling": {
+                            "axis": "Both",
+                            "stopPropogation": false,
+                            "isDefined": false,
+                            "indicator": {
+                                "v": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "top": "0px",
+                                    "bottom": "0px"
+                                },
+                                "h": {
+                                    "show": true,
+                                    "className": "",
+                                    "barClassName": "",
+                                    "location": "right",
+                                    "offset": "0px",
+                                    "left": "0px",
+                                    "right": "0px"
+                                }
+                            }
+                        },
+                        "pull": {
+                            "isDefined": false,
+                            "javascript": {
+                                "onPullRelease": "",
+                                "onPullEnd": "",
+                                "onPull": ""
+                            },
+                            "pullpastEnd": {
+                                "YSetting": "auto",
+                                "XSetting": "auto"
+                            }
+                        }
+                    },
+                    "precalc": {
+                        "javascriptAbstractSetupCode": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SPINLISTGROUP\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=cc152ded_c3ae_433a_8e69_a74b668494bf}{I:'$$control.spinlist'} [EDITOR_1_S_MONTH]",
+                "displayODFlat": "{Data=cc152ded_c3ae_433a_8e69_a74b668494bf}{I:'$$control.spinlist'} [EDITOR_1_S_MONTH]",
+                "idInternal": "cc152ded_c3ae_433a_8e69_a74b668494bf",
+                "parentContainer": 8,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=cc152ded_c3ae_433a_8e69_a74b668494bf}{I:'$$control.spinlist'} [EDITOR_1_S_MONTH]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=cc152ded_c3ae_433a_8e69_a74b668494bf}{I:'$$control.spinlist'} [EDITOR_1_S_MONTH]",
+                "crc": "4294935731",
+                "indentTree": 5,
+                "parentIsCollapsed": true,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "controlType": "SpinList",
+                    "variableName": "EDITOR_1_S_MONTH",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "S Month",
+                    "defaultValue": "1",
+                    "class": "<Default>",
+                    "width": "33.33%",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "embeddedJavascriptControl": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "datePicker": {
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        },
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "spinList": {
+                        "width": "95px",
+                        "height": "2",
+                        "subTheme": "",
+                        "buttonStyle": "Text only",
+                        "methodForDefining": "Static",
+                        "dataSeriesMapping": "",
+                        "clientsideDataCacheMapping": "",
+                        "staticData": "&nbsp;|0\n<a5:t>Jan</a5:t>|1\nFeb|2\nMar|3\nApr|4\nMay|5\nJun|6\nJul|7\nAug|8\nSep|9\nOct|10\nNov|11\nDec|12\n",
+                        "javascript": {
+                            "onSelect": "if(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 != 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1();\n}",
+                            "onChange": "",
+                            "onInitialize": ""
+                        },
+                        "inlineStyle": "",
+                        "className": "",
+                        "itemClassName": "",
+                        "addBlank": false
+                    },
+                    "precalc": {
+                        "javascript_spinList": "{dialog.object}._controls['EDITOR_1_S_MONTH'] = { type: 'spinList', data: {dialog.object}._spinListData['EDITOR_1_S_MONTH'],   settings:  {theme: '{dialog.style}',height: 2,onSelect: function() { if(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 != 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1();\n} } } }",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MONTH\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'EDITOR_1_S_MONTH': {info: {controlType: 'SpinList'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=1a2f2f63_47e3_4595_acaa_e167af095d85}{I:'$$control.spinlist'} [EDITOR_1_S_DAY]",
+                "displayODFlat": "{Data=1a2f2f63_47e3_4595_acaa_e167af095d85}{I:'$$control.spinlist'} [EDITOR_1_S_DAY]",
+                "idInternal": "1a2f2f63_47e3_4595_acaa_e167af095d85",
+                "parentContainer": 8,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=1a2f2f63_47e3_4595_acaa_e167af095d85}{I:'$$control.spinlist'} [EDITOR_1_S_DAY]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=1a2f2f63_47e3_4595_acaa_e167af095d85}{I:'$$control.spinlist'} [EDITOR_1_S_DAY]",
+                "crc": "4294913473",
+                "indentTree": 5,
+                "parentIsCollapsed": true,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "controlType": "SpinList",
+                    "variableName": "EDITOR_1_S_DAY",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "S Date",
+                    "class": "<Default>",
+                    "width": "33.33%",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "embeddedJavascriptControl": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "datePicker": {
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        },
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "spinList": {
+                        "width": "95px",
+                        "height": "2",
+                        "subTheme": "",
+                        "buttonStyle": "Text only",
+                        "methodForDefining": "Static",
+                        "dataSeriesMapping": "",
+                        "clientsideDataCacheMapping": "",
+                        "staticData": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
+                        "javascript": {
+                            "onSelect": "",
+                            "onChange": "",
+                            "onInitialize": ""
+                        },
+                        "inlineStyle": "",
+                        "className": "",
+                        "itemClassName": "",
+                        "addBlank": false
+                    },
+                    "precalc": {
+                        "javascript_spinList": "{dialog.object}._controls['EDITOR_1_S_DAY'] = { type: 'spinList', data: {dialog.object}._spinListData['EDITOR_1_S_DAY'],   settings:  {theme: '{dialog.style}',height: 2} }",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY\" name=\"V.R{grid.rownumber}.EDITOR_1_S_DAY\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'EDITOR_1_S_DAY': {info: {controlType: 'SpinList'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "dialog_formcontrol",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fb657695_5865_44e8_95ae_b58735d019f2}{I:'$$control.spinlist'} [EDITOR_1_S_YEAR]",
+                "displayODFlat": "{Data=fb657695_5865_44e8_95ae_b58735d019f2}{I:'$$control.spinlist'} [EDITOR_1_S_YEAR]",
+                "idInternal": "fb657695_5865_44e8_95ae_b58735d019f2",
+                "parentContainer": 8,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fb657695_5865_44e8_95ae_b58735d019f2}{I:'$$control.spinlist'} [EDITOR_1_S_YEAR]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fb657695_5865_44e8_95ae_b58735d019f2}{I:'$$control.spinlist'} [EDITOR_1_S_YEAR]",
+                "crc": "4294917559",
+                "indentTree": 5,
+                "parentIsCollapsed": true,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "controlType": "SpinList",
+                    "variableName": "EDITOR_1_S_YEAR",
+                    "type": "Character",
+                    "maxLength": -1,
+                    "watermark": {
+                        "text": "<FieldLabel>"
+                    },
+                    "textboxSubTheme": "",
+                    "textboxAutocorrect": true,
+                    "textboxAutoCapitalize": true,
+                    "label": "S Year",
+                    "class": "<Default>",
+                    "width": "33.33%",
+                    "breakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "repeatingSectionColumnHeading": "<FieldLabel>",
+                    "embeddedJavascriptControl": true,
+                    "helpIcon": "images/$$generic.help.png.a5image",
+                    "showHelpIcon": "None",
+                    "helpIconBehavior": "ShowHelpOnClick",
+                    "clientSideFormat": {
+                        "type": "Mask"
+                    },
+                    "getFunction": "",
+                    "setFunction": "",
+                    "onChange_ValidationOption": "Client-side only",
+                    "dataBinding": {
+                        "updateable": true,
+                        "image": {
+                            "type": "JPG",
+                            "noImageFoundImage": "<None>",
+                            "newRecordImage": "<None>"
+                        },
+                        "ink": {
+                            "hasbackgroundimage": false,
+                            "backgroundimage": "",
+                            "inkunits": 1
+                        }
+                    },
+                    "datePicker": {
+                        "friendlyDisplay": {
+                            "enabled": false,
+                            "settingsJSON": ""
+                        },
+                        "displayTimePicker": false,
+                        "openMethod": "ClickIcon",
+                        "dateFormat": "<Default>",
+                        "iconNumber": 2,
+                        "OKButtonLabel": "OK",
+                        "CancelButtonLabel": "Cancel",
+                        "userMustSelectFromDatePicker": false,
+                        "multiple": {
+                            "allow": false,
+                            "separators": ".."
+                        },
+                        "hasMask": false,
+                        "format": {
+                            "mask": ""
+                        },
+                        "timePickerOptionsDefined": false,
+                        "display": false
+                    },
+                    "spinList": {
+                        "width": "95px",
+                        "height": "2",
+                        "subTheme": "",
+                        "buttonStyle": "Text only",
+                        "methodForDefining": "Static",
+                        "dataSeriesMapping": "",
+                        "clientsideDataCacheMapping": "",
+                        "staticData": "&nbsp|0\n1950\n1951\n1952\n1953\n1954\n1955\n1956\n1957\n1958\n1959\n1960\n1961\n1962\n1963\n1964\n1965\n1966\n1967\n1968\n1969\n1970\n1971\n1972\n1973\n1974\n1975\n1976\n1977\n1978\n1979\n1980\n1981\n1982\n1983\n1984\n1985\n1986\n1987\n1988\n1989\n1990\n1991\n1992\n1993\n1994\n1995\n1996\n1997\n1998\n1999\n2000\n2001\n2002\n2003\n2004\n2005\n2006\n2007\n2008\n2009\n2010\n2011\n2012\n2013\n2014\n2015\n2016\n2017\n2018\n2019\n2020\n2021\n2022\n2023\n2024\n2025\n2026\n2027\n2028\n2029\n2030\n2031\n2032\n2033\n2034\n2035\n2036\n2037\n2038\n2039\n2040\n2041\n2042\n2043\n2044\n2045\n2046\n2047\n2048\n2049\n2050\n\n\n",
+                        "javascript": {
+                            "onSelect": "if(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 != 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1();\n}",
+                            "onChange": "",
+                            "onInitialize": ""
+                        },
+                        "inlineStyle": "",
+                        "className": "",
+                        "itemClassName": "",
+                        "addBlank": false
+                    },
+                    "precalc": {
+                        "javascript_spinList": "{dialog.object}._controls['EDITOR_1_S_YEAR'] = { type: 'spinList', data: {dialog.object}._spinListData['EDITOR_1_S_YEAR'],   settings:  {theme: '{dialog.style}',height: 2,onSelect: function() { if(typeof {dialog.object}._functions.setDaysInMonth_EDITOR_1 != 'undefined') { \n\t{dialog.object}._functions.setDaysInMonth_EDITOR_1();\n} } } }",
+                        "javascriptAbstractSetupCode": ""
+                    },
+                    "displayAsSlider": false,
+                    "flags": {
+                        "clientSideDefinition": false
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_YEAR\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>",
+                    "DesignViewHTML": "",
+                    "columnInfo": "'EDITOR_1_S_YEAR': {info: {controlType: 'SpinList'}, hiddenVal: false, type: 'control', isCalc: false, hlp: '', isArray: false, dataType: 'C'  }\n"
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=Violet,White}{B=White,Violet}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fc6a6e75_98ac_43da_ac19_1d303562ebe3}{I:'vertLineCap'} [SpinListGroup End: EDITOR_1_SPINLISTGROUP] �",
+                "displayODFlat": "{Data=fc6a6e75_98ac_43da_ac19_1d303562ebe3}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "fc6a6e75_98ac_43da_ac19_1d303562ebe3",
+                "parentContainer": 7,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fc6a6e75_98ac_43da_ac19_1d303562ebe3}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=Violet,White}{B=White,Violet}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=fc6a6e75_98ac_43da_ac19_1d303562ebe3}{I:'vertLineCap'} [SpinListGroup End: EDITOR_1_SPINLISTGROUP] �",
+                "crc": "4294956085",
+                "indentTree": 4,
+                "parentIsCollapsed": true,
+                "containerStartIndex": 8,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITOR_1_SPINLISTGROUP.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                }
+            },
+            {
+                "controlType": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=63e25175_f708_43cd_abf8_f9829cb5d515}{I:'$$control.button'} [Button: Today]",
+                "displayODFlat": "{Data=63e25175_f708_43cd_abf8_f9829cb5d515}{I:'$$control.button'} [Button]",
+                "idInternal": "63e25175_f708_43cd_abf8_f9829cb5d515",
+                "parentContainer": 7,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=63e25175_f708_43cd_abf8_f9829cb5d515}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=63e25175_f708_43cd_abf8_f9829cb5d515}{I:'$$control.button'} [Button: Today]",
+                "crc": "4294905077",
+                "indentTree": 4,
+                "parentIsCollapsed": false,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "buttonText": "Today",
+                    "Class": "<Default>",
+                    "BreakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "EDITOR_1_TODAY",
+                    "advancedButtonStyling": true,
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "",
+                    "abstractJavascript": {
+                        "click": "var sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nvar d = new Date();\n\n\n\n\n\n\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue(d.getFullYear());\nsMonth.setValue(d.getMonth()+1);\n\n\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nsDate.setValue(d.getDate());"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_TODAY',A5.d.evnts.click,function(e) {\nvar sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nvar d = new Date();\n\n\n\n\n\n\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue(d.getFullYear());\nsMonth.setValue(d.getMonth()+1);\n\n\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nsDate.setValue(d.getDate());\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_TODAY');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['EDITOR_1_TODAY'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;',\n\thtml: 'Today',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['EDITOR_1_TODAY'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.EDITOR_1_TODAY');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_TODAY\"    ></button>\n</div>",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3fcded8e_9134_4d91_8a78_c845a77f9bb8}{I:'$$control.button'} [Button: None] �",
+                "displayODFlat": "{Data=3fcded8e_9134_4d91_8a78_c845a77f9bb8}{I:'$$control.button'} [Button]",
+                "idInternal": "3fcded8e_9134_4d91_8a78_c845a77f9bb8",
+                "parentContainer": 7,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3fcded8e_9134_4d91_8a78_c845a77f9bb8}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3fcded8e_9134_4d91_8a78_c845a77f9bb8}{I:'$$control.button'} [Button: None] �",
+                "crc": "4294910050",
+                "indentTree": 4,
+                "parentIsCollapsed": false,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "buttonText": "None",
+                    "Class": "<Default>",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "EDITOR_1_CLEAR",
+                    "advancedButtonStyling": true,
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "",
+                    "abstractJavascript": {
+                        "click": "var sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue('0');\nsMonth.setValue('0');\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nsDate.setValue('0');"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR',A5.d.evnts.click,function(e) {\nvar sDate = {dialog.object}.getControl(\"EDITOR_1_S_DAY\");\nvar sMonth = {dialog.object}.getControl(\"EDITOR_1_S_MONTH\");\nvar sYear = {dialog.object}.getControl(\"EDITOR_1_S_YEAR\");\nsYear.refresh();\nsMonth.refresh();\nsYear.setValue('0');\nsMonth.setValue('0');\n{dialog.object}._functions.setDaysInMonth_EDITOR_1();\nsDate.setValue('0');\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['EDITOR_1_CLEAR'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;',\n\thtml: 'None',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['EDITOR_1_CLEAR'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.EDITOR_1_CLEAR');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=76d19d37_7b77_4fbd_8d18_f5c30de3ef32}{I:'$$control.button'} [Button: Save]",
+                "displayODFlat": "{Data=76d19d37_7b77_4fbd_8d18_f5c30de3ef32}{I:'$$control.button'} [Button]",
+                "idInternal": "76d19d37_7b77_4fbd_8d18_f5c30de3ef32",
+                "parentContainer": 7,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=76d19d37_7b77_4fbd_8d18_f5c30de3ef32}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=76d19d37_7b77_4fbd_8d18_f5c30de3ef32}{I:'$$control.button'} [Button: Save]",
+                "crc": "4294935740",
+                "indentTree": 4,
+                "parentIsCollapsed": false,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "buttonText": "Save",
+                    "Class": "<Default>",
+                    "BreakType": "None",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "EDITOR_1_SAVEBUTTON",
+                    "advancedButtonStyling": true,
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "",
+                    "abstractJavascript": {
+                        "click": "\tvar closeEditorAfterCommit = true;\n\t{dialog.object}.editorCommit('editor:EDITOR_1',closeEditorAfterCommit);\n\t\n"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON',A5.d.evnts.click,function(e) {\nvar closeEditorAfterCommit = true;\n\t{dialog.object}.editorCommit('editor:EDITOR_1',closeEditorAfterCommit);\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['EDITOR_1_SAVEBUTTON'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;',\n\thtml: 'Save',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['EDITOR_1_SAVEBUTTON'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.EDITOR_1_SAVEBUTTON');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON\"    ></button>\n</div>",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_button",
+                "display": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=e056ec4a_5a12_4e42_aabe_a9326eb444b6}{I:'$$control.button'} [Button: Cancel] �",
+                "displayODFlat": "{Data=e056ec4a_5a12_4e42_aabe_a9326eb444b6}{I:'$$control.button'} [Button]",
+                "idInternal": "e056ec4a_5a12_4e42_aabe_a9326eb444b6",
+                "parentContainer": 7,
+                "displayOD": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=e056ec4a_5a12_4e42_aabe_a9326eb444b6}{I:'$$control.button'} [Button]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{B=White,Light Blue}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=e056ec4a_5a12_4e42_aabe_a9326eb444b6}{I:'$$control.button'} [Button: Cancel] �",
+                "crc": "4294936628",
+                "indentTree": 4,
+                "parentIsCollapsed": false,
+                "inPanelCard": true,
+                "inTreeControl": false,
+                "v": {
+                    "buttonText": "Cancel",
+                    "Class": "<Default>",
+                    "BreakType": "After",
+                    "breakHeight": ".1in",
+                    "breakHorizontalSpace": ".1in",
+                    "id": "EDITOR_1_CANCELBUTTON",
+                    "advancedButtonStyling": true,
+                    "labelClass": "<Default>",
+                    "labelPosition": "None",
+                    "labelWidth": "{Global.LabelWidth}",
+                    "labelAlignment": "Left",
+                    "advancedButton": {
+                        "subTheme": "",
+                        "buttonClass": "",
+                        "buttonClassDisabled": "",
+                        "buttonClassHover": "",
+                        "buttonClassPressed": "",
+                        "buttonInlineStyle": "",
+                        "buttonstyle": "Text only",
+                        "disabledImageName": "",
+                        "hoverImageName": "",
+                        "displayDropdownIconOnButton": false,
+                        "displayAsSplitButton": false,
+                        "hyperlinkClass": "[class.gridHyperlinkButton]",
+                        "hyperlinkImagePosition": "None",
+                        "hyperlinkInlineStyle": "",
+                        "imageClass": "",
+                        "imageInlineStyle": "",
+                        "imageName": "",
+                        "pressedImageName": "",
+                        "textClass": "",
+                        "textInlineStyle": "",
+                        "type": "Button"
+                    },
+                    "securityGroups": "",
+                    "showHideExpn": "",
+                    "clientSideconditionalStyle": "",
+                    "CalcExpression": "",
+                    "EnableExpression": "",
+                    "ShowExpression": "",
+                    "abstractJavascript": {
+                        "click": "{dialog.object}.editorCancel('editor:EDITOR_1');\n"
+                    },
+                    "precalc": {
+                        "javascriptClientSideWatches": "",
+                        "javascriptAbstractSetupCode": "$e.add('{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON',A5.d.evnts.click,function(e) {\n{dialog.object}.editorCancel('editor:EDITOR_1');\n},this,false,'{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON');\n",
+                        "javascriptAdvancedButton": "",
+                        "javascriptAdvancedButton_control": "{dialog.object}._buttons['EDITOR_1_CANCELBUTTON'] = new A5.Button({\n\tlayout: 'text',\n\tstyle: 'box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;',\n\thtml: 'Cancel',\n\tonClick: function() { \n\n},\n\ttheme: '{grid.style}'\n});",
+                        "javascriptAdvancedButton_bind": "{dialog.object}._buttons['EDITOR_1_CANCELBUTTON'].bind('{DIALOG.COMPONENTNAME}.V.R{DIALOG.ROWNUMBER}.EDITOR_1_CANCELBUTTON');"
+                    },
+                    "javascript": {
+                        "onclick": ""
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                }
+            },
+            {
+                "controlType": "layout_directive_ContainerEnd",
+                "display": "{C=#11+161+255,White}{B=White,#11+161+255}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3d74a542_9a2c_4b96_aede_fc5daa3bcfcc}{I:'vertLineCap'} [Editor End: EDITOR_1]",
+                "displayODFlat": "{Data=3d74a542_9a2c_4b96_aede_fc5daa3bcfcc}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "3d74a542_9a2c_4b96_aede_fc5daa3bcfcc",
+                "parentContainer": 6,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3d74a542_9a2c_4b96_aede_fc5daa3bcfcc}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#11+161+255,White}{B=White,#11+161+255}{F=+B}{I:'vertLine'}{I:'vertLine'}{I:'vertLine'}{Data=3d74a542_9a2c_4b96_aede_fc5daa3bcfcc}{I:'vertLineCap'} [Editor End: EDITOR_1]",
+                "crc": "4294909921",
+                "indentTree": 3,
+                "parentIsCollapsed": false,
+                "containerStartIndex": 7,
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n",
+                    "DesignViewHTML": ""
+                },
+                "v": {
+                    "container": {
+                        "BreakType": "None",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                }
+            },
+            {
+                "controltype": "layout_directive_ContainerEnd",
+                "display": "{C=#0+87+141,White}{B=White,#0+87+141}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=bf9e5dec-a995-436e-8b39-690c21d1dcb9}{I:'vertLineCap'} [EditorSet End: EDITORSET_1] �",
+                "displayODFlat": "{Data=bf9e5dec-a995-436e-8b39-690c21d1dcb9}{I:'$$format.border.style.dash'} [Container End]",
+                "idInternal": "bf9e5dec-a995-436e-8b39-690c21d1dcb9",
+                "v": {
+                    "container": {
+                        "BreakType": "After",
+                        "BreakHeight": ".1in",
+                        "breakHorizontalSpace": ".1in"
+                    }
+                },
+                "precalc": {
+                    "ControlHTML": "<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITORSET_1.BREAK\"  style=\"clear:both; \" /><!--breakend-->",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 6,
+                "parentContainer": 5,
+                "displayOD": "{C=#0+0+127,White}{B=White,Light Blue}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=bf9e5dec-a995-436e-8b39-690c21d1dcb9}{I:'vertLineCap'} [Container End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#0+87+141,White}{B=White,#0+87+141}{F=+B}{I:'vertLine'}{I:'vertLine'}{Data=bf9e5dec-a995-436e-8b39-690c21d1dcb9}{I:'vertLineCap'} [EditorSet End: EDITORSET_1] �",
+                "indentTree": 2,
+                "parentIsCollapsed": true
+            },
+            {
+                "controltype": "layout_directive_PanelCardEnd",
+                "display": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e5b32312-c71d-487e-a428-77468222baca}{I:'vertLineCap'} [Panel Card End: PANELCARD_2]",
+                "displayODFlat": "{Data=e5b32312-c71d-487e-a428-77468222baca}{I:'vertlinecap'} [Panel Card End]",
+                "idInternal": "e5b32312-c71d-487e-a428-77468222baca",
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 5,
+                "parentContainer": 1,
+                "displayOD": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e5b32312-c71d-487e-a428-77468222baca}{I:'vertlinecap'} [Panel Card End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#104+150+1120,White}{B=White,#104+150+112}{F=+B}{I:'vertLine'}{Data=e5b32312-c71d-487e-a428-77468222baca}{I:'vertLineCap'} [Panel Card End: PANELCARD_2]",
+                "indentTree": 1,
+                "crc": "4294906246",
+                "parentIsCollapsed": true
+            },
+            {
+                "controltype": "layout_directive_PanelNavigatorEnd",
+                "display": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=6f33016d-04fa-40b9-8df3-c78e4947ba18}{I:'vertLineCap'} [Panel Navigator End: PANELNAVIGATOR_1]",
+                "displayODFlat": "{Data=6f33016d-04fa-40b9-8df3-c78e4947ba18}{I:'vertlinecap'} [Panel Navigator End]",
+                "idInternal": "6f33016d-04fa-40b9-8df3-c78e4947ba18",
+                "precalc": {
+                    "ControlHTML": "'xbasic\nv._dirty = .f.\n",
+                    "DesignViewHTML": ""
+                },
+                "containerStartIndex": 1,
+                "parentContainer": -1,
+                "displayOD": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=6f33016d-04fa-40b9-8df3-c78e4947ba18}{I:'vertlinecap'} [Panel Navigator End]",
+                "repeatingSectionParentId": -1,
+                "displayODtree": "{C=#51+111+61,White}{B=White,#51+111+61}{F=+B}{Data=6f33016d-04fa-40b9-8df3-c78e4947ba18}{I:'vertLineCap'} [Panel Navigator End: PANELNAVIGATOR_1]",
+                "indentTree": 0,
+                "parentIsCollapsed": false
+            }
+        ],
+        "builderType": "Dialog2",
+        "guid": "84215068-d19d-4b58-a466-4567c349869b",
+        "componentName": "mobileDatePicker",
+        "componentFilename": "C:\\a5v12\\packages\\AJAX_webComponents.WebProjects\\kyle2.WebProject\\mobileDatePicker.a5wcmp",
+        "_style_versionNumber": 4,
+        "_style_hasSassOverrides": false,
+        "_style_hasCSSTweaks": false,
+        "_style_hasCSS_or_subtheme_tweaks": false,
+        "useCompactTheme": false,
+        "styleTweaksCSS": "",
+        "styleTweaksSubthemes": "",
+        "controlflowdirection": "ltr",
+        "SVGLinkedFiles": "",
+        "localsvg": "",
+        "createAppCacheVersion": false,
+        "createAppCacheVersionC": "No",
+        "appcache": {
+            "pageName": "<Default>",
+            "pageTitle": "",
+            "hasHomeScreenIcons": false,
+            "homeScreenIconName": "",
+            "icons": {
+                "precomposed": false
+            },
+            "pageHeadSection": ""
+        },
+        "clientsideNumberFormatDecimal": "period",
+        "clientsideNumberFormatThousands": "comma",
+        "dataSeriesPublishToClientSide": false,
+        "showLineNumbersInControlsList": false,
+        "saveFileType": "Formatted JSON",
+        "keyboardShortcutsJSON": "",
+        "preRenderWarningMessageShow": false,
+        "autoSetPreRenderOnForAllUX": false,
+        "selected": "76d19d37_7b77_4fbd_8d18_f5c30de3ef32\n",
+        "designPaneIndex": 1,
+        "masterPaneC": "controls",
+        "serverSideEventIndex": 1,
+        "clientSideEventIndex": 11,
+        "clientSideEventIndexC": "11",
+        "lastControlSelected": "Insert_layout_directive_ContainerBegin",
+        "__WPhostName": "Chrome",
+        "embeddedMode": false,
+        "_style_hassubthemeTweaks": false,
+        "repeatingSectionsAreDirty": true,
+        "flagDropdownCascadingChanged": false,
+        "toolBox_value": "",
+        "addinBuildNumber": "5057",
+        "addinBuildNumberHighestUsed": "5057",
+        "alphaFiveBuildNumber": "12",
+        "openedFromTemplate": false,
+        "builtWithVersionNumer": 1,
+        "_buildCount": "30",
+        "securityEnabled": false,
+        "showHideIsUsed": false,
+        "precalc": {
+            "js_editorSetInitialization": ";\n",
+            "customControl": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "customControl_xbasicFunctions": ""
+            },
+            "jschart": {
+                "js_beforePrepare": "",
+                "js_afterRender": "",
+                "jschart_xbasicFunctions": ""
+            },
+            "rgraph": {
+                "libraries": ""
+            },
+            "getSetFunctions": {
+                "js_beforePrepare": ""
+            },
+            "injectibleHTML": "",
+            "containerWindowHTML": "",
+            "repeatingsectionInfoJs": "",
+            "framesInfoJS": "{dialog.object}.framesInfo = {\n\n};\n",
+            "jsActionJavascriptGlobalFunctions": "",
+            "xbActionJavascriptGlobalFunctions": "",
+            "javascriptSetupForGridLookups": "{\n}",
+            "javascript": {
+                "showWaitMessage": "",
+                "hideWaitMessage": "",
+                "embeddedUXComponents": ""
+            },
+            "fileUpload_controlInfo": "",
+            "javascript_cascadingDropdowns": "{dialog.object}._cascadingControls = [];\n{dialog.object}._cascadingControlsChildren = [];",
+            "template_html": "<!--div GLOBALERRORS-->\n<div class=\"errorTip\" style=\"margin-bottom: 2px; display: none; width: 8in; \" id=\"{dialog.componentname}.GLOBALERRORS\"></div>\n<!--End div GLOBALERRORS-->\n\n<div id=\"{dialog.componentname}.R1\">\n'xbasic\nv._dirty = .f.\n\n'xbasic\n\nv._dirty = .f.\n\n\n\n<div class=\"A5CWLayout\" style=\"width: 100%\" >\n\t<!--LblS--><label id=\"{grid.componentname}.LBL.R{grid.rownumber}.DATE\" for=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" title=\"\" class=\"[class.dialogFieldLabel]\" style=\"display:block;\">Date</label>\n<!--LblE-->\n\t<!--FldS--><table id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CONTAINER\" cellspacing=\"0\" cellpadding=\"0\" class=\"[theme:editButtonGroup.base.container.className|{grid.style}EditBG]\" style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;; display: inline-table; *display: inline; width: 100%; \">\n<tr>\n<td style=\"width:100%\">\n\n<input  \tid=\"{grid.componentname}.V.R{grid.rownumber}.DATE\" name=\"V.R{grid.rownumber}.DATE\"  value=\"\"  autocomplete=\"off\"   size=\"200\" class=\"[theme:editButtonGroup.base.container.editClassName|class.editButtonGroupEdit]\" style=\"width: 100%; ; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;\" />\n\n</td>\n\t\t<td class=\"[theme:editButtonGroup.base.container.separatorClassName|{grid.style}EditBGSeparator]\" >&nbsp;</td>\n\t\t<td id=\"{grid.componentname}.V.R{grid.rownumber}.DATE.CUSTOMBUTTON.0\"  class=\"[theme:editButtonGroup.base.container.button.className|{grid.style}EditBGButton]\" style=\"width: 0%;\"><img style=\"vertical-align: middle; \" src=\"svgIcon=#alpha-icon-calendar:icon,24\" /></td>\n\t</tr>\n</table>\n<!--FldE-->\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n'xbasic\nv._dirty = .f.\n\n\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITORSET_1\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->\n<div \tid=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SPINLISTGROUP\"   \n\t\t\tclass=\"A5CWLayout \"  style=\"\"  ><!--DIV for Container control-->\n<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH\" name=\"V.R{grid.rownumber}.EDITOR_1_S_MONTH\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_MONTH.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY\" name=\"V.R{grid.rownumber}.EDITOR_1_S_DAY\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_DAY.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>\n<div class=\"A5CWLayout\" style=\"width: 95px\" >\n\t<!--FldS--><!--JSControlStart--><input id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR\" name=\"V.R{grid.rownumber}.EDITOR_1_S_YEAR\" type=\"hidden\"/><!--JSControlEnd-->\n<div id=\"{grid.componentname}.V.R{grid.rownumber}.EDITOR_1_S_YEAR.CONTROL\"  style=\"width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box; \"></div>\n<!--FldE-->\n</div>\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITOR_1_SPINLISTGROUP.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_TODAY\"    ></button>\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CLEAR\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_SAVEBUTTON\"    ></button>\n</div>\n<div class=\"A5CWLayout\" style=\"width: \" >\n\t<button type=\"button\" id=\"{dialog.componentName}.V.R{dialog.rownumber}.EDITOR_1_CANCELBUTTON\"    ></button>\n</div><!--breakbegin--><br  style=\"clear:both; \" /><!--breakend-->\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n\n<div style=\"font: 0pt arial;clear:both;\"></div>\n\t</div>\n<!--breakbegin--><br  id=\"{dialog.componentname}.V.R1.EDITORSET_1.BREAK\"  style=\"clear:both; \" /><!--breakend-->\n'xbasic\nv._dirty = .f.\n\n'xbasic\nv._dirty = .f.\n\n\n\n</div>\n<!--div DEBUGUPDATECOMMANDS-->\n<div class=\"\" style=\"display: none; \" id=\"{dialog.componentname}.DEBUGUPDATECOMMANDS\"></div>\n<!--End div DEBUGUPDATECOMMANDS-->\n",
+            "panelDisplayNames": "PANELCARD_1 : 'PANELCARD_1',PANELCARD_2 : 'PANELCARD_2',PANELNAVIGATOR_1 : 'PANELNAVIGATOR_1'",
+            "controlJavascript": "",
+            "controlJavascriptRepeatingSections": "",
+            "template_js": "",
+            "sessionVarsInShowHideExpns": "",
+            "flagHasShowTimer": false,
+            "themeSearchReplaceString": "[theme:editButtonGroup.base.container.className|{grid.style}EditBG]=*if_error(p.editButtonGroup.base.container.className,\"{grid.style}EditBG\")\n[theme:editButtonGroup.base.container.editClassName|class.editButtonGroupEdit]=*if_error(p.editButtonGroup.base.container.editClassName,\"[class.editButtonGroupEdit]\")\n[theme:editButtonGroup.base.container.separatorClassName|{grid.style}EditBGSeparator]=*if_error(p.editButtonGroup.base.container.separatorClassName,\"{grid.style}EditBGSeparator\")\n[theme:editButtonGroup.base.container.button.className|{grid.style}EditBGButton]=*if_error(p.editButtonGroup.base.container.button.className,\"{grid.style}EditBGButton\")\n[theme:spinList.base.groupClassName|{dialog.style}SpinListGroup]=*if_error(p.spinList.base.groupClassName,\"{dialog.style}SpinListGroup\")\n",
+            "flagHasHTML5ImageCapture": false,
+            "flagUsesCordova": false,
+            "flagUseAmazonS3FileUpload": false,
+            "flagUseStripe": false,
+            "usesSystemSVG": true,
+            "flagUseAudioPlayer": false,
+            "flagUseInk": false,
+            "flagUsesAudioLibrary": false,
+            "flagUsesPhoneGapFileSystemFunctions": false,
+            "flagUsesGetAccurateLocation": false,
+            "editorSet_for_editor": "{dialog.object}._EDITOR_EDITORSET = {\n\t'EDITOR_1' : {editorSet: 'EDITORSET_1'}\n\n}",
+            "otherJS": "",
+            "javascript_layoutRules": "",
+            "javascript_controlNesting": "{\nEDITORSET_1: ['container:EDITOR_1'],\nEDITOR_1: ['container:EDITOR_1_SPINLISTGROUP'],\nEDITOR_1_SPINLISTGROUP: ['EDITOR_1_S_MONTH','EDITOR_1_S_DAY','EDITOR_1_S_YEAR']\n}",
+            "appcacheEvents": "",
+            "requiredPlugins": "",
+            "IconMap": "{images.RowExpander.Open}=\"<Specified by Style>\"\n{images.RowExpander.Close}=\"<Specified by Style>\"\n{images.EmbeddedSearch.Search}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ClearSearch}=\"<Specified by Style>\"\n{images.EmbeddedSearch.ShowHideEmbeddedSearch}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.NoFocus}=\"<Specified by Style>\"\n{images.GridRow.NewRecordRow.HasFocus}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord}=\"<Specified by Style>\"\n{images.GridRow.SaveRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges}=\"<Specified by Style>\"\n{images.GridRow.UndoChanges.Disabled}=\"<Specified by Style>\"\n{images.GridRow.EditRecord}=\"<Specified by Style>\"\n{images.GridRow.EditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord}=\"<Specified by Style>\"\n{images.GridRow.DeleteRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord}=\"<Specified by Style>\"\n{images.GridRow.CancelEditRecord.Disabled}=\"<Specified by Style>\"\n{images.GridRow.HasError}=\"<Specified by Style>\"\n{images.QBE.OperatorIsSelected}=\"<Specified by Style>\"\n{images.QBE.OpenQBEMenu}=\"<Specified by Style>\"\n{images.QBE.ShowHideQBERow}=\"<Specified by Style>\"\n{images.PopUpWindow.Lookup.Close}=\"<Specified by Style>\"\n{images.PopUpWindow.DetailView.Close}=\"<Specified by Style>\"\n{images.CollapseContainer.Open}=\"<Specified by Style>\"\n{images.CollapseContainer.Close}=\"<Specified by Style>\"\n{images.FieldHelpIcon}=\"<Specified by Style>\"\n{images.SearchPart.SaveSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.LoadSearchCriteria}=\"<Specified by Style>\"\n{images.SearchPart.RunSearch}=\"<Specified by Style>\"\n{images.SearchPart.ClearSearch}=\"<Specified by Style>\"\n{images.GridRow.SelectionPointer}=\"<Specified by Style>\"\n{images.Grid.SortAsc}=\"<Specified by Style>\"\n{images.Grid.SortAscDisabled}=\"<Specified by Style>\"\n{images.Grid.sortDesc}=\"<Specified by Style>\"\n{images.grid.sortDescDisabled}=\"<Specified by Style>\"\n{images.grid.firstPage}=\"<Specified by Style>\"\n{images.grid.firstPageDisabled}=\"<Specified by Style>\"\n{images.grid.prevPage}=\"<Specified by Style>\"\n{images.grid.prevPageDisabled}=\"<Specified by Style>\"\n{images.grid.nextPage}=\"<Specified by Style>\"\n{images.grid.nextPageDisabled}=\"<Specified by Style>\"\n{images.grid.lastPage}=\"<Specified by Style>\"\n{images.grid.lastPageDisabled}=\"<Specified by Style>\"\n{images.edit.dropdownArrow}=\"<Specified by Style>\"\n{images.edit.datePicker}=\"<Specified by Style>\"\n{images.edit.dateTimePicker}=\"<Specified by Style>\"\n{images.edit.timePicker}=\"<Specified by Style>\"\n{images.edit.calculator}=\"<Specified by Style>\"\n{images.edit.lookup}=\"<Specified by Style>\"\n{images.javascript.deleteRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.cancelEditRowConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.UndoAllEditsConfirmation}=\"<Specified by Style>\"\n{images.javascript.dirtyRecordWarning}=\"<Specified by Style>\"\n{images.dv.close}=\"<Specified by Style>\"\n{images.dv.firstRecord}=\"<Specified by Style>\"\n{images.dv.prevRecord}=\"<Specified by Style>\"\n{images.dv.nextRecord}=\"<Specified by Style>\"\n{images.dv.lastRecord}=\"<Specified by Style>\"\n{images.dv.newRecord}=\"<Specified by Style>\"\n{images.dv.cancelEdits}=\"<Specified by Style>\"\n{images.dv.deleteRecord}=\"<Specified by Style>\"\n{images.dv.saveRecord}=\"<Specified by Style>\"\n{images.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.switchToEdit}=\"<Specified by Style>\"\n{images.dv.switchToView}=\"<Specified by Style>\"\n{images.disabled.dv.newRecord}=\"<Specified by Style>\"\n{images.disabled.dv.cancelEdits}=\"<Specified by Style>\"\n{images.disabled.dv.deleteRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveRecord}=\"<Specified by Style>\"\n{images.disabled.dv.saveAndEnter}=\"<Specified by Style>\"\n{images.dv.cancelNewRecord}=\"<Specified by Style>\"\n{images.grid.editError}=\"<Specified by Style>\"\n{images.dialog.editError}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseLeft}=\"<Specified by Style>\"\n{images.tabbedUI.menuExpandRight}=\"<Specified by Style>\"\n{images.tabbedUI.menuCollapseRight}=\"<Specified by Style>\"",
+            "absoluteLayoutSetButtonSizes": "",
+            "viewBoxesToRefresh": "",
+            "AdditionalGridStyles": ""
+        },
+        "FieldsInRepeatingSectionsDeletedBySecurity": "",
+        "repeatingSectionsToRecalc": "",
+        "dialogObject": "if(typeof {dialog.componentName}_DlgObj == 'object') {dialog.componentName}_DlgObj._destroy();\nvar {dialog.componentName}_DlgObj = new A5.DialogComponentHelper('{dialog.componentName}',{\n\tajaxURL: '{dialog.ajaxUrl}',\n\t_embeddedMode: {dialog.embeddedMode},\n\t_livePreviewInBuilder: {livePreviewInBuilder},\n\tcomponentGUID: '84215068-d19d-4b58-a466-4567c349869b',\n\tcolumnInfo: {columninfo},\n\toriginalValues: {dialog.jsOriginalValues},\n\tdefaultValues: {dialog.jsDefaultValues},\n\tdatePickerMonthNames: [{datePickerMonthNames}],\n\tdatePickerDayNames: [{datePickerDayNames}],\n\tdatePickerTodayButton: '{datePickerTodayButton}',\n\tdatePickerCloseButton: '{datePickerCloseButton}',\n\tdatePickerFirstDayOfWeek: {datePickerFirstDayOfWeek},\n\tresetFormMessage: '{resetFormMessage}',\n\tresetFormTitle: '{resetFormTitle}',\n\tresetFormIcon: '{resetFormIcon}',\n\tdirtyFormMessage: '{dirtyFormMessage}',\n\tdirtyFormTitle: '{dirtyFormTitle}',\n\tdirtyFormIcon: '{dirtyFormIcon}',\n\tdeleteRecordDialogTitle: '{deleteRecordTitle}',\n\tdeleteRecordDialogMessage: '{deleteRecordMessage}',\t\n\tssDateFormat: '{serverSideDateFormat}',\n\tstyleName: '{dialog.style}',\n\t_fieldHelpers_DIALOG2: [],\n\tparentComponentAlias: '{parentComponentAlias}',\n\tsubmitIfHasClientSideErrors: true, \n\trowErrors: {\n\t\t\t\tshowMessageBox: false,\n\t\t\t\tmessageBoxTitle: 'Error',\n\t\t\t\tstyle: 'color: red; width: 6in; height: 2in;'\n\t\t},\n\tfieldErrors: {\n\t\ttype: 'block', \n\t\tclassName: 'errorText',\n\t\tinputClassName: '[class.gridInputError]',\n\t\tedit: { \n\t\t\tcontainer: { className: '[class.gridInputContainerError]'}\n\t\t},\n\t\ticon: '{images.dialog.editError}',\n\t\tglobal: {\n\t\t\tcontId: '{dialog.componentname}.GLOBALERRORS',\n\t\t\thoverClassName: 'errorTextHighlight',\n\t\t\thoverInputClassName: 'errorInputHighlight'\n\t\t}\n\t},\n\t\tonInitializeBegin: function(e) {\nA5.overrides.add('editDateTime',{\n\tbase: {\n\t\tdecouple: true,\n\t\twindow: {\n\t\t\ttype: 'modal',\n\t\t\tlocation: ['dock','top'],\n\t\t\twidth: '100%',\n\t\t\theight: '100%',\n\t\t\tbody: {\n\t\t\t\tstyle: 'text-align: center',\n\t\t\t\tscroll: {axis: 'both'}\n\t\t\t}\n\t\t}\n\t}\n});\n\t\t}\n\n\t});\n\n",
+        "xbasiccode": {
+            "blankInitialValueIfVarNotFound": "",
+            "setValueProperties": "value.DATE=\"\"\nvalue.EDITOR_1_S_MONTH=\"1\"\nvalue.EDITOR_1_S_DAY=\"\"\nvalue.EDITOR_1_S_YEAR=\"\"",
+            "setValueProperties2": "value.DATE=\"\"\nvalue.EDITOR_1_S_MONTH=\"1\"\nvalue.EDITOR_1_S_DAY=\"\"\nvalue.EDITOR_1_S_YEAR=\"\"",
+            "setValueUnformattedProperties": "value.DATE=convert_type(\"\",\"D\")\nvalue.EDITOR_1_S_MONTH=convert_type(\"1\",\"C\")\nvalue.EDITOR_1_S_DAY=convert_type(\"\",\"C\")\nvalue.EDITOR_1_S_YEAR=convert_type(\"\",\"C\")\n"
+        },
+        "componentType": "Dialog2",
+        "version": 1,
+        "recNav": {
+            "slider": {
+                "showSlider": false
+            },
+            "listView": {
+                "showlistView": false
+            }
+        },
+        "A5SaveTimeStamp": "20180223130300931",
+        "minimumBuildNumber": "",
+        "customTabOrder": "",
+        "captureJSErrorStackTrace": false,
+        "__idinternalCurrentControl": "4b1b2260-783d-4ce9-88e2-93f5af15a3df",
+        "__nameCurrentControl": "date",
+        "__flagHasMacro": false,
+        "mobileDeviceDefault": "iphone4_v",
+        "Livepreview_permissions": "",
+        "livePreview_permissions_friendly": "",
+        "__allowCascadingRecalc": true,
+        "showJavascriptActions": false,
+        "showResponsiveLayoutHelp": false,
+        "_flagDoTreeview": true,
+        "_flagStaticHTMLMode": false,
+        "__flagUseFakeRequestVariables": false,
+        "__specialMode": false,
+        "alias": "{UXPRERENDEREDALIAS}",
+        "systemXbasicFunctionDeclarations": "",
+        "localPreviewFlag": false,
+        "flagStaticHTMLMode": false,
+        "flagInitialLoadIsAjax": false,
+        "_forceInitialLoadIsAjax": false,
+        "override_settings": "",
+        "flagForcerecalc": false,
+        "flagSaveDialogCache": true,
+        "__argumentValues": "",
+        "__argumentsFromGrid": "",
+        "flagExecuteOnDialogInitializeEvent": true,
+        "flagExecuteOnDialogExecuteEvent": true,
+        "__livePreviewMode": false,
+        "_forceMobileSimulation": false,
+        "iconMapOverrides": "",
+        "resolveAbstractIconNamesAtDesignTime": true,
+        "customizationString": {
+            "javascriptDialogs": "",
+            "DetailView": {
+                "toolbar": ""
+            }
+        },
+        "linkedResources": "",
+        "flagReloadComponent": false,
+        "__flagPrerender": false,
+        "panelRootId": "{UXPRERENDEROUTPUTDIV}",
+        "__flagstatichtmlorphonegap": false,
+        "__changeAJAXURL": "",
+        "__phoneGapInstantUpdate": false,
+        "temp": {
+            "_onRenderComplete": ""
+        },
+        "_sections": {
+            "flagHasSections": false
+        },
+        "disableAbstractEvents": false,
+        "jsRunAtBeginning": "",
+        "flagLoadDetailViewImageCaptureJS": false,
+        "forceLoadPhoneGapFileSystemFunctions": false,
+        "_flagUsesAudioLibrary": false,
+        "_flagUsesInk": false,
+        "_flagUsesControlBar": true,
+        "__staticHTML_setStaticHTMLFlag": false,
+        "_isPartial": false,
+        "sassProcessor": true,
+        "__flagCreateAppCache": false,
+        "debugMode": true,
+        "__jsLibraries": "<script type=\"text/javascript\" src=\"javascript/core.js\"></script>\n\n<script type=\"text/javascript\" src=\"javascript/utilCore.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/utilDOM.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/utilIcon.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/utilTemplate.js\"></script>\n\n<script type=\"text/javascript\" src=\"javascript/AjaxFormLibrary.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/aui.js\"></script>\n<script type=\"text/javascript\" language=\"javascript\" src=\"javascript/a5_html_calendar.js\"></script>\n<script type=\"text/javascript\" language=\"javascript\" src=\"javascript/a5_html_layout.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/dialogCompHelper.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/gridCompHelper.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/customComponentCompHelper.js\"></script>\n<script type=\"text/javascript\" src=\"javascript/a5_url.js\"></script>\n",
+        "bumpFilename": false
+    }
+}

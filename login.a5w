@@ -1,0 +1,78 @@
+<%a5
+'== This code must be above the login dialog code, top of the page above doctype is best
+'==Template Note - this code places the Username (userid) in a session variable.
+if eval_valid("submitbutton")
+	if eval_valid("userid")
+		dim session.userid as c
+		session.userid = userid
+	end if
+end if
+'==saves login to LastLogin on User Mgmt
+if eval_valid("submitbutton")
+	if eval_valid("userid")
+		dim cn as SQL::Connection
+		if cn.open("::name::conn")
+			vsql = "UPDATE wt_users SET lastlogin='"+time("yyyy/M/d 0h:0m:0s")+"' WHERE userid = '"+userid+"'"
+			cn.Execute(vsql)
+			cn.close()
+		end if
+	end if
+end if
+%>
+<!doctype html>
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "LOGIN"
+Delete tmpl_LOGIN
+DIM tmpl_LOGIN as P
+tmpl_LOGIN = a5w_load_component("login") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:login)
+'Following code allows you to override settings in the saved component, and specify the component alias (componentName property).
+'Tip: Keep the componentName property short because this name is used in page URLs, and it will help keep the URLs short.
+'Each component on a page must have a unique alias (componentName property).
+with tmpl_LOGIN
+	componentName = "LOGIN"
+end with 
+'=======================================compute the HTML for the Component=======================================
+delete x_LOGIN
+dim x_LOGIN as p
+x_LOGIN = a5w_run_Component(tmpl_LOGIN)  'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_LOGIN) (EDIT:login)
+'=============================================================================================================
+if x_LOGIN.RedirectURL <> "" then 
+	response.redirect(x_LOGIN.redirectURL)
+	end
+end if 
+?x_LOGIN.Output.Head.JavaScript
+?x_LOGIN.Output.Head.CSS_Link
+%>
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--CSS for tmpl_MAINMENU -->
+<link rel="stylesheet" type="text/css" href="file:///C:/pcm/pcm.WebProjects/Default.WebProject/css/nav/style.css">
+<link rel="stylesheet" type="text/css" href="file:///C:/pcm/pcm.WebProjects/Default.WebProject/css/nav/components/a5navsysToolbar/style.css">
+<!--Alpha Five Temporary Code End -->
+
+
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+</head>>
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--Body Tag for tmpl_MAINMENU -->
+<body class="navpage"><!--Alpha Five Temporary Code End -->&nbsp;&nbsp;&nbsp;
+			<div class="col-md-4">
+				<table align="center">
+				<tr><td><%A5 ?x_LOGIN.Output.Body.Login_Errors %></td></tr>
+				<tr><td><%A5 ?x_LOGIN.Output.Body.Login_HTML %></td></tr>
+				</table>
+			</div>
+			<div class="col-md-8">
+			</div> 
+<body>
+<body background="<img src="Wireframes-1.jpg" style="width:px;height:px">
+
+<p>&nbsp;</p></body></html>

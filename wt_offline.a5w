@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<%a5 ?"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/theme/"+wt_setup("css_theme") + "/framework.css\">" %>
+<title>This website is currently offline</title>
+
+</head>
+<body>
+<div class="main_content">
+	<div class="container">
+		<div class="row">
+			<div style="padding:20px;font-weight:bold;font-size:1.3em"><%a5 ?wt_setup("app_name") %></div>
+		</div>			
+		<div>
+			<%a5
+			if wt_setup("sitestatus") = "Admin"
+			?"<hr><div style=\"font-size:1em\">This website currently does not allow login. Click <a href=\"index.a5w\">here</a> to return to our home page.</div>"
+			end if
+			%>	
+			<div style="padding:20px;font-weight:bold;font-size:.9em"><%a5 ?wt_setup("offline_msg") %></div>
+		</div>
+
+		<div class="row">
+			<%a5 ?wt_content("offline_1") %>
+		</div>			
+	</div>
+</div>
+</body>
+</html>

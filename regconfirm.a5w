@@ -1,0 +1,228 @@
+<%a5
+
+'wt_regconfirm(conf)
+
+	dim tError as l
+	dim status as c 
+	dim rmsg as c
+	if eval_valid("conf") = .f.
+		rmsg = "Link is missing the Confirmation ID, cannot continue."
+		tError = .t.
+		goto displaymsg
+		end
+	end if
+	
+	dim cn as SQL::Connection
+	if cn.open("::name::conn") = .f.
+		errorout("REGCONFIRM|"+cn.callresult.text)
+		rmsg = "An error occured. Please try again and report any problem to the webmaster."
+		tError = .t.
+		cn.close()
+		goto displaymsg
+		end
+	end if
+	
+	'==GET USERS PENDING REGISTRATION
+	vsql = "SELECT fname,lname,userid,email_address,regstatus,regtemp FROM wt_users WHERE guid='{conf}'"
+	vsql = evaluate_string(vsql)
+	if cn.execute(vsql) = .f.
+		errorout("REGCONFIRM|"+cn.callresult.text)
+		rmsg = "Could not open the database."
+		tError = .t.
+		cn.close()
+		goto displaymsg
+		end
+	end if
+	if cn.resultset.nextrow() =.f. 'not found
+		rmsg = "We did not find a pending registration for you, or the time period to register may have expired. Please visit our Registration area."
+		tError = .t.
+		cn.close()
+		goto displaymsg
+		end
+	else
+		'==FOUND A PENDING REG, MOVING FORWARD
+		vfname 			= cn.resultset.data("fname")
+		vlname 			= cn.resultset.data("lname")
+		vuserid			= cn.resultset.data("userid")
+		vemail_address 	= cn.resultset.data("email_address")
+		vregtemp 		= cn.resultset.data("regtemp")
+		
+		'==CREATE ANY SPECIAL EMAIL TEMPLATE MERGE FIELDS
+		fullname 	= vFname + " " + vLName
+		firstname	= vFName
+		
+		'==ABORT IF ALREADY REGISTERED
+		IF cn.resultset.data("Regstatus") = "ACTIVE"
+			rmsg = "You are already registered, please visit our Login page."
+			cn.close()
+			goto displaymsg
+			end
+		END IF
+	END IF
+	
+	'== get default security group(s)
+	ugroups = sql_lookup(cn,"wt_setup","tid=1","default_sec_group")
+	'== DELETE USER FROM S/F IF FOUND (should not be there if they are PENDING)
+	IF A5WS_Get_GUID_From_User(vUserid,request) <> ""
+		a5ws_delete_user(vUserid,request)
+	END IF
+	
+	'==ADD TO SECURITY FRAMEWORK
+	
+	dim uservalue as p
+	dim uservalue.email as c 	= vuserid ' this is the default
+	if wt_variables("userid_type") = "value"
+		uservalue.email = alltrim(vemail_address)
+	end if
+	'dim uservalue.ulink as c 	= conf
+	dim uservalue.userid as c 	= vUserid
+	dim uservalue.groups as c 	= ugroups
+	dim temppwd as c
+	temppwd = base64decode(alltrim(vRegtemp))
+	uservalue.password = temppwd
+	dim uservalue.guid as c = conf
+	
+	dim output as p
+	dim output.controls as p
+	dim s_result as p
+	s_result = a5ws_save_webuser_values(output,uservalue)
+	IF s_result.errors = .T. THEN
+		rmsg = "Some information was missing and we could not process your registration. Please try to register again, and contact our office if this problem continues."
+		tError = .t.
+		cn.close()
+		goto displaymsg
+		end
+	END IF
+	
+	'== UPDATE PENDING REGISTATION
+	vsql = "UPDATE wt_users SET regstatus='ACTIVE',regtemp='' WHERE guid='{conf}'"
+	vsql = evaluate_string(vsql)
+	if cn.execute(vsql)=.f.
+		errorout("REGCONFIRM|"+cn.callresult.text)
+		vError = .t.
+		rmsg = "An error occured. Please try again and report any problem to the webmaster."
+		cn.close()
+		goto displaymsg
+		end
+	end if
+	
+	''''''''''''''''''''''''''''''''''''''''''
+	'== EMAIL REGCONFIRM RESULTS
+	''''''''''''''''''''''''''''''''''''''''''
+	
+	vsql = "SELECT * FROM wt_email WHERE template='USERS_REGCONF'"
+	vsql = evaluate_string(vsql)
+	if cn.execute(vsql) = .f.
+		errorout("REGCONFIRM|"+cn.callresult.text)
+	end if
+	if cn.resultset.nextrow()
+		e_bcc  				= cn.resultset.data("bcc")
+		e_subj 				= cn.resultset.data("subject")
+		e_body 				= cn.resultset.data("body_html")
+		e_msg  				= ""
+		e_msg  				= e_msg + crlf(2) + e_body
+	end if
+	'== GET STATIC SETUP INFO
+	vsql = "SELECT * FROM wt_setup"
+	if cn.execute(vsql) = .f.
+		errorout("REGCONFIRM|"+cn.callresult.text)
+	end if
+	
+	'==SET MAILMERGE FIELDS
+	app_name 			= cn.resultset.data("app_name")
+	app_url 			= cn.resultset.data("app_url")
+	support_contact 	= cn.resultset.data("support_contact")
+	support_url 		= cn.resultset.data("support_url")
+	support_phone		= cn.resultset.data("support_phone")
+	pm.from_email		= cn.resultset.data("smtp_from")
+	pm.from_name		= cn.resultset.data("smtp_from_alias")
+	dim setup as p
+	setup.server 		= cn.resultset.data("smtp_server")
+	setup.port 			= convert_type(cn.resultset.data("smtp_port"),"N")
+	setup.uname 		= cn.resultset.data("smtp_uname")
+	setup.pwd 			= cn.resultset.data("smtp_pwd")
+	setup.mode			= cn.resultset.data("smtp_mode")
+
+	
+	e_to 	 			= alltrim(vUserid) ' this is the default
+	if wt_variables("userid_type") = "value"
+		e_to 			= alltrim(vemail_address)
+	end if
+
+	e_url 				= App_url
+	userid				= vUserID
+	password			= "After you confirm your registration, if you forget your password, click the Recover Password link on our Login page."
+	
+	dim result as l
+	dim pm as p
+	dim ps as p
+	pm.send_to		= e_to
+	pm.send_to_bcc	= e_bcc
+	pm.subject 		= evaluate_string(e_subj)
+	pm.message_html	= evaluate_string(e_msg)
+	email_method 	= sql_lookup(cn,"wt_setup","","email_method")
+
+	select
+	case email_method = "SMTP"
+		'redundant for smtp functions
+		pm.from			= pm.from_email
+		pm.from_alias	= pm.from_name
+		pm.to 			= pm.send_to
+		pm.html_message = pm.message_html
+	
+		open_result = email_smtp_open(ps,setup.server,setup.port,setup.uname,setup.pwd,setup.mode)
+		if open_result = .t.
+			result = email_smtp_send(pm,ps)
+			email_smtp_close(ps)
+			if result = .t.
+				status = "Sent"
+				else
+				status 	  = "Failed"
+				errorText = "SMTP Send failed"
+			end if
+		else
+			status 	  = "Failed"
+			errorText = "SMTP Open failed"
+		end if			
+	case email_method = "Mandrill"
+		pm.preserve_recipients = .f. 'Mandrill specific to ensure TO, CC and BCC are not shared on same email
+		key 			= cn.resultset.data("mandrill_key")
+		dim result as p = email_send_mandrill(key,pm)
+		if result.error = .f.
+			status = "Sent"
+			else
+			status	 = "Failed"
+			if eval_valid("result.result")
+				errorText = alltrim(result.result.name) + " : " + result.result.message
+			end if				
+		end if
+	
+	case email_method = "Sparkpost"
+		key 			= cn.resultset.data("sparkpost_key")
+		dim result as p = email_send_sparkpost(key,pm)
+		if result.error = .f.
+			status = "Sent"
+			else
+			status	 = "Failed"
+			if eval_valid("result.errorText")
+				errorText = alltrim(result.errorText)
+			end if
+		end if
+		
+	case else
+end select
+
+rmsg = "Thank you for registering, you may now log in.<br>For reference, an email with login details has been sent to "+ e_to +"."
+displaymsg:
+cn.close()
+dim session.messagetext as c = rmsg
+dim session.messagelink as c = ""
+if tError =.t.
+	dim session.messagetitle as c = ""
+else
+	dim session.messagetitle as c = "Registration Complete"
+end if
+
+response.redirect("message.a5w")
+
+%>

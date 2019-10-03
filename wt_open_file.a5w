@@ -1,0 +1,26 @@
+<%a5
+
+dim location as c
+dim filename as c
+dim path as c
+
+select
+	case location = "A5Folder"
+	path = "\a5\\"
+	case location = "Webroot"
+	path = filename_decode(Request.ApplicationRoot)
+	case location = "Data"
+	path = filename_decode("[PathAlias.ADB_Path]\\")
+	case location = "Images"
+	path = filename_decode(Request.ApplicationRoot) + chr(92) + "Images\\"
+end select
+
+openfile = path + filename
+
+if file.exists(openfile) = .f.
+	?"<script>alert('File not found');</script>"
+	else
+	response.sendfile(openfile,.t.)
+end if
+
+%>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+
+<div class="main_content">
+	<div class="container">
+		<%a5 ?wt_page("page_title","<h1>") %>
+		<div class="row">
+			<%a5 ?wt_content("index_1") %>
+			<%a5 ?wt_content("index_2") %>
+			<%a5 ?wt_content("index_3") %>
+		</div>
+	</div>
+</div>
+
+<div class="section_2">
+	<div class="container clearfix align-center">
+		<div class="row">
+			<div class="col-md-4">
+			<%a5 ?wt_content("index_4_1") %>
+			</div>
+			<div class="col-md-4">
+			<%a5 ?wt_content("index_4_2") %>
+			</div>
+			<div class="col-md-4">
+			<%a5 ?wt_content("index_4_3") %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<%a5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>

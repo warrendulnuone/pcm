@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head>
+
+
+<%a5
+Delete tmpl_WT_ACCESSCTRL
+DIM tmpl_WT_ACCESSCTRL as P
+tmpl_WT_ACCESSCTRL = a5w_load_component("wt_accessctrl") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_accessctrl)
+
+'Override settings start -----------------------------------------
+with tmpl_WT_ACCESSCTRL
+.alias = "WT_ACCESSCTRL"
+_dialogFilename = "wt_accessctrl"
+end with 
+'Override settings end -----------------------------------------
+
+delete x_WT_ACCESSCTRL
+dim x_WT_ACCESSCTRL as p
+x_WT_ACCESSCTRL = a5w_run_Component(tmpl_WT_ACCESSCTRL) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:wt_accessctrl)
+
+?x_WT_ACCESSCTRL.Output.Head.JavaScript
+?x_WT_ACCESSCTRL.Output.Head.CSS_Link
+
+?x_WT_ACCESSCTRL.Output.Head.Title 
+%>
+
+
+</head>
+<body>
+
+<%a5 ?x_WT_ACCESSCTRL.Output.Body.Dialog2_HTML %>
+<%a5 ?a5dialogHelper_generateCORSHeaders() %>
+
+</body></html>

@@ -1,0 +1,24 @@
+<%a5
+'==Template Note - this allows the admin to take the system offline
+'==Either completely offline, or only allows Admin to login 
+'==REQUIRES session.mygroups is set for this application (default condition)
+select
+    case wt_setup("sitestatus") = "Admin" 'OFFLINE UNLESS YOU ARE MEMBER OF "ADMINISTRATORS"
+	dim pUser as p
+	dim pUser.userid as c
+	a5ws_logged_in_user_values(pUser)
+	if pUser.userid <> "" 
+		dim session.mygroups as c
+		session.mygroups = crlf_to_comma(a5ws_get_user_assignments(pUser.userid,request))
+		if is_one_of("Administrators",session.mygroups) = .f.
+			a5ws_logoutuser(session,request,response)
+			session.reset()
+			response.redirect("wt_offline.a5w")	
+		end if
+	end if
+    case wt_setup("sitestatus") = "Offline" 'TOTALLY OFFLINE
+	response.redirect("wt_offline.a5w")
+end select
+%>
+
+

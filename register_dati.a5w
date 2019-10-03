@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<%A5 a5w_include("wt_inc_header_head.a5w") %>
+
+<%a5
+Delete tmpl_WT_USERS_REG
+DIM tmpl_WT_USERS_REG as P
+tmpl_WT_USERS_REG = a5w_load_component("wt_users_reg") ''SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:wt_users_reg)
+
+'Override settings start -----------------------------------------
+with tmpl_WT_USERS_REG
+.alias = "WT_USERS_REG"
+_dialogFilename = "wt_users_reg"
+end with 
+'Override settings end -----------------------------------------
+
+delete x_WT_USERS_REG
+dim x_WT_USERS_REG as p
+x_WT_USERS_REG = a5w_run_Component(tmpl_WT_USERS_REG) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl) (EDIT:wt_users_reg)
+
+?x_WT_USERS_REG.Output.Head.JavaScript
+?x_WT_USERS_REG.Output.Head.CSS_Link
+
+?x_WT_USERS_REG.Output.Head.Title 
+%>
+
+</head>
+<body>
+<%A5 a5w_include("wt_inc_header_body.a5w") %>
+<div class="main_content">
+	<div class="container">
+		<div class="row">
+			<%a5 ?wt_page("page_title","<h1>") %>
+			<div class="col-md-6">
+				<%a5 ?wt_content("register_1") %>
+			</div>
+			<div class="col-md-6">
+				<%a5 ?x_WT_USERS_REG.Output.Body.Dialog2_HTML %>
+			</div>
+		</div>
+	</div>
+</div>
+<%A5 a5w_include("wt_inc_footer_body.a5w") %>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<%a5
+'==Template Note - this creates the string "Login / Signup" or "Logged in: John Doe (Logout)"
+'==It can be placed anwhere, typically in the header.
+dim pUser as p 
+dim pUser.userid as c
+dim vLoginMsg as c
+A5WS_Logged_In_User_Values(pUser)
+dim cn as sql::Connection
+if cn.open("::name::conn") = .f.
+	?"Error opening database."
+	end 
+end if
+vSQL = "SELECT omit_login,omit_registration,login_text,registration_text FROM wt_setup WHERE tid=1"
+if cn.execute(vSQL) = .f.
+errorout("LOGINTEXT|"+cn.callresult.text)
+end if
+
+dim hide_login as l = cn.resultset.data("omit_login")
+dim hide_reg as l 	= cn.resultset.data("omit_registration")
+
+select
+	case hide_login = .t. .and. hide_reg = .t. 
+	vloginmsg = ""
+	case hide_login = .t. .and. hide_reg = .f.
+	vloginmsg = "<a href=\"register.a5w\">"+cn.resultset.data("registration_text")+"</a>"
+	case  hide_login = .f. .and. hide_reg = .t.
+	vloginmsg = "<a href=\"Login.a5w\">"+cn.resultset.data("login_text")+"</a>"
+	case  hide_login = .f. .and. hide_reg = .f.
+	vloginmsg = "<div><a href=\"Login.a5w\">"+cn.resultset.data("login_text")+"</a><span style=\"margin:5px\">|</span> <a href=\"register.a5w\">"+cn.resultset.data("registration_text")+"</a></div>"
+end select
+IF pUser.userid <> ""
+	session.fullname = sql_lookup(cn,"wt_users","userid='"+pUser.userid+"'","concatenate(alltrim(fname),' ',lname)")
+	vloginmsg = "Logged in: " + session.fullname + "  " + "<a href=\"Logout.a5w\">(Logout)</a>"
+END IF
+?vloginmsg
+cn.close()
+%>

@@ -1,0 +1,70 @@
+<!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+<!-- end bootstrap -->
+
+<!-- SlickNav -->
+<meta name="viewport" content="width=device-width">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<link rel="stylesheet" href="css/slicknav.css">
+<!-- end SlickNav -->
+
+<!-- Framework styles -->
+<%a5 ?"<link rel=\"stylesheet\" type=\"text/css\" href=\"css/theme/"+wt_setup("css_theme") + "/framework.css\">" + crlf() %>
+<!-- *** Do not omit: Copyright AlphaToGo LLC 2017, Web Application Framework - www.alphatogo.com ***-->
+
+<%a5
+?wt_setup("head_code") + crlf() 
+a5w_include("wt_inc_header_setvar.a5w") '==Sets session vars for Logged-In user
+
+'a5w_include("wt_inc_takeoffline.a5w") '==Optional, allows the Admin to take the website offline from a browser
+?"<meta name=\"keywords\" content=\"" + wt_page("Meta_keywords")+"\">" + crlf()
+?"<meta name=\"description\" content=\"" + wt_page("Meta_description")+"\">" + crlf()
+%>
+
+<title><%a5 ?wt_page("meta_title") %></title>
+
+<!-- must use in order to make XP Themes render -->
+<meta HTTP-EQUIV="MSThemeCompatible" content="Yes" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+
+<%a5
+'The componentAlias MUST be UNIQUE for each component on the page. It must not have spaces in the name. Keep name as short as possible
+dim componentAlias as c 
+componentAlias = "mainmenu"
+Delete tmpl_mainmenu
+DIM tmpl_mainmenu as P
+tmpl_mainmenu = a5w_load_component("mainmenu") 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (LOAD:mainmenu)
+'Following code allows you to override settings in the saved component, and specify the component alias (componentName property).
+'Each component on a page must have a unique alias (componentName property).
+with tmpl_mainmenu
+	location = ""
+	componentName = "mainmenu"
+end with 
+delete x_mainmenu
+dim x_mainmenu as p
+x_mainmenu = a5w_run_Component(tmpl_mainmenu) 'SYSTEM GENERATED COMMENT - PLEASE DO NOT REMOVE (RUN:tmpl_mainmenu) (EDIT:mainmenu)
+?x_mainmenu.Output.Head.JavaScript
+?x_mainmenu.Output.Head.CSS_Link
+%>
+
+<%a5
+'==Template Note - all of the code from here down only serves to "fool" the A5 Editor to think their is a navigation component on this page.
+'==The actual xbasic to display the navigation component is in header_body.a5w, and the editor would try to remove the xbasic above if the below were missing.
+'==So do not remove this.
+%>
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--DO NOT REMOVE THIS ENTIRE SECTION.-->
+</head><%a5 ?x_MAINMENU.Output.Body.Body_Tag %>
+<!--Alpha Five Temporary Code Start - Will be automatically removed when page is published -->
+<!--Body Tag for tmpl_MAINMENU -->
+<body class="navpage"><!--Alpha Five Temporary Code End --><!-- Navigation System -->
+<p>
+<%a5
+'?x_mainmenu.Output.Body.navsysTBH
+%></p>
+<p>&nbsp;</p>
+
+
+
+</body></html>
+<!--Alpha Five Temporary Code End -->

@@ -1,0 +1,9 @@
+<!doctype html>
+<html>
+<head>
+<%a5 a5w_include("wt_inc_header_head.a5w") %>
+<title>Terms and Conditions</title>
+</head>
+<body style="text-align:left;padding:10px">
+  <%a5 ?wt_content("termsofuse_1") %> 
+</body></html>
